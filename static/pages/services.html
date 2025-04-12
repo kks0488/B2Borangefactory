@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오렌지팩토리 서비스</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <style>
+        /* 서비스 페이지 특별 스타일 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--light-color);
+            border: 1px solid var(--border-color);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(255, 140, 0, 0.1);
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 2rem auto 1rem;
+        }
+        
+        .service-content {
+            padding: 1.5rem 2rem 2rem;
+            text-align: center;
+        }
+        
+        .service-content h3 {
+            margin-top: 0;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+        
+        .process-steps {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 2rem;
+            margin: 3rem 0;
+            position: relative;
+        }
+        
+        .process-step {
+            flex: 1;
+            min-width: 200px;
+            max-width: 250px;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin: 0 auto 1.5rem;
+        }
+        
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 30px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+        
+        .faq-item {
+            margin-bottom: 1.5rem;
+            border: 1px solid var(--border-color);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+        
+        .faq-question {
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .faq-answer {
+            padding: 0 1.5rem;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        
+        .faq-item.active .faq-answer {
+            padding: 1.5rem;
+            max-height: 500px;
+        }
+        
+        .faq-question::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            transition: transform 0.3s ease;
+        }
+        
+        .faq-item.active .faq-question::after {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="../logo.svg" alt="오렌지팩토리 로고" width="180" height="45">
+                </a>
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a href="about.html">소개</a></li>
+                    <li><a href="services.html" class="active">서비스</a></li>
+                    <li><a href="success.html">성공사례</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>오렌지팩토리 서비스</h1>
+                    <p>패션 기업을 위한 최적의 재고 처리 솔루션을 제공합니다.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="text-center">주요 서비스</h2>
+                <p class="text-center mb-4">오렌지팩토리는 패션 기업의 다양한 재고 문제를 해결하기 위한 맞춤형 서비스를 제공합니다.</p>
+                
+                <div class="service-grid">
+                    <div class="service-card fade-in" id="buyback">
+                        <div class="service-icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>재고 매입</h3>
+                            <p>시즌이 지난 재고, 샘플, 불량품 등 다양한 패션 재고를 합리적인 가격에 매입합니다. 브랜드 가치를 보호하면서 재고 부담을 줄여드립니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in delay-1" id="export">
+                        <div class="service-icon">
+                            <i class="fas fa-globe-asia"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>해외 수출</h3>
+                            <p>글로벌 네트워크를 통해 국내 재고를 해외 시장에 효율적으로 판매합니다. 국내 유통을 차단하여 브랜드 이미지를 보호합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in delay-2" id="logistics">
+                        <div class="service-icon">
+                            <i class="fas fa-warehouse"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>물류 대행</h3>
+                            <p>재고 보관부터 분류, 포장, 배송까지 전문적인 물류 서비스를 제공합니다. 물류 비용 절감과 효율성 향상에 기여합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in delay-3" id="consulting">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>재고 컨설팅</h3>
+                            <p>재고 현황 분석부터 최적의 처리 방안 제시까지, 전문적인 재고 관리 컨설팅을 제공합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in delay-4" id="upcycling">
+                        <div class="service-icon">
+                            <i class="fas fa-tshirt"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>업사이클링</h3>
+                            <p>불용 재고를 활용한 업사이클링 프로젝트를 통해 지속가능한 패션을 실천합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="service-card fade-in delay-5" id="outlet">
+                        <div class="service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <div class="service-content">
+                            <h3>아울렛 유통</h3>
+                            <p>엄선된 해외 아울렛 채널을 통해 브랜드 가치를 유지하면서 재고를 효율적으로 처리합니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="text-center">서비스 프로세스</h2>
+                <p class="text-center mb-4">오렌지팩토리의 체계적인 서비스 프로세스를 소개합니다.</p>
+                
+                <div class="process-steps">
+                    <div class="process-step fade-in">
+                        <div class="step-number">1</div>
+                        <h3>상담 신청</h3>
+                        <p>홈페이지, 전화, 이메일을 통해 무료 상담을 신청합니다.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-1">
+                        <div class="step-number">2</div>
+                        <h3>재고 분석</h3>
+                        <p>전문 컨설턴트가 재고 현황을 분석하고 최적의 솔루션을 제안합니다.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-2">
+                        <div class="step-number">3</div>
+                        <h3>계약 체결</h3>
+                        <p>맞춤형 서비스 계약을 체결하고 구체적인 일정을 수립합니다.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-3">
+                        <div class="step-number">4</div>
+                        <h3>서비스 진행</h3>
+                        <p>재고 수거부터 처리까지 전 과정을 신속하게 진행합니다.</p>
+                    </div>
+                    
+                    <div class="process-step fade-in delay-4">
+                        <div class="step-number">5</div>
+                        <h3>결과 보고</h3>
+                        <p>투명한 정산과 함께 상세한 결과 보고서를 제공합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="text-center">자주 묻는 질문</h2>
+                <p class="text-center mb-4">오렌지팩토리 서비스에 대한 궁금증을 해결해드립니다.</p>
+                
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">어떤 종류의 재고를 처리할 수 있나요?</div>
+                        <div class="faq-answer">
+                            <p>의류, 신발, 가방, 액세서리 등 다양한 패션 아이템의 재고를 처리할 수 있습니다. 시즌이 지난 재고, 샘플, 불량품, 반품 상품 등 모든 종류의 패션 재고를 취급합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">재고 처리 기간은 얼마나 걸리나요?</div>
+                        <div class="faq-answer">
+                            <p>재고의 양과 종류에 따라 다르지만, 일반적으로 계약 체결 후 7일 이내에 재고 수거를 완료하며, 최대 30일 이내에 모든 처리 과정을 마무리합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">브랜드 보호는 어떻게 이루어지나요?</div>
+                        <div class="faq-answer">
+                            <p>오렌지팩토리는 철저한 브랜드 보호 정책을 시행합니다. 국내 유통을 차단하고, 해외 수출 시에도 브랜드 이미지를 훼손하지 않는 채널만을 선별하여 거래합니다. 필요에 따라 라벨 제거 등의 조치도 가능합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">재고 매입 가격은 어떻게 결정되나요?</div>
+                        <div class="faq-answer">
+                            <p>재고의 상태, 시즌, 브랜드, 수량 등 다양한 요소를 종합적으로 고려하여 가격을 책정합니다. 전문 평가사의 정확한 평가를 통해 공정한 가격을 제안해드립니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="faq-item">
+                        <div class="faq-question">최소 처리 수량이 있나요?</div>
+                        <div class="faq-answer">
+                            <p>기본적으로 최소 처리 수량 제한은 없으나, 효율적인 서비스 제공을 위해 일정 수량 이상을 권장하고 있습니다. 소량 재고의 경우에도 맞춤형 솔루션을 제공해드리니 부담 없이 문의해주세요.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>지금 바로 무료 상담을 신청하세요</h2>
+                <p>오렌지팩토리의 전문 컨설턴트가 귀사의 재고 문제 해결을 위한 최적의 솔루션을 제안해드립니다.</p>
+                <a href="contact.html" class="btn btn-light btn-lg">무료 상담 신청하기</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>오렌지팩토리</h3>
+                    <p>대한민국 No.1 패션 재고 솔루션</p>
+                    <p>서울특별시 강남구 테헤란로 123</p>
+                    <p>사업자등록번호: 123-45-67890</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>바로가기</h3>
+                    <ul>
+                        <li><a href="index.html">메인</a></li>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="services.html">서비스</a></li>
+                        <li><a href="success.html">성공사례</a></li>
+                        <li><a href="contact.html">문의하기</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>고객센터</h3>
+                    <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@orangefactory.kr</p>
+                    <p><i class="fas fa-clock"></i> 평일 09:00 - 18:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>소셜미디어</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mt-3">뉴스레터 구독하기</p>
+                    <form class="mt-2">
+                        <input type="email" class="form-control" placeholder="이메일 주소" required>
+                        <button type="submit" class="btn btn-primary btn-block mt-2">구독하기</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 오렌지팩토리. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 스크롤 애니메이션 효과
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(element);
+            });
+            
+            // FAQ 토글 기능
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                
+                question.addEventListener('click', () => {
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>

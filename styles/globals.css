@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* 세 가지 기본 색상으로 통일: 오렌지(브랜드), 흰색, 짙은 회색 */
+  --radius: 10px;
+  
+  /* 주요 색상 */
+  --primary: 32 100% 50%; /* 오렌지 - #FF8C00 */
+  --primary-light: 32 100% 60%; /* 밝은 오렌지 - #FFB347 */
+  --primary-dark: 32 100% 40%; /* 어두운 오렌지 - #CC7000 */
+  
+  /* 배경과 텍스트 색상 */
+  --background: 0 0% 100%; /* 흰색 - #FFFFFF */
+  --foreground: 240 3.7% 15.9%; /* 짙은 회색 - #27272A */
+  
+  /* 다른 모든 UI 요소들도 3가지 색상으로 통일 */
+  --chart: 240 3.7% 15.9%;
+  --muted: 0 0% 96%;
+  --muted-foreground: 240 3.7% 35%;
+  --card: 0 0% 100%;
+  --card-foreground: 240 3.7% 15.9%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 3.7% 15.9%;
+  --border: 0 0% 90%;
+  --input: 0 0% 90%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 0 0% 96%;
+  --secondary-foreground: 240 3.7% 15.9%;
+  --accent: 0 0% 96%;
+  --accent-foreground: 240 3.7% 15.9%;
+  --destructive: 32 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 32 100% 50%;
+  
+  /* 차트 색상도 기본 색상 조합으로 통일 */
+  --chart-1: #FF8C00;
+  --chart-2: #FFB347;
+  --chart-3: #CC7000;
+  --chart-4: #27272A;
+  --chart-5: #F5F5F5;
+}
+
+:root.dark {
+  /* 다크 모드도 동일한 세 가지 색상의 변형으로 구성 */
+  --background: 240 3.7% 15.9%; /* 짙은 회색 - #27272A */
+  --foreground: 0 0% 100%; /* 흰색 - #FFFFFF */
+  --chart: 0 0% 100%;
+  --muted: 240 3.7% 25%;
+  --muted-foreground: 0 0% 80%;
+  --card: 240 3.7% 15.9%;
+  --card-foreground: 0 0% 100%;
+  --popover: 240 3.7% 15.9%;
+  --popover-foreground: 0 0% 100%;
+  --border: 240 3.7% 25%;
+  --input: 240 3.7% 25%;
+  --primary: 32 100% 50%; /* 오렌지 그대로 유지 */
+  --primary-light: 32 100% 60%;
+  --primary-dark: 32 100% 40%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 240 3.7% 25%;
+  --secondary-foreground: 0 0% 100%;
+  --accent: 240 3.7% 25%;
+  --accent-foreground: 0 0% 100%;
+  --destructive: 32 100% 50%;
+  --destructive-foreground: 0 0% 100%;
+  --ring: 32 100% 50%;
+  
+  /* 차트 색상도 동일하게 유지 */
+  --chart-1: #FF8C00;
+  --chart-2: #FFB347;
+  --chart-3: #CC7000;
+  --chart-4: #F5F5F5;
+  --chart-5: #27272A;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+  color-scheme: unset !important;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  font-weight: inherit;
+  /* 1 */
+  line-height: inherit;
+  /* 1 */
+  color: hsl(var(--foreground));
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  padding: 0;
+  /* 3 */
+}
+
+option {
+  color: black;
+}
+
+p {
+  letter-spacing: 0px;
+}
+
+img {
+  pointer-events: none;
+}
+::-moz-selection {
+  /* Code for Firefox */
+  color: white;
+  background: #09090B;
+}
+
+::selection {
+  color: white;
+  background: #09090B;
+}
+
+input.defaultCheckbox {
+  color: white;
+}
+
+input.defaultCheckbox::before {
+  content: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6.66662 10.115L12.7946 3.98633L13.7379 4.92899L6.66662 12.0003L2.42395 7.75766L3.36662 6.81499L6.66662 10.115Z' fill='white'/%3E%3C/svg%3E%0A");
+  fill: currentColor;
+  opacity: 0;
+  height: 16px;
+  width: 16px;
+  top: 0;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0px);
+}
+
+input.defaultCheckbox::before path {
+  fill: currentColor;
+}
+
+input:checked.defaultCheckbox::before {
+  opacity: 1;
+}
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+      }
+  .dark {
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오렌지팩토리 소개</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="../favicon.svg" type="image/svg+xml">
+    <style>
+        /* 소개 페이지 특별 스타일 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+        }
+        
+        .timeline-date {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-color);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 500;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .team-member {
+            text-align: center;
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-photo {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin: 0 auto 1rem;
+            border: 3px solid var(--primary-color);
+        }
+        
+        .team-name {
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .team-position {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+        }
+        
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .value-item {
+            background-color: var(--light-color);
+            border-radius: var(--border-radius);
+            padding: 2rem;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .value-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .value-icon {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: rgba(255, 140, 0, 0.1);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="../logo.svg" alt="오렌지팩토리 로고" width="180" height="45">
+                </a>
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a href="about.html" class="active">소개</a></li>
+                    <li><a href="services.html">서비스</a></li>
+                    <li><a href="success.html">성공사례</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <h1>오렌지팩토리 소개</h1>
+                    <p>10년 이상의 경험과 노하우로 패션 기업의 재고 문제를 해결하는 대한민국 No.1 패션 재고 솔루션</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="text-center">우리의 이야기</h2>
+                <p class="text-center mb-4">오렌지팩토리는 패션 산업의 재고 문제를 해결하기 위해 설립되었습니다.</p>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2013</div>
+                        <div class="timeline-content">
+                            <h3>회사 설립</h3>
+                            <p>패션 재고 처리의 새로운 패러다임을 제시하기 위해 오렌지팩토리가 설립되었습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2015</div>
+                        <div class="timeline-content">
+                            <h3>해외 수출 시작</h3>
+                            <p>글로벌 네트워크를 구축하여 국내 패션 재고의 해외 수출을 시작했습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2018</div>
+                        <div class="timeline-content">
+                            <h3>물류 센터 확장</h3>
+                            <p>늘어나는 수요에 대응하기 위해 경기도에 5,000평 규모의 물류 센터를 오픈했습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2020</div>
+                        <div class="timeline-content">
+                            <h3>디지털 전환</h3>
+                            <p>재고 관리 시스템을 디지털화하여 더욱 효율적인 서비스를 제공하기 시작했습니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="timeline-date">2023</div>
+                        <div class="timeline-content">
+                            <h3>현재</h3>
+                            <p>300개 이상의 패션 기업과 협력하며 대한민국 No.1 패션 재고 솔루션으로 자리매김했습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section style="background-color: var(--bg-light);">
+            <div class="container">
+                <h2 class="text-center">우리의 가치</h2>
+                <p class="text-center mb-4">오렌지팩토리가 추구하는 핵심 가치입니다.</p>
+                
+                <div class="values-grid">
+                    <div class="value-item fade-in">
+                        <div class="value-icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>신뢰</h3>
+                        <p>모든 거래와 협력 관계에서 투명성과 정직함을 바탕으로 신뢰를 구축합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-1">
+                        <div class="value-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>효율성</h3>
+                        <p>최적화된 프로세스로 빠르고 효율적인 재고 처리 솔루션을 제공합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-2">
+                        <div class="value-icon">
+                            <i class="fas fa-leaf"></i>
+                        </div>
+                        <h3>지속가능성</h3>
+                        <p>환경을 생각하는 재고 처리 방식으로 지속가능한 패션 산업에 기여합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-3">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3>혁신</h3>
+                        <p>끊임없는 혁신을 통해 패션 재고 처리의 새로운 표준을 만들어갑니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <h2 class="text-center">경영진 소개</h2>
+                <p class="text-center mb-4">오렌지팩토리를 이끌어가는 핵심 경영진을 소개합니다.</p>
+                
+                <div class="team-grid">
+                    <div class="team-member fade-in">
+                        <div class="team-photo" style="background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="team-name">김대표</h3>
+                        <p class="team-position">CEO / 창립자</p>
+                        <p>패션 산업에서 20년 이상의 경력을 가진 전문가로, 오렌지팩토리의 비전과 전략을 이끌고 있습니다.</p>
+                    </div>
+                    
+                    <div class="team-member fade-in delay-1">
+                        <div class="team-photo" style="background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="team-name">이상무</h3>
+                        <p class="team-position">COO</p>
+                        <p>물류 및 운영 전문가로, 오렌지팩토리의 효율적인 운영 시스템을 구축했습니다.</p>
+                    </div>
+                    
+                    <div class="team-member fade-in delay-2">
+                        <div class="team-photo" style="background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="team-name">박이사</h3>
+                        <p class="team-position">글로벌 사업부 이사</p>
+                        <p>국제 무역 전문가로, 오렌지팩토리의 글로벌 네트워크 확장을 주도하고 있습니다.</p>
+                    </div>
+                    
+                    <div class="team-member fade-in delay-3">
+                        <div class="team-photo" style="background-color: #f0f0f0; display: flex; align-items: center; justify-content: center;">
+                            <i class="fas fa-user" style="font-size: 4rem; color: var(--primary-color);"></i>
+                        </div>
+                        <h3 class="team-name">최부장</h3>
+                        <p class="team-position">마케팅 부장</p>
+                        <p>디지털 마케팅 전문가로, 오렌지팩토리의 브랜드 가치를 높이는 데 기여하고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <h2>함께 일해보세요</h2>
+                <p>오렌지팩토리와 함께 패션 산업의 미래를 만들어갈 인재를 찾고 있습니다.</p>
+                <a href="contact.html" class="btn btn-light btn-lg">문의하기</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>오렌지팩토리</h3>
+                    <p>대한민국 No.1 패션 재고 솔루션</p>
+                    <p>서울특별시 강남구 테헤란로 123</p>
+                    <p>사업자등록번호: 123-45-67890</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>바로가기</h3>
+                    <ul>
+                        <li><a href="index.html">메인</a></li>
+                        <li><a href="about.html">소개</a></li>
+                        <li><a href="services.html">서비스</a></li>
+                        <li><a href="success.html">성공사례</a></li>
+                        <li><a href="contact.html">문의하기</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>고객센터</h3>
+                    <p><i class="fas fa-phone"></i> 02-123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@orangefactory.kr</p>
+                    <p><i class="fas fa-clock"></i> 평일 09:00 - 18:00</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>소셜미디어</h3>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                    <p class="mt-3">뉴스레터 구독하기</p>
+                    <form class="mt-2">
+                        <input type="email" class="form-control" placeholder="이메일 주소" required>
+                        <button type="submit" class="btn btn-primary btn-block mt-2">구독하기</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 오렌지팩토리. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // 스크롤 애니메이션 효과
+        document.addEventListener('DOMContentLoaded', function() {
+            const fadeElements = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = 1;
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElements.forEach(element => {
+                element.style.opacity = 0;
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+                observer.observe(element);
+            });
+        });
+    </script>
+</body>
+</html>

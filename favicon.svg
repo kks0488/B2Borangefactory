@@ -1,0 +1,6 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+  <!-- 오렌지 아이콘 -->
+  <circle cx="16" cy="16" r="14" fill="#FF8C00"/>
+  <path d="M16 2 Q26 6 26 16 Q26 26 16 30 Q6 26 6 16 Q6 6 16 2" fill="#FFA500"/>
+  <path d="M16 5 L16 0 Q19 1 18 3" fill="#228B22"/>
+</svg> 
