@@ -1,8 +1,6 @@
-import SupabaseProvider from './supabase-provider';
 import { PropsWithChildren } from 'react';
 import '@/styles/globals.css';
 import { ThemeProvider } from './theme-provider';
-import { Noto_Sans_KR } from 'next/font/google';
 import { Metadata } from 'next';
 
 export const dynamic = 'force-dynamic';
@@ -104,9 +102,7 @@ export default function RootLayout({
         className="min-h-screen bg-background text-foreground antialiased selection:bg-[#FF8C00]/30 selection:text-[#FF8C00]"
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <SupabaseProvider>
-            {children}
-          </SupabaseProvider>
+          {children}
         </ThemeProvider>
       </body>
     </html>
