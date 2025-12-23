@@ -138,7 +138,7 @@ export default function SuccessPage() {
              지금 바로 실질적인 유동성 변화를 경험하세요.
            </p>
            <Button size="lg" className="h-24 px-16 rounded-lg bg-white text-zinc-950 hover:bg-[#FF8C00] hover:text-white text-2xl font-black transition-all" asChild>
-             <Link href="/contact" className="uppercase italic">Consult with the Experts</Link>
+             <Link href="/ko/contact" className="uppercase italic">Consult with the Experts</Link>
            </Button>
         </div>
       </section>

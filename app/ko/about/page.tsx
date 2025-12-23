@@ -168,7 +168,7 @@ export default function AboutPage() {
           </div>
 
           <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-8 rounded-lg font-semibold" asChild>
-            <Link href="/contact" className="flex items-center gap-2">
+            <Link href="/ko/contact" className="flex items-center gap-2">
               상담 신청하기 <ArrowRight className="w-4 h-4" />
             </Link>
           </Button>

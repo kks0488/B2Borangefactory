@@ -19,37 +19,37 @@ export default function LandingPage() {
       icon: <Package className="w-7 h-7" />,
       title: "재고 및 브랜드 양도양수",
       desc: "과잉 재고 및 현금유동성 문제를 해결합니다. 브랜드, 쇼핑몰까지 한번에 정리 가능.",
-      href: "/services/inventory"
+      href: "/ko/services/inventory"
     },
     {
       icon: <Landmark className="w-7 h-7" />,
       title: "동산 담보자금",
       desc: "재고를 담보로 긴급 자금을 확보하세요. 홈쇼핑 스케줄 변동 등 급한 상황에 대응.",
-      href: "/services/finance"
+      href: "/ko/services/finance"
     },
     {
       icon: <Store className="w-7 h-7" />,
       title: "오프라인 위탁판매",
       desc: "온라인 가격 노출 없이 브랜드 가치를 보호하면서 재고를 처리합니다.",
-      href: "/services/consignment"
+      href: "/ko/services/consignment"
     },
     {
       icon: <Factory className="w-7 h-7" />,
       title: "잔여 원단 해외 생산",
       desc: "유명 브랜드 잔여원단을 활용해 원가를 절감하는 해외 생산 솔루션.",
-      href: "/services/production"
+      href: "/ko/services/production"
     },
     {
       icon: <ShoppingBag className="w-7 h-7" />,
       title: "상품 소싱 및 도매",
       desc: "이월상품, 브랜드 의류 상품을 찾아 고객사에 연결해드립니다.",
-      href: "/services/sourcing"
+      href: "/ko/services/sourcing"
     },
     {
       icon: <Globe className="w-7 h-7" />,
       title: "해외수출",
       desc: "K-Fashion을 세계로. 글로벌 바이어와 한국 업체를 연결하고 수출을 지원합니다.",
-      href: "/services/export"
+      href: "/ko/services/export"
     },
   ];
 
@@ -86,12 +86,12 @@ export default function LandingPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
             <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-14 px-8 rounded-lg font-semibold text-base" asChild>
-              <Link href="/contact" className="flex items-center gap-2">
+              <Link href="/ko/contact" className="flex items-center gap-2">
                 무료 상담 신청 <ArrowRight className="w-5 h-5" />
               </Link>
             </Button>
             <Button variant="outline" className="h-14 px-8 border-slate-300 rounded-lg font-semibold text-base" asChild>
-              <Link href="/about">회사소개</Link>
+              <Link href="/ko/about">회사소개</Link>
             </Button>
           </div>
           
@@ -190,7 +190,7 @@ export default function LandingPage() {
             </a>
           </div>
           <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-14 px-10 rounded-lg font-semibold text-base" asChild>
-            <Link href="/contact">무료 상담 신청</Link>
+            <Link href="/ko/contact">무료 상담 신청</Link>
           </Button>
         </div>
       </section>
