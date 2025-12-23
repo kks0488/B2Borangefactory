@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ArrowRight, Phone } from 'lucide-react';
+import { Menu, X, ArrowRight, Phone, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -73,8 +73,11 @@ export function Header() {
             </div>
           </nav>
 
-          {/* 오른쪽: 전화 + CTA */}
+          {/* 오른쪽: 언어 + 전화 + CTA */}
           <div className="flex items-center gap-2">
+            <Link href="/en" className="p-2 text-slate-600 hover:text-[#FF8C00] transition-colors" title="English">
+              <Globe className="w-4 h-4" />
+            </Link>
             <a href="tel:010-4464-0345" className="p-2 text-slate-600 hover:text-[#FF8C00] transition-colors">
               <Phone className="w-4 h-4" />
             </a>
