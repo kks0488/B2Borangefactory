@@ -42,7 +42,7 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-package-lock.json
+# package-lock.json (removed from ignore for CI/CD)
 .env.local.production
 .env.local.new
 .env.local.non-docker
