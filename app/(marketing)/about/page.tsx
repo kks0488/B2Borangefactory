@@ -9,7 +9,8 @@ import {
   ChevronRight,
   TrendingUp,
   Globe2,
-  Scale
+  Scale,
+  ArrowRight
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -82,9 +83,9 @@ export default function AboutPage() {
                 <span className="text-[#FF8C00]">Enabling Growth.</span>
              </h2>
              <p className="text-xl md:text-2xl text-zinc-500 leading-relaxed mb-20 max-w-3xl font-medium italic">
-                재고는 실패의 흔적이 아닙니다. 새로운 도약을 위한 '준비된 자산'입니다. 
-                오렌지팩토리는 그 자산의 가치를 가장 먼저 알아보고, 
-                귀사가 다시 원활하게 움직일 수 있도록 돕습니다.
+               재고는 실패의 흔적이 아닙니다. 새로운 도약을 위한 &apos;준비된 자산&apos;입니다. 
+               오렌지팩토리는 그 자산의 가치를 가장 먼저 알아보고, 
+               귀사가 다시 원활하게 움직일 수 있도록 돕습니다.
              </p>
              <div className="grid grid-cols-2 md:grid-cols-4 gap-12 w-full pt-16 border-t border-zinc-100 dark:border-zinc-900">
                 {[

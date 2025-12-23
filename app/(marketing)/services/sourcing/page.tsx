@@ -88,7 +88,7 @@ export default function SourcingServicePage() {
             <p className="text-xl md:text-2xl text-zinc-500 leading-relaxed font-medium italic">
                 우리는 단순히 물건을 넘기지 않습니다. <br />
                 파트너사의 매출 구조를 분석하고, 그 구조 속에서 
-                최적의 수익을 낼 수 있는 상품의 '흐름'을 소싱합니다. 
+                최적의 수익을 낼 수 있는 상품의 &apos;흐름&apos;을 소싱합니다. 
                 오렌지팩토리와의 결합이 곧 성장의 공식입니다.
             </p>
         </div>

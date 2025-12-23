@@ -9,7 +9,8 @@ import {
   Landmark, 
   HandCoins,
   ChevronRight,
-  TrendingUp
+  TrendingUp,
+  CheckCircle2
 } from 'lucide-react';
 
 export const metadata: Metadata = {

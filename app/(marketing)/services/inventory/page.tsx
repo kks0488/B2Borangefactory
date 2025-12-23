@@ -56,7 +56,7 @@ export default function InventoryServicePage() {
                   <span className="text-[#FF8C00]">Unlocking Capital.</span>
                </h2>
                <p className="text-lg text-zinc-500 leading-relaxed font-medium">
-                  단순한 '땡처리'가 아닙니다. 오렌지팩토리는 재고 자산의 시장 가치를 최고치로 끌어올려 
+                  단순한 &apos;땡처리&apos;가 아닙니다. 오렌지팩토리는 재고 자산의 시장 가치를 최고치로 끌어올려 
                   매각하는 전략적 파트너입니다. 대량 매입을 통한 자금 집행은 물론, 
                   브랜드 가치를 훼손하지 않는 철저한 유통 경로 통제 솔루션을 제공합니다.
                </p>
