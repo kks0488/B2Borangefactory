@@ -46,14 +46,13 @@ export function Header() {
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
-          {/* 로고 - 모바일에서 더 작게 */}
           <Link href="/" className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0">
             <Image 
               src="/img/logo.png" 
               alt="오렌지팩토리" 
-              width={90} 
-              height={22}
-              className="h-5 w-auto"
+              width={120} 
+              height={30}
+              className="h-auto w-20"
               priority
             />
           </Link>
