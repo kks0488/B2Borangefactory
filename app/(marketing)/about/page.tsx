@@ -48,31 +48,31 @@ export default function AboutPage() {
   const newsItems = [
     {
       title: "오렌지팩토리, 그린월드홀딩스가 새 주인으로",
-      source: "패션비즈",
+      source: "조선비즈 외",
       date: "2019.07",
       desc: "패션 전산 시스템 업체 그린월드홀딩스가 오렌지팩토리를 인수하며 새로운 도약을 시작했습니다.",
-      url: "https://www.fashionbiz.co.kr/article/view.asp?idx=175621"
+      url: "https://search.naver.com/search.naver?where=news&query=오렌지팩토리+그린월드홀딩스+인수"
     },
     {
       title: "오렌지팩토리, 2022년 100개 매장 확보 목표",
-      source: "조선비즈",
+      source: "어패럴뉴스 외",
       date: "2019.07",
       desc: "그린월드홀딩스 인수 후 연내 10개 매장을 오픈하고 2022년까지 100개 매장 확보를 목표로 재도약합니다.",
-      url: "https://biz.chosun.com/site/data/html_dir/2019/07/24/2019072402284.html"
+      url: "https://search.naver.com/search.naver?where=news&query=오렌지팩토리+100개+매장"
     },
     {
-      title: "'한국형 SPA의 자존심' 오렌지팩토리 10% 신장",
-      source: "패션인사이트",
-      date: "2014.02",
+      title: "'한국형 SPA' 오렌지팩토리 성장세",
+      source: "패션인사이트 외",
+      date: "2014",
       desc: "해외 SPA 브랜드에 밀리는 상황 속에서도 전년 대비 10% 성장하며 국내 SPA 브랜드의 자존심을 지켰습니다.",
-      url: "https://www.fi.co.kr/main/view.asp?idx=45982"
+      url: "https://search.naver.com/search.naver?where=news&query=오렌지팩토리+SPA+성장"
     },
     {
-      title: "오렌지팩토리, 연매출 1000억 돌파",
-      source: "한국경제",
-      date: "2009.11",
+      title: "오렌지팩토리, 연매출 1000억 달성",
+      source: "한국경제 외",
+      date: "2009",
       desc: "20개 매장에서 연매출 1,000억 원을 달성하고 20만 회원을 보유하며 급성장했습니다.",
-      url: "https://www.hankyung.com/article/2009111842841"
+      url: "https://search.naver.com/search.naver?where=news&query=오렌지팩토리+1000억"
     },
   ];
 
