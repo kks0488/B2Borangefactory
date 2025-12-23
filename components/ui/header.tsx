@@ -42,9 +42,9 @@ export function Header() {
             <Image 
               src="/img/logo.png" 
               alt="오렌지팩토리" 
-              width={160} 
-              height={40}
-              className="h-10 w-auto"
+              width={80} 
+              height={20}
+              className="h-5 w-auto"
               priority
             />
           </Link>
