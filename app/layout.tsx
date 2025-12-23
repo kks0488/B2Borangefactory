@@ -7,42 +7,38 @@ export const dynamic = 'force-dynamic';
 
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
 
-// Inter: 텍스트 가독성을 위한 메인 폰트
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-inter',
 });
 
-// Plus Jakarta Sans: 세련된 디스플레이(헤딩) 폰트
 const jakarta = Plus_Jakarta_Sans({
   subsets: ['latin'],
   display: 'swap',
   variable: '--font-jakarta',
 });
 
-// Next.js Metadata API - SEO 최적화
 export const metadata: Metadata = {
-  metadataBase: new URL('https://orangefactory.kr'),
+  metadataBase: new URL('https://orangefactory.biz'),
   title: {
-    template: '%s | 오렌지팩토리',
-    default: '오렌지팩토리 | 대한민국 NO.1 패션 재고 솔루션',
+    template: '%s | Orange Factory',
+    default: 'Orange Factory | Korean Fashion Wholesale & Export',
   },
-  description:
-    '1985년 설립된 오렌지팩토리는 패션 브랜드의 과잉 재고 처리, 브랜드 양도양수, 동산 담보자금, 위탁판매 등 다양한 솔루션을 제공합니다.',
+  description: 'Since 1985, Orange Factory is Korea\'s leading fashion inventory solution provider. Wholesale sourcing, brand inventory, and export services for global buyers.',
   keywords: [
-    '오렌지팩토리',
-    '땡처리',
-    '재고처리',
-    '패션 재고',
-    '브랜드 양도양수',
-    '동산 담보',
-    '위탁판매',
-    '의류 생산',
+    'Korean fashion wholesale',
+    'K-fashion export',
+    'Korean clothing wholesale',
+    'fashion inventory',
+    'Korea wholesale supplier',
+    'Korean brand clothes',
+    'wholesale fashion Korea',
+    'Orange Factory',
   ],
-  authors: [{ name: '오렌지팩토리' }],
-  creator: '오렌지팩토리',
-  publisher: '오렌지팩토리',
+  authors: [{ name: 'Orange Factory' }],
+  creator: 'Orange Factory',
+  publisher: 'Orange Factory',
   formatDetection: {
     email: false,
     address: false,
@@ -50,26 +46,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'ko_KR',
-    url: 'https://orangefactory.kr',
-    siteName: '오렌지팩토리',
-    title: '오렌지팩토리 | 대한민국 NO.1 패션 재고 솔루션',
-    description:
-      '1985년 설립된 오렌지팩토리는 패션 브랜드의 과잉 재고 처리, 브랜드 양도양수, 동산 담보자금, 위탁판매 등 다양한 솔루션을 제공합니다.',
+    locale: 'en_US',
+    url: 'https://orangefactory.biz',
+    siteName: 'Orange Factory',
+    title: 'Orange Factory | Korean Fashion Wholesale & Export',
+    description: 'Since 1985, Korea\'s leading fashion inventory solution. Wholesale sourcing, brand inventory, and export services for global buyers.',
     images: [
       {
         url: '/img/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: '오렌지팩토리 - 대한민국 NO.1 패션 재고 솔루션',
+        alt: 'Orange Factory - Korean Fashion Wholesale & Export',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: '오렌지팩토리 | 대한민국 NO.1 패션 재고 솔루션',
-    description:
-      '1985년 설립된 오렌지팩토리는 패션 브랜드의 과잉 재고 처리, 브랜드 양도양수, 동산 담보자금, 위탁판매 등 다양한 솔루션을 제공합니다.',
+    title: 'Orange Factory | Korean Fashion Wholesale & Export',
+    description: 'Since 1985, Korea\'s leading fashion inventory solution. Wholesale sourcing, brand inventory, and export services.',
     images: ['/img/og-image.jpg'],
   },
   robots: {
@@ -88,21 +82,52 @@ export const metadata: Metadata = {
   },
   manifest: '/manifest.json',
   alternates: {
-    canonical: 'https://orangefactory.kr',
+    canonical: 'https://orangefactory.biz',
+    languages: {
+      'en': 'https://orangefactory.biz',
+      'ko': 'https://orangefactory.biz/ko',
+      'ja': 'https://orangefactory.biz/ja',
+      'zh': 'https://orangefactory.biz/zh',
+    },
   },
 };
 
-export default function RootLayout({
-  children,
-}: PropsWithChildren) {
+// JSON-LD Structured Data for Organization
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: 'Orange Factory',
+  alternateName: '오렌지팩토리',
+  url: 'https://orangefactory.biz',
+  logo: 'https://orangefactory.biz/img/logo.png',
+  foundingDate: '1985',
+  description: 'Korea\'s leading fashion inventory solution provider since 1985. Wholesale, export, and B2B fashion services.',
+  address: {
+    '@type': 'PostalAddress',
+    addressCountry: 'KR',
+  },
+  contactPoint: {
+    '@type': 'ContactPoint',
+    telephone: '+82-10-4464-0345',
+    contactType: 'sales',
+    email: 'orangefactory@kakao.com',
+    availableLanguage: ['English', 'Korean', 'Japanese', 'Chinese'],
+  },
+  sameAs: [],
+};
+
+export default function RootLayout({ children }: PropsWithChildren) {
   return (
-    <html lang="ko" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable}`}>
+    <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable}`}>
       <head>
-        {/* Pretendard 폰트 - 한글 최적화 */}
         <link
           rel="stylesheet"
           as="style"
           href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
       <body
