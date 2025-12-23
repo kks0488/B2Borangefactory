@@ -2,216 +2,225 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { 
   ArrowRight, 
-  BarChart4, 
-  ShieldCheck, 
-  Wallet2, 
-  Building2, 
-  Clock, 
+  Package, 
+  Landmark, 
+  Store, 
+  Factory, 
+  ShoppingBag, 
   ChevronRight,
-  Target,
-  LineChart
+  Phone,
+  Mail,
+  CheckCircle2
 } from 'lucide-react';
 
 export default function LandingPage() {
   return (
-    <div className="flex flex-col w-full bg-white dark:bg-zinc-950">
+    <div className="flex flex-col w-full bg-white">
       
-      {/* 1. HERO - Institutional Presence */}
-      <section className="relative pt-32 pb-24 md:pt-48 md:pb-40 border-b border-zinc-100 dark:border-zinc-900 overflow-hidden bg-subtle-grid">
+      {/* 1. HERO - 대한민국 재고처리 NO.1 */}
+      <section className="relative pt-32 pb-24 md:pt-40 md:pb-32 overflow-hidden">
         <div className="section-container relative z-10">
-          <div className="max-w-4xl opacity-0 animate-reveal">
+          <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-12 bg-[#FF8C00]"></span>
-              <span className="text-sm font-bold tracking-[0.3em] text-[#FF8C00] uppercase">Since 1985</span>
+              <span className="text-sm font-bold tracking-widest text-[#FF8C00]">Since 1985</span>
             </div>
             
-            <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 leading-[1] tracking-tighter">
-              The Standard of <br />
-              <span className="text-slate-500">Inventory Liquidity.</span>
+            <h1 className="text-4xl md:text-6xl lg:text-7xl font-black text-slate-900 mb-8 leading-[1.1] tracking-tight">
+              대한민국<br />
+              <span className="text-[#FF8C00]">재고처리 NO.1</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-brand-slate dark:text-slate-500 max-w-2xl mb-12 leading-relaxed font-medium">
-              오렌지팩토리는 39년간 대한민국 패션 산업의 유동성을 책임져온 <br className="hidden md:block" />
-              재고 자산 관리 및 자금 조달 전문 파트너입니다. 
+            <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-10 leading-relaxed">
+              오렌지팩토리는 지난 30년간 브랜드 재고처리 업계에서 
+              독보적인 위치를 차지해 왔습니다. 오렌지팩토리와의 협업을 통해 
+              여러분의 비즈니스를 쉽고 빠르게 정리하세요!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 items-center">
-              <Button size="lg" className="h-16 px-10 rounded-lg bg-[#FF8C00] hover:bg-[#E67E00] text-lg font-bold shadow-soft transition-all" asChild>
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Button size="lg" className="cta-primary h-14 px-8 rounded-lg text-lg" asChild>
                 <Link href="/contact" className="flex items-center gap-2">
-                  가치 평가 전문 상담 <ArrowRight className="w-5 h-5" />
+                  무료 상담 신청 <ArrowRight className="w-5 h-5" />
                 </Link>
               </Button>
-              <Button size="lg" variant="ghost" className="h-16 px-10 text-brand-navy dark:text-white font-bold hover:bg-zinc-100 dark:hover:bg-zinc-900" asChild>
-                <Link href="/services">서비스 포트폴리오 <ChevronRight className="w-4 h-4" /></Link>
+              <Button size="lg" variant="outline" className="h-14 px-8 border-slate-300 text-slate-700 font-bold hover:bg-slate-50" asChild>
+                <Link href="/services">서비스 알아보기 <ChevronRight className="w-4 h-4" /></Link>
               </Button>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 2. LOGO CLOUD / TRUST - Minimalist */}
-      <section className="py-16 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-900">
-        <div className="section-container flex flex-col md:flex-row items-center justify-between gap-12 opacity-60 grayscale transition-all hover:grayscale-0">
-          <p className="text-xs font-bold uppercase tracking-widest text-slate-500">Our Trusted Partners</p>
-          <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 items-center text-3xl font-black italic text-zinc-300 dark:text-zinc-800">
-            <span>BRAND A</span>
-            <span>BRAND B</span>
-            <span>BRAND C</span>
-            <span>BRAND D</span>
-            <span>BRAND E</span>
-          </div>
-        </div>
-      </section>
-
-      {/* 3. KEY METRICS - Structural Strength */}
-      <section className="py-32 bg-zinc-50 dark:bg-zinc-900/50">
+      {/* 2. 주요 서비스 */}
+      <section className="py-24 bg-slate-50">
         <div className="section-container">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-16">
-            {[
-              { label: 'Cumulative Throughput', value: '₩2.4T+', desc: '지난 39년간 해결한 누적 재고 자산 규모' },
-              { label: 'Processing Speed', value: '24H', desc: '매입 결정 후 현금 지급까지 소요되는 최단 시간' },
-              { label: 'Partnership Network', value: '1,200+', desc: '오렌지팩토리와 함께하는 국내외 패션 브랜드' },
-            ].map((metric, i) => (
-              <div key={metric.label} className="flex flex-col border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 transition-all hover:border-[#FF8C00] group">
-                <p className="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">{metric.label}</p>
-                <p className="text-5xl lg:text-6xl font-black text-brand-navy dark:text-white mb-6 group-hover:text-[#FF8C00] transition-colors tracking-tighter italic">{metric.value}</p>
-                <p className="text-slate-600 text-sm leading-relaxed">{metric.desc}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. STRATEGIC SOLUTIONS - Precision Grid */}
-      <section className="py-32 bg-white dark:bg-zinc-950">
-        <div className="section-container">
-          <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20 border-b border-zinc-100 dark:border-zinc-900 pb-12">
-            <div className="max-w-xl">
-              <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">Strategic Liquidity.</h2>
-              <p className="text-brand-slate dark:text-slate-500 text-lg">
-                현금 흐름 최적화와 브랜드 보호를 동시에 달성하는 <br />
-                오렌지팩토리만의 5대 핵심 비즈니스 엔진입니다.
-              </p>
-            </div>
-            <Link href="/services" className="text-[#FF8C00] font-bold text-sm tracking-widest flex items-center gap-2 group">
-              READ ALL SOLUTIONS <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">주요 서비스</h2>
+            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+              30여년간의 경험과 네트워크를 바탕으로 B2B 서비스를 통해 
+              성공적으로 고객사의 고민을 함께 해결하고 있습니다
+            </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-1">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
               {
-                icon: <Wallet2 className="w-6 h-6" />,
-                title: "Institutional Buying",
-                desc: "잉여 재고 전액 현금 매입. 신속한 결제로 기업의 유동성 위기를 해결합니다.",
+                icon: <Package className="w-8 h-8" />,
+                num: "1",
+                title: "재고 및 브랜드 양도양수",
+                subtitle: "오렌지팩토리의 메인서비스",
+                desc: "고객사의 과잉 재고 및 현금유동성 문제 해결",
                 href: "/services/inventory"
               },
               {
-                icon: <LineChart className="w-6 h-6" />,
-                title: "Asset-Backed Finance",
-                desc: "재고 자산을 담보로 한 운영 자금 원조. 비즈니스 단절 없는 자금 조달 솔루션.",
-                href: "/services/finance"
-              },
-              {
-                icon: <ShieldCheck className="w-6 h-6" />,
-                title: "Consignment Ops",
-                desc: "브랜드 가치 보호형 위탁 판매. 최적화된 채널을 통한 안정적 소진 전략.",
+                icon: <Store className="w-8 h-8" />,
+                num: "2",
+                title: "오프라인 위탁판매",
+                subtitle: "브랜드 가치 보호",
+                desc: "온라인에 할인 가격이 공개되지 않으면서 브랜드 가치를 훼손하지 않는 위탁판매",
                 href: "/services/consignment"
               },
               {
-                icon: <Building2 className="w-6 h-6" />,
-                title: "Global Supply Engine",
-                desc: "해외 생산 최적화 인프라 가동. 원가 절감과 품질 고도화를 동시에 실현.",
+                icon: <Factory className="w-8 h-8" />,
+                num: "3",
+                title: "잔여 원단 해외 생산",
+                subtitle: "원가 절감 생산",
+                desc: "유명 브랜드에서 사용한 잔여원단을 활용해 가격 절감을 1순위로 하는 해외 공동 생산",
                 href: "/services/production"
               },
               {
-                icon: <Target className="w-6 h-6" />,
-                title: "Strategic Sourcing",
-                desc: "데이터 기반 B2B 상품 큐레이션 및 도매. 유통 파트너의 수익성을 극대화.",
+                icon: <ShoppingBag className="w-8 h-8" />,
+                num: "4",
+                title: "상품 소싱 대행",
+                subtitle: "맞춤형 상품 연결",
+                desc: "고객사의 이미지와 맞는 상품 혹은 브랜드 의류 상품을 찾아드립니다",
                 href: "/services/sourcing"
               },
-              {
-                icon: <BarChart4 className="w-6 h-6" />,
-                title: "Market Analysis",
-                desc: "데이터 중심의 정교한 재고 가치 산정. 불확실성을 상수로 바꾸는 인사이트.",
-                href: "/success"
-              }
-            ].map((sol, i) => (
-              <Link key={i} href={sol.href} className="group p-10 border border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900/50">
-                <div className="text-[#FF8C00] mb-8 group-hover:scale-110 transition-transform origin-left">{sol.icon}</div>
-                <h3 className="text-xl font-bold mb-4 group-hover:text-[#FF8C00] transition-colors uppercase tracking-tight italic">{sol.title}</h3>
-                <p className="text-slate-600 dark:text-slate-500 text-sm leading-relaxed mb-6">{sol.desc}</p>
-                <div className="text-[10px] font-black tracking-widest text-zinc-300 dark:text-zinc-700 uppercase">Discover more</div>
+            ].map((service) => (
+              <Link 
+                key={service.num} 
+                href={service.href} 
+                className="group p-8 bg-white border border-slate-200 rounded-xl hover:border-[#FF8C00] hover:shadow-lg transition-all"
+              >
+                <div className="flex items-start gap-6">
+                  <div className="text-[#FF8C00] p-3 bg-orange-50 rounded-lg group-hover:bg-[#FF8C00] group-hover:text-white transition-colors">
+                    {service.icon}
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center gap-3 mb-2">
+                      <span className="text-sm font-bold text-[#FF8C00]">{service.num}.</span>
+                      <h3 className="text-xl font-bold text-slate-900 group-hover:text-[#FF8C00] transition-colors">
+                        {service.title}
+                      </h3>
+                    </div>
+                    <p className="text-sm font-medium text-slate-500 mb-2">{service.subtitle}</p>
+                    <p className="text-slate-600">{service.desc}</p>
+                  </div>
+                  <ChevronRight className="w-5 h-5 text-slate-300 group-hover:text-[#FF8C00] group-hover:translate-x-1 transition-all" />
+                </div>
               </Link>
             ))}
           </div>
         </div>
       </section>
 
-      {/* 5. HERITAGE / WHY US - Information Density */}
-      <section className="py-32 bg-brand-navy">
+      {/* 3. 왜 오렌지팩토리인가? */}
+      <section className="py-24 bg-white">
         <div className="section-container">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-24 items-center">
-            <div className="space-y-10">
-              <h2 className="text-4xl md:text-6xl font-black text-white tracking-tighter leading-tight italic">
-                EXPERIENCE <br />
-                THAT MATTERS.
-              </h2>
-              <p className="text-slate-500 text-xl leading-relaxed">
-                오렌지팩토리는 단순히 재고를 사고팔지 않습니다. <br />
-                우리는 지난 39년간 1,200개 이상의 파트너사와 함께하며 
-                패션 산업의 보이지 않는 리스크를 관리해 왔습니다. 
-                전문가 집단의 정교한 가치 평가와 압도적인 자본력은 귀사의 가장 확실한 보험이 됩니다.
-              </p>
-              <div className="flex flex-col gap-6">
-                {[
-                  '1985년 설립 - 업계 최장수 업력의 안정성',
-                  '자체 물류 센터 운영 - 즉각적인 일괄 수거 인프라',
-                  '금융 연계 솔루션 - 단순 매입을 넘어선 자금 지원',
-                ].map((item, i) => (
-                  <div key={i} className="flex gap-4 items-center">
-                    <div className="w-2 h-2 rounded-full bg-[#FF8C00]" />
-                    <span className="text-white font-bold">{item}</span>
-                  </div>
-                ))}
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-12 text-center">
+            오렌지팩토리를 선택해야 하는 이유
+          </h2>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              { title: "30년간의 전문성", desc: "과잉 재고 매입에 특화된 30년 경력의 매입팀이 전문으로 진행합니다." },
+              { title: "고객사에 맞는 유연성", desc: "소량 및 대량의 재고 정리에 모두 대응 가능해 1인기업부터 대기업까지 지원합니다." },
+              { title: "빠른 당일 현금화", desc: "연중무휴로 경쟁력 있는 가격으로 만족스러운 현금 구매를 제공합니다." },
+              { title: "쉬운 원스톱 솔루션", desc: "초기 상담부터 재고 확인, 현금 입금까지 전 과정을 한번에 제공합니다." },
+              { title: "신뢰할 수 있는 서비스", desc: "고객사가 최상의 계약과 성과를 받을 수 있도록 신뢰와 만족을 바탕으로 진행합니다." },
+              { title: "네트워크 확보", desc: "해외생산, 해외수출, 브랜드 재고수배 등 다양한 네트워크를 제공합니다." },
+            ].map((item, i) => (
+              <div key={i} className="p-6 border border-slate-200 rounded-xl">
+                <div className="flex items-center gap-3 mb-4">
+                  <CheckCircle2 className="w-5 h-5 text-[#FF8C00]" />
+                  <h3 className="font-bold text-slate-900">{item.title}</h3>
+                </div>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
               </div>
-            </div>
-            <div className="relative">
-               <div className="aspect-square bg-zinc-800 rounded-lg p-1 border border-white/10 overflow-hidden group">
-                  <div className="w-full h-full bg-zinc-900 flex items-center justify-center relative overflow-hidden">
-                     {/* Static visual representation of professional context */}
-                     <div className="absolute inset-0 opacity-20">
-                        <div className="h-full w-full bg-[radial-gradient(circle_at_center,_white_1px,_transparent_1px)] bg-[size:20px_20px]" />
-                     </div>
-                     <span className="text-zinc-700 font-black text-9xl tracking-tighter select-none rotate-12 opacity-50">TRUST</span>
-                  </div>
-               </div>
-               <div className="absolute -bottom-6 -right-6 h-32 w-32 bg-[#FF8C00] rounded-lg shadow-2xl flex flex-col items-center justify-center p-4">
-                  <span className="text-4xl font-black text-white">39Y</span>
-                  <span className="text-[10px] font-bold text-white uppercase tracking-widest text-center leading-tight mt-1">Foundational Trust</span>
-               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
 
-      {/* 6. CALL TO ACTION - Solid Ending */}
-      <section className="py-40 bg-white dark:bg-zinc-950">
-        <div className="section-container text-center max-w-4xl">
-           <div className="mb-12 flex justify-center">
-             <Clock className="w-12 h-12 text-[#FF8C00] animate-pulse" />
-           </div>
-           <h2 className="text-4xl md:text-7xl font-black text-brand-navy dark:text-white tracking-tighter mb-10 leading-[1.1] italic">
-             START YOUR <br />
-             STRATEGIC EXIT.
-           </h2>
-           <p className="text-xl text-brand-slate dark:text-slate-500 mb-16 font-medium leading-relaxed">
-             더 이상 고민하지 마세요. 오렌지팩토리가 귀사의 재고 자산을 <br />
-             가장 가치 있는 유동성으로 즉각 전환해 드립니다.
-           </p>
-           <Button size="lg" className="h-20 px-16 rounded-lg bg-brand-navy dark:bg-white dark:text-brand-navy text-white text-2xl font-black transition-all hover:bg-zinc-800 dark:hover:bg-zinc-200" asChild>
-             <Link href="/contact">CONSULTATION NOW</Link>
-           </Button>
+      {/* 4. 성공 사례 */}
+      <section className="py-24 bg-slate-50">
+        <div className="section-container">
+          <h2 className="text-3xl md:text-4xl font-black text-slate-900 mb-4 text-center">
+            성공 사례 및 고객사의 긍정적인 평가
+          </h2>
+          <p className="text-slate-600 text-center mb-12 max-w-2xl mx-auto">
+            다양한 상황의 고객사들이 오렌지팩토리를 통해 문제를 해결했습니다
+          </p>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { 
+                brand: "A 브랜드", 
+                type: "홈쇼핑 스케쥴을 맞추지 못한 고객사",
+                quote: "홈쇼핑 스케쥴을 맞추지 못해 전혀 판매하지 못한 대량의 상품을 오렌지팩토리를 통해 쉽고 편하게 정리할 수 있었습니다. 정말 감사합니다."
+              },
+              { 
+                brand: "B 브랜드", 
+                type: "20대 타겟의 스케이트 스트릿 브랜드",
+                quote: "무신사에 입점만 하면 잘 팔릴줄 알았는데.. 오프라인 채널을 통해 기존 고객과 겹치지 않게 브랜드 이미지를 보호하면서도 매출을 올릴 수 있었습니다"
+              },
+              { 
+                brand: "C 브랜드", 
+                type: "유명브랜드의 잔여원단으로 해외생산",
+                quote: "명품 브랜드가 반팔티셔츠를 만들때 같이 얹어서 생산하니 수량 부담도 적고 수준높은 상품을 생산할 수 있었습니다"
+              },
+              { 
+                brand: "D 플랫폼", 
+                type: "유명브랜드의 재고를 연결해준 사례",
+                quote: "이월상품 2개년치를 매입해 저희 고객들에게 저렴한 가격에 판매할 수 있게 되어 매출을 끌어올릴 수 있었습니다."
+              },
+            ].map((item, i) => (
+              <div key={i} className="p-8 bg-white border border-slate-200 rounded-xl">
+                <div className="mb-4">
+                  <span className="text-lg font-bold text-[#FF8C00]">{item.brand}</span>
+                  <p className="text-sm text-slate-500">{item.type}</p>
+                </div>
+                <p className="text-slate-700 leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA */}
+      <section className="py-24 bg-slate-900">
+        <div className="section-container text-center">
+          <h2 className="text-3xl md:text-4xl font-black text-white mb-6">
+            비즈니스 협업 문의
+          </h2>
+          <p className="text-slate-400 mb-10 text-lg">
+            언제든지 전화 / 메신저로 연락주시면 과잉 재고를 적절한 가격에 상호 만족스러운 방식으로 구매합니다.
+          </p>
+          
+          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-12">
+            <div className="flex items-center gap-3 text-white">
+              <Phone className="w-5 h-5 text-[#FF8C00]" />
+              <span className="font-bold">김경수 영업이사: 010-4464-0345</span>
+            </div>
+            <div className="flex items-center gap-3 text-white">
+              <Mail className="w-5 h-5 text-[#FF8C00]" />
+              <span className="font-bold">orangefactory@kakao.com</span>
+            </div>
+          </div>
+          
+          <Button size="lg" className="cta-primary h-16 px-12 rounded-lg text-xl" asChild>
+            <Link href="/contact">무료 상담 신청하기</Link>
+          </Button>
         </div>
       </section>
     </div>
