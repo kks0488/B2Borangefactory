@@ -82,7 +82,7 @@ export default function ChineseHomePage() {
             {testimonials.map((t, i) => (
               <div key={i} className="p-6 bg-white border border-slate-200 rounded-xl">
                 <p className="text-[#FF8C00] font-bold text-sm mb-3">{t.company}</p>
-                <p className="text-slate-700 text-sm leading-relaxed">"{t.quote}"</p>
+                <p className="text-slate-700 text-sm leading-relaxed">&quot;{t.quote}&quot;</p>
               </div>
             ))}
           </div>
