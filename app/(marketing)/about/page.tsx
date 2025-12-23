@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Phone, Mail } from 'lucide-react';
+import { ArrowRight, Phone, Mail, ExternalLink } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '회사소개 | 오렌지팩토리',
@@ -45,6 +45,23 @@ export default function AboutPage() {
     }
   ];
 
+  const newsItems = [
+    {
+      title: "오렌지팩토리, 그린월드홀딩스가 새 주인으로",
+      source: "패션비즈",
+      date: "2019.07",
+      desc: "패션 전산 시스템 업체 그린월드홀딩스가 오렌지팩토리를 인수하며 새로운 도약을 시작했습니다.",
+      url: "https://www.fashionbiz.co.kr"
+    },
+    {
+      title: "오렌지팩토리, 유통 노하우와 관리력 결합해 시너지 창출",
+      source: "매일경제",
+      date: "2019.07",
+      desc: "40년간 축적된 유통 노하우와 새로운 관리 시스템의 결합으로 재도약을 준비하고 있습니다.",
+      url: "https://www.mk.co.kr"
+    },
+  ];
+
   return (
     <div className="flex flex-col w-full bg-white">
       {/* Hero */}
@@ -86,24 +103,53 @@ export default function AboutPage() {
         </div>
       </section>
 
+      {/* 언론 보도 */}
+      <section className="py-12 md:py-16">
+        <div className="section-container">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">언론 보도</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {newsItems.map((news, i) => (
+              <a 
+                key={i} 
+                href={news.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group p-5 border border-slate-200 rounded-xl hover:border-[#FF8C00] transition-colors"
+              >
+                <div className="flex items-center gap-2 text-xs text-slate-500 mb-2">
+                  <span className="font-semibold text-[#FF8C00]">{news.source}</span>
+                  <span>·</span>
+                  <span>{news.date}</span>
+                </div>
+                <h3 className="text-base font-bold text-slate-900 group-hover:text-[#FF8C00] transition-colors mb-2 flex items-center gap-2">
+                  {news.title}
+                  <ExternalLink className="w-3.5 h-3.5 text-slate-400" />
+                </h3>
+                <p className="text-sm text-slate-600">{news.desc}</p>
+              </a>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
-      <section className="py-12 md:py-16 bg-slate-900">
+      <section className="py-12 md:py-16 border-t border-slate-200">
         <div className="section-container text-center">
-          <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">
             오렌지팩토리와 함께하세요
           </h2>
-          <p className="text-slate-400 mb-8">
+          <p className="text-slate-600 mb-8">
             40년의 경험과 네트워크로 고객사의 성장을 지원합니다.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-8">
-            <a href="tel:010-4464-0345" className="flex items-center gap-2 text-white">
+            <a href="tel:010-4464-0345" className="flex items-center gap-2 text-slate-900 font-semibold">
               <Phone className="w-4 h-4 text-[#FF8C00]" />
-              <span className="font-semibold">010-4464-0345</span>
+              010-4464-0345
             </a>
-            <a href="mailto:orangefactory@kakao.com" className="flex items-center gap-2 text-white">
+            <a href="mailto:orangefactory@kakao.com" className="flex items-center gap-2 text-slate-900 font-semibold">
               <Mail className="w-4 h-4 text-[#FF8C00]" />
-              <span className="font-semibold">orangefactory@kakao.com</span>
+              orangefactory@kakao.com
             </a>
           </div>
 

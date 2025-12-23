@@ -40,7 +40,7 @@ export default function ProductionPage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero - 깔끔한 라이트 스타일 */}
+      {/* Hero */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="section-container">
           <div className="flex items-center gap-3 mb-6">
@@ -109,19 +109,19 @@ export default function ProductionPage() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-12 md:py-16 bg-slate-900">
+      {/* CTA - 라이트 스타일 */}
+      <section className="py-12 md:py-16 border-t border-slate-200">
         <div className="section-container text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-4">해외 생산 상담</h2>
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
-            <a href="tel:010-4464-0345" className="flex items-center gap-2 text-white text-sm">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-4">해외 생산 상담</h2>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+            <a href="tel:010-4464-0345" className="flex items-center gap-2 text-slate-900 font-semibold">
               <Phone className="w-4 h-4 text-[#FF8C00]" /> 010-4464-0345
             </a>
-            <a href="mailto:orangefactory@kakao.com" className="flex items-center gap-2 text-white text-sm">
+            <a href="mailto:orangefactory@kakao.com" className="flex items-center gap-2 text-slate-900 font-semibold">
               <Mail className="w-4 h-4 text-[#FF8C00]" /> orangefactory@kakao.com
             </a>
           </div>
-          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-11 px-6 rounded-lg font-semibold" asChild>
+          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-8 rounded-lg font-semibold" asChild>
             <Link href="/contact" className="flex items-center gap-2">
               상담 신청 <ArrowRight className="w-4 h-4" />
             </Link>
