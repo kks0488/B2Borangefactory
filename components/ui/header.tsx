@@ -37,21 +37,30 @@ export function Header() {
     )}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
-          {/* 로고 */}
-          <Link href="/" className="flex-shrink-0">
+          
+          {/* 모바일: 햄버거 버튼 (왼쪽) */}
+          <button 
+            className="lg:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            {isMobileMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+
+          {/* 로고 - 모바일: 중앙, 데스크탑: 왼쪽 */}
+          <Link href="/" className="flex-shrink-0 lg:order-first">
             <Image 
               src="/img/logo.png" 
               alt="오렌지팩토리" 
-              width={80} 
-              height={20}
-              className="h-5 w-auto"
+              width={100} 
+              height={25}
+              className="h-6 w-auto"
               priority
             />
           </Link>
 
-          {/* 데스크탑 네비게이션 - 중앙 정렬 */}
+          {/* 데스크탑 네비게이션 - 중앙 */}
           <nav className="hidden lg:flex items-center justify-center flex-1 mx-8">
-            <div className="flex items-center gap-8">
+            <div className="flex items-center gap-6">
               {navLinks.map((link) => (
                 <Link 
                   key={link.href}
@@ -65,7 +74,13 @@ export function Header() {
           </nav>
 
           {/* 오른쪽 영역 */}
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-3">
+            {/* 모바일: 전화 아이콘만 */}
+            <a href="tel:010-4464-0345" className="md:hidden p-2 text-slate-700 hover:bg-slate-100 rounded-lg transition-colors">
+              <Phone className="w-5 h-5" />
+            </a>
+            
+            {/* 데스크탑: 전화번호 + CTA 버튼 */}
             <a href="tel:010-4464-0345" className="hidden md:flex items-center gap-2 text-slate-600 hover:text-[#FF8C00] transition-colors">
               <Phone className="w-4 h-4" />
               <span className="text-sm font-semibold">010-4464-0345</span>
@@ -73,20 +88,13 @@ export function Header() {
             
             <Button
               size="sm"
-              className="hidden sm:flex bg-[#FF8C00] hover:bg-[#E67E00] text-white rounded-lg font-bold px-5 h-10"
+              className="hidden sm:flex bg-[#FF8C00] hover:bg-[#E67E00] text-white rounded-lg font-bold px-4 h-9 text-sm"
               asChild
             >
-              <Link href="/contact" className="flex items-center gap-2">
-                무료 상담 <ArrowRight className="w-4 h-4" />
+              <Link href="/contact" className="flex items-center gap-1">
+                상담신청 <ArrowRight className="w-3.5 h-3.5" />
               </Link>
             </Button>
-
-            <button 
-              className="lg:hidden p-2 text-slate-900 hover:bg-slate-100 rounded-lg transition-colors"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            >
-              {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
           </div>
         </div>
       </div>
@@ -94,25 +102,21 @@ export function Header() {
       {/* 모바일 메뉴 */}
       {isMobileMenuOpen && (
         <div className="lg:hidden absolute top-full left-0 w-full bg-white border-b border-slate-200 shadow-xl">
-          <div className="max-w-7xl mx-auto px-4 py-6">
-            <nav className="flex flex-col gap-1">
+          <div className="max-w-7xl mx-auto px-4 py-4">
+            <nav className="flex flex-col">
               {navLinks.map((link) => (
                 <Link 
                   key={link.href}
                   href={link.href} 
-                  className="text-base font-semibold text-slate-900 hover:text-[#FF8C00] hover:bg-slate-50 transition-colors py-3 px-4 rounded-lg"
+                  className="text-base font-semibold text-slate-800 hover:text-[#FF8C00] hover:bg-slate-50 transition-colors py-3 px-3 rounded-lg border-b border-slate-100 last:border-b-0"
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
             </nav>
-            <div className="mt-6 pt-6 border-t border-slate-100 space-y-4">
-              <a href="tel:010-4464-0345" className="flex items-center gap-2 text-slate-600 px-4">
-                <Phone className="w-4 h-4 text-[#FF8C00]" />
-                <span className="font-semibold">010-4464-0345</span>
-              </a>
-              <Button className="w-full h-12 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-base rounded-lg" asChild>
+            <div className="mt-4 pt-4 border-t border-slate-100">
+              <Button className="w-full h-12 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold rounded-lg" asChild>
                 <Link href="/contact">무료 상담 신청</Link>
               </Button>
             </div>
