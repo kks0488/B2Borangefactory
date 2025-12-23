@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ModeToggle } from '@/components/ui/mode-toggle';
+
 import { 
   Menu, 
   X, 
@@ -77,7 +77,7 @@ export function Header() {
             </Link>
           </Button>
           
-          <ModeToggle />
+
 
           <button 
             className="lg:hidden p-1 text-brand-navy dark:text-white"
