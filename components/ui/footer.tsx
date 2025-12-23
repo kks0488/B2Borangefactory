@@ -30,9 +30,9 @@ export function Footer() {
               <Image 
                 src="/img/logo.png" 
                 alt="오렌지팩토리" 
-                width={70} 
-                height={18}
-                className="h-5 w-auto brightness-0 invert"
+                width={80} 
+                height={20}
+                className="h-4 w-auto brightness-0 invert"
               />
             </Link>
             <p className="text-slate-400 text-sm leading-relaxed">
