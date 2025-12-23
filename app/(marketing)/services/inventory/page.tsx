@@ -40,22 +40,32 @@ export default function InventoryPage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero */}
-      <section className="pt-20 pb-10 md:pt-28 md:pb-14 bg-slate-50">
-        <div className="section-container">
-          <p className="text-sm font-semibold text-[#FF8C00] mb-2">재고 정리 서비스</p>
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            재고 및 쇼핑몰 정리를<br />원하신다면?
+      {/* Hero - 임팩트 */}
+      <section className="relative min-h-[60vh] md:min-h-[50vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
+        <div className="section-container relative z-10 py-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/20 text-[#FF8C00] text-sm font-semibold mb-6">
+            <Package className="w-4 h-4" />
+            재고 정리 서비스
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            재고 정리<br />
+            <span className="text-[#FF8C00]">당일 현금화</span>
           </h1>
-          <p className="text-base text-slate-600 max-w-xl leading-relaxed">
-            과잉 재고로 인한 이익 손실, 보관비용 부담을 해결하고 현금 유동성을 확보하세요. 
+          <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed mb-8">
+            과잉 재고로 인한 이익 손실, 보관비용 부담을 해결하세요. 
             브랜드와 쇼핑몰까지 한번에 정리 가능합니다.
           </p>
+          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-6 rounded-lg font-semibold text-base" asChild>
+            <Link href="/contact" className="flex items-center gap-2">
+              무료 상담 신청 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
       {/* 핵심 3개 */}
-      <section className="py-10 md:py-14">
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">서비스 특징</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -71,7 +81,7 @@ export default function InventoryPage() {
       </section>
 
       {/* 절차 3단계 */}
-      <section className="py-10 md:py-14 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">진행 절차</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -88,8 +98,8 @@ export default function InventoryPage() {
         </div>
       </section>
 
-      {/* FAQ 2개 */}
-      <section className="py-10 md:py-14">
+      {/* FAQ */}
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">자주 묻는 질문</h2>
           <div className="space-y-3">
@@ -107,7 +117,7 @@ export default function InventoryPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 md:py-14 bg-slate-900">
+      <section className="py-12 md:py-16 bg-slate-900">
         <div className="section-container text-center">
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4">재고 정리 상담</h2>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">

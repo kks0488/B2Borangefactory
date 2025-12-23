@@ -26,6 +26,7 @@ export function Header() {
     { href: '/services/consignment', label: '위탁판매' },
     { href: '/services/production', label: '해외생산' },
     { href: '/services/sourcing', label: '상품소싱' },
+    { href: '/services/export', label: '해외수출' },
   ];
 
   return (

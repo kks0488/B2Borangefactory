@@ -40,22 +40,32 @@ export default function ProductionPage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero */}
-      <section className="pt-20 pb-10 md:pt-28 md:pb-14 bg-slate-50">
-        <div className="section-container">
-          <p className="text-sm font-semibold text-[#FF8C00] mb-2">의류 해외 생산</p>
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            고품질 의류를<br />저렴하게 생산하고 싶다면?
+      {/* Hero - 임팩트 */}
+      <section className="relative min-h-[60vh] md:min-h-[50vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
+        <div className="section-container relative z-10 py-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/20 text-[#FF8C00] text-sm font-semibold mb-6">
+            <Factory className="w-4 h-4" />
+            의류 해외 생산
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            명품 원단으로<br />
+            <span className="text-[#FF8C00]">소량 생산</span>
           </h1>
-          <p className="text-base text-slate-600 max-w-xl leading-relaxed">
-            유명 브랜드의 잔여원단을 활용하여 원가를 크게 절감하면서도 
-            수준 높은 상품을 해외에서 생산할 수 있습니다.
+          <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed mb-8">
+            유명 브랜드의 잔여원단을 활용하여 원가를 절감하세요. 
+            소량으로도 고품질 상품을 해외에서 생산할 수 있습니다.
           </p>
+          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-6 rounded-lg font-semibold text-base" asChild>
+            <Link href="/contact" className="flex items-center gap-2">
+              생산 상담하기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
       {/* 핵심 3개 */}
-      <section className="py-10 md:py-14">
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">서비스 특징</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -71,7 +81,7 @@ export default function ProductionPage() {
       </section>
 
       {/* 절차 3단계 */}
-      <section className="py-10 md:py-14 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">진행 절차</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -88,8 +98,8 @@ export default function ProductionPage() {
         </div>
       </section>
 
-      {/* FAQ 2개 */}
-      <section className="py-10 md:py-14">
+      {/* FAQ */}
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">자주 묻는 질문</h2>
           <div className="space-y-3">
@@ -107,7 +117,7 @@ export default function ProductionPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 md:py-14 bg-slate-900">
+      <section className="py-12 md:py-16 bg-slate-900">
         <div className="section-container text-center">
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4">해외 생산 상담</h2>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">

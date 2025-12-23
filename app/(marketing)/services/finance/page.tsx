@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, TrendingUp, Shield, Phone, Mail, ChevronDown } from 'lucide-react';
+import { ArrowRight, Clock, TrendingUp, Shield, Phone, Mail, ChevronDown, Landmark } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '동산 담보자금 | 오렌지팩토리',
@@ -40,22 +40,32 @@ export default function FinancePage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero */}
-      <section className="pt-20 pb-10 md:pt-28 md:pb-14 bg-slate-50">
-        <div className="section-container">
-          <p className="text-sm font-semibold text-[#FF8C00] mb-2">동산 담보자금</p>
-          <h1 className="text-3xl md:text-4xl font-black text-slate-900 mb-4">
-            재고를 담보로<br />자금이 필요하신가요?
+      {/* Hero - 임팩트 */}
+      <section className="relative min-h-[60vh] md:min-h-[50vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+        <div className="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
+        <div className="section-container relative z-10 py-20">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/20 text-[#FF8C00] text-sm font-semibold mb-6">
+            <Landmark className="w-4 h-4" />
+            동산 담보자금
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
+            재고가 곧<br />
+            <span className="text-[#FF8C00]">현금입니다</span>
           </h1>
-          <p className="text-base text-slate-600 max-w-xl leading-relaxed">
-            홈쇼핑 스케줄 차질, 긴급 생산비용 확보 등 예상치 못한 자금 수요에 대응하세요. 
-            재고자산을 기반으로 신속한 현금 확보가 가능합니다.
+          <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed mb-8">
+            홈쇼핑 스케줄 차질, 긴급 생산비용 확보 등 예상치 못한 상황에 대응하세요. 
+            재고자산으로 신속하게 자금을 확보합니다.
           </p>
+          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-6 rounded-lg font-semibold text-base" asChild>
+            <Link href="/contact" className="flex items-center gap-2">
+              자금 상담하기 <ArrowRight className="w-4 h-4" />
+            </Link>
+          </Button>
         </div>
       </section>
 
       {/* 핵심 3개 */}
-      <section className="py-10 md:py-14">
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">서비스 특징</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -71,7 +81,7 @@ export default function FinancePage() {
       </section>
 
       {/* 절차 3단계 */}
-      <section className="py-10 md:py-14 bg-slate-50">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">진행 절차</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -88,8 +98,8 @@ export default function FinancePage() {
         </div>
       </section>
 
-      {/* FAQ 2개 */}
-      <section className="py-10 md:py-14">
+      {/* FAQ */}
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">자주 묻는 질문</h2>
           <div className="space-y-3">
@@ -107,7 +117,7 @@ export default function FinancePage() {
       </section>
 
       {/* CTA */}
-      <section className="py-10 md:py-14 bg-slate-900">
+      <section className="py-12 md:py-16 bg-slate-900">
         <div className="section-container text-center">
           <h2 className="text-xl md:text-2xl font-bold text-white mb-4">담보자금 상담</h2>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
