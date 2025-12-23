@@ -98,7 +98,7 @@ export default function LandingPage() {
           {/* 신뢰 지표 */}
           <div className="flex items-center gap-6 pt-10 border-t border-slate-200">
             <div>
-              <p className="text-3xl font-black text-[#FF8C00]">30+</p>
+              <p className="text-3xl font-black text-[#FF8C00]">40+</p>
               <p className="text-sm text-slate-500">년 경력</p>
             </div>
             <div className="w-px h-10 bg-slate-200"></div>
