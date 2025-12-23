@@ -6,28 +6,26 @@ export function Footer() {
   const currentYear = new Date().getFullYear();
 
   const services = [
-    { label: '재고매매', href: '/services/inventory' },
-    { label: '동산담보', href: '/services/finance' },
-    { label: '위탁판매', href: '/services/consignment' },
-    { label: '해외생산', href: '/services/production' },
-    { label: '상품소싱', href: '/services/sourcing' },
-    { label: '해외수출', href: '/services/export' },
+    { label: '재고매매', href: '/ko/services/inventory' },
+    { label: '동산담보', href: '/ko/services/finance' },
+    { label: '위탁판매', href: '/ko/services/consignment' },
+    { label: '해외생산', href: '/ko/services/production' },
+    { label: '상품소싱', href: '/ko/services/sourcing' },
+    { label: '해외수출', href: '/ko/services/export' },
   ];
 
   const company = [
-    { label: '회사소개', href: '/about' },
-    { label: '문의하기', href: '/contact' },
+    { label: '회사소개', href: '/ko/about' },
+    { label: '문의하기', href: '/ko/contact' },
   ];
 
   return (
     <footer className="bg-white border-t border-slate-200">
       <div className="section-container py-10">
-        {/* 상단: 로고 + 네비게이션 */}
         <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-8">
           
-          {/* 로고 및 슬로건 */}
           <div className="flex-shrink-0">
-            <Link href="/" className="inline-block mb-3">
+            <Link href="/ko" className="inline-block mb-3">
               <Image 
                 src="/img/logo.png" 
                 alt="오렌지팩토리" 
@@ -41,9 +39,7 @@ export function Footer() {
             </p>
           </div>
 
-          {/* 네비게이션 */}
           <div className="flex flex-wrap gap-x-12 gap-y-6">
-            {/* 서비스 */}
             <div>
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">서비스</h3>
               <ul className="space-y-2">
@@ -57,7 +53,6 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* 회사 */}
             <div>
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">회사</h3>
               <ul className="space-y-2">
@@ -71,7 +66,6 @@ export function Footer() {
               </ul>
             </div>
 
-            {/* 연락처 */}
             <div>
               <h3 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">연락처</h3>
               <div className="space-y-2">
@@ -88,7 +82,6 @@ export function Footer() {
           </div>
         </div>
 
-        {/* 하단 바 */}
         <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
           <p className="text-xs text-slate-400">
             © {currentYear} 오렌지팩토리. All rights reserved.

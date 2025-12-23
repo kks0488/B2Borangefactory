@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, ArrowRight, Phone, Globe } from 'lucide-react';
+import { Menu, X, Phone, Globe } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -20,13 +20,13 @@ export function Header() {
   }, []);
 
   const navLinks = [
-    { href: '/about', label: '회사소개' },
-    { href: '/services/inventory', label: '재고매매' },
-    { href: '/services/finance', label: '동산담보' },
-    { href: '/services/consignment', label: '위탁판매' },
-    { href: '/services/production', label: '해외생산' },
-    { href: '/services/sourcing', label: '상품소싱' },
-    { href: '/services/export', label: '해외수출' },
+    { href: '/ko/about', label: '회사소개' },
+    { href: '/ko/services/inventory', label: '재고매매' },
+    { href: '/ko/services/finance', label: '동산담보' },
+    { href: '/ko/services/consignment', label: '위탁판매' },
+    { href: '/ko/services/production', label: '해외생산' },
+    { href: '/ko/services/sourcing', label: '상품소싱' },
+    { href: '/ko/services/export', label: '해외수출' },
   ];
 
   return (
@@ -47,7 +47,7 @@ export function Header() {
             {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}
           </button>
 
-          <Link href="/" className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0">
+          <Link href="/ko" className="absolute left-1/2 -translate-x-1/2 lg:relative lg:left-0 lg:translate-x-0">
             <Image 
               src="/img/logo.png" 
               alt="오렌지팩토리" 
@@ -87,7 +87,7 @@ export function Header() {
               className="hidden sm:flex bg-[#FF8C00] hover:bg-[#E67E00] text-white rounded-md font-semibold px-3 h-8 text-xs"
               asChild
             >
-              <Link href="/contact">상담신청</Link>
+              <Link href="/ko/contact">상담신청</Link>
             </Button>
           </div>
         </div>
@@ -111,7 +111,7 @@ export function Header() {
             </nav>
             <div className="mt-3 pt-3 border-t border-slate-100">
               <Button className="w-full h-10 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-semibold text-sm rounded-lg" asChild>
-                <Link href="/contact">무료 상담 신청</Link>
+                <Link href="/ko/contact">무료 상담 신청</Link>
               </Button>
             </div>
           </div>
