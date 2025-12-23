@@ -12,28 +12,25 @@ export default function ContactPage() {
     <div className="flex flex-col w-full bg-white">
       
       {/* Hero */}
-      <section className="pt-28 pb-12 md:pt-36 md:pb-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-[#FF8C00]"></span>
-              <span className="text-sm font-bold text-[#FF8C00]">문의하기</span>
-            </div>
-            <h1 className="text-3xl md:text-5xl font-black text-slate-900 mb-6 leading-tight">
-              비즈니스 상담<br />
-              <span className="text-slate-400">신청하기</span>
-            </h1>
-            <p className="text-lg text-slate-600 leading-relaxed">
-              재고 솔루션의 표준, 오렌지팩토리가 귀사의 문제를 즉각적으로 진단해 드립니다. 
-              모든 문의 사항은 철저한 기밀이 유지됩니다.
-            </p>
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div className="section-container">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-12 bg-[#FF8C00]"></span>
+            <span className="text-sm font-bold tracking-widest text-[#FF8C00]">문의하기</span>
           </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+            비즈니스 상담 신청하기
+          </h1>
+          <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
+            재고 솔루션의 표준, 오렌지팩토리가 귀사의 문제를 즉각적으로 진단해 드립니다. 
+            모든 문의 사항은 철저한 기밀이 유지됩니다.
+          </p>
         </div>
       </section>
 
       {/* 연락처 및 폼 */}
-      <section className="py-12 md:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-12 md:py-16 bg-slate-50">
+        <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             
             {/* 왼쪽: 연락처 정보 */}

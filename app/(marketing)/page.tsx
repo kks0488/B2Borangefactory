@@ -70,49 +70,46 @@ export default function LandingPage() {
   return (
     <div className="flex flex-col w-full bg-white">
       
-      {/* HERO - 모바일 풀스크린 */}
-      <section className="min-h-[calc(100vh-48px)] flex items-center py-12">
+      {/* HERO - 다른 서비스 페이지와 동일한 스타일 */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="section-container">
-          <div className="max-w-2xl">
-            <div className="flex items-center gap-3 mb-6">
-              <span className="h-px w-12 bg-[#FF8C00]"></span>
-              <span className="text-sm font-bold tracking-widest text-[#FF8C00]">Since 1985</span>
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-12 bg-[#FF8C00]"></span>
+            <span className="text-sm font-bold tracking-widest text-[#FF8C00]">Since 1985</span>
+          </div>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
+            대한민국 재고처리 NO.1
+          </h1>
+          <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed">
+            30년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다. 
+            당일 현금화부터 브랜드 양도까지, 한번에.
+          </p>
+          <div className="flex flex-col sm:flex-row gap-3 mb-10">
+            <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-14 px-8 rounded-lg font-semibold text-base" asChild>
+              <Link href="/contact" className="flex items-center gap-2">
+                무료 상담 신청 <ArrowRight className="w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="outline" className="h-14 px-8 border-slate-300 rounded-lg font-semibold text-base" asChild>
+              <Link href="/about">회사소개</Link>
+            </Button>
+          </div>
+          
+          {/* 신뢰 지표 */}
+          <div className="flex items-center gap-6 pt-10 border-t border-slate-200">
+            <div>
+              <p className="text-3xl font-black text-[#FF8C00]">30+</p>
+              <p className="text-sm text-slate-500">년 경력</p>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 leading-tight tracking-tight">
-              대한민국<br />
-              <span className="text-[#FF8C00]">재고처리 NO.1</span>
-            </h1>
-            <p className="text-lg md:text-xl text-slate-600 mb-8 leading-relaxed">
-              30년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다. 
-              당일 현금화부터 브랜드 양도까지, 한번에.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-3">
-              <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-14 px-8 rounded-lg font-semibold text-base" asChild>
-                <Link href="/contact" className="flex items-center gap-2">
-                  무료 상담 신청 <ArrowRight className="w-5 h-5" />
-                </Link>
-              </Button>
-              <Button variant="outline" className="h-14 px-8 border-slate-300 rounded-lg font-semibold text-base" asChild>
-                <Link href="/about">회사소개</Link>
-              </Button>
+            <div className="w-px h-10 bg-slate-200"></div>
+            <div>
+              <p className="text-3xl font-black text-[#FF8C00]">1,200+</p>
+              <p className="text-sm text-slate-500">협력 파트너사</p>
             </div>
-            
-            {/* 신뢰 지표 */}
-            <div className="flex items-center gap-6 mt-10 pt-10 border-t border-slate-200">
-              <div>
-                <p className="text-3xl font-black text-[#FF8C00]">30+</p>
-                <p className="text-sm text-slate-500">년 경력</p>
-              </div>
-              <div className="w-px h-10 bg-slate-200"></div>
-              <div>
-                <p className="text-3xl font-black text-[#FF8C00]">1,200+</p>
-                <p className="text-sm text-slate-500">협력 파트너사</p>
-              </div>
-              <div className="w-px h-10 bg-slate-200"></div>
-              <div>
-                <p className="text-3xl font-black text-[#FF8C00]">24h</p>
-                <p className="text-sm text-slate-500">당일 현금화</p>
-              </div>
+            <div className="w-px h-10 bg-slate-200"></div>
+            <div>
+              <p className="text-3xl font-black text-[#FF8C00]">24h</p>
+              <p className="text-sm text-slate-500">당일 현금화</p>
             </div>
           </div>
         </div>
