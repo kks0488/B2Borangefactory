@@ -42,21 +42,22 @@ export default function ContactPage() {
             </div>
             <div className="p-6 md:p-10 bg-white rounded-2xl border border-slate-200">
               <h2 className="text-xl font-bold text-slate-900 mb-6">Send Inquiry</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
+                <input type="hidden" name="_language" value="en" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Company</label><input type="text" placeholder="Company name" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Name</label><input type="text" placeholder="Your name" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Company</label><input type="text" name="company" placeholder="Company name" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Name</label><input type="text" name="name" placeholder="Your name" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Email</label><input type="email" placeholder="your@email.com" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Country</label><input type="text" placeholder="Your country" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Email</label><input type="email" name="email" placeholder="your@email.com" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Country</label><input type="text" name="country" placeholder="Your country" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                 </div>
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">Interest</label>
-                  <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]">
-                    <option>Select interest</option><option>Wholesale</option><option>Inventory</option><option>Export</option><option>Partnership</option>
+                  <select name="interest" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]">
+                    <option value="">Select interest</option><option value="Wholesale">Wholesale</option><option value="Inventory">Inventory</option><option value="Export">Export</option><option value="Partnership">Partnership</option>
                   </select>
                 </div>
-                <div><label className="block text-sm font-semibold text-slate-700 mb-2">Message</label><textarea placeholder="Tell us about your needs" rows={4} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
+                <div><label className="block text-sm font-semibold text-slate-700 mb-2">Message</label><textarea name="message" placeholder="Tell us about your needs" rows={4} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
                 <Button type="submit" className="w-full h-14 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-lg rounded-lg">Send Inquiry</Button>
               </form>
             </div>

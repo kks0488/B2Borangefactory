@@ -85,13 +85,16 @@ export default function ContactPage() {
             {/* 오른쪽: 상담 폼 */}
             <div className="p-6 md:p-10 bg-slate-50 rounded-2xl">
               <h2 className="text-xl font-bold text-slate-900 mb-6">상담 신청</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
+                <input type="hidden" name="_language" value="ko" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">회사명</label>
                     <input 
                       type="text" 
+                      name="company"
                       placeholder="회사명 또는 브랜드명" 
+                      required
                       className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all"
                     />
                   </div>
@@ -99,7 +102,9 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2">담당자명</label>
                     <input 
                       type="text" 
+                      name="name"
                       placeholder="담당자 성함" 
+                      required
                       className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all"
                     />
                   </div>
@@ -110,19 +115,21 @@ export default function ContactPage() {
                     <label className="block text-sm font-semibold text-slate-700 mb-2">연락처</label>
                     <input 
                       type="tel" 
+                      name="phone"
                       placeholder="휴대폰 번호" 
+                      required
                       className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all"
                     />
                   </div>
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">관심 서비스</label>
-                    <select className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all">
-                      <option>서비스를 선택하세요</option>
-                      <option>재고매매 및 브랜드 양도</option>
-                      <option>동산 담보자금</option>
-                      <option>오프라인 위탁판매</option>
-                      <option>의류 해외 생산</option>
-                      <option>상품 소싱 및 도매</option>
+                    <select name="interest" className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all">
+                      <option value="">서비스를 선택하세요</option>
+                      <option value="재고매매 및 브랜드 양도">재고매매 및 브랜드 양도</option>
+                      <option value="동산 담보자금">동산 담보자금</option>
+                      <option value="오프라인 위탁판매">오프라인 위탁판매</option>
+                      <option value="의류 해외 생산">의류 해외 생산</option>
+                      <option value="상품 소싱 및 도매">상품 소싱 및 도매</option>
                     </select>
                   </div>
                 </div>
@@ -130,8 +137,10 @@ export default function ContactPage() {
                 <div>
                   <label className="block text-sm font-semibold text-slate-700 mb-2">문의 내용</label>
                   <textarea 
+                    name="message"
                     placeholder="상담 받고 싶은 내용을 자유롭게 적어주세요" 
                     rows={4} 
+                    required
                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all resize-none"
                   />
                 </div>

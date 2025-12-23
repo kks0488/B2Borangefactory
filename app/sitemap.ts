@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next';
 
 const sitemap = (): MetadataRoute.Sitemap => {
-  const baseUrl = 'https://orangefactory.kr';
+  const baseUrl = 'https://orangefactory.biz';
   const lastModified = new Date();
 
   // 영어 페이지 (기본)

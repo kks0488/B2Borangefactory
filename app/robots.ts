@@ -9,7 +9,7 @@ const robots = (): MetadataRoute.Robots => {
         disallow: ['/api/', '/dashboard/', '/auth/', '/admin/'],
       },
     ],
-    sitemap: 'https://orangefactory.kr/sitemap.xml',
+    sitemap: 'https://orangefactory.biz/sitemap.xml',
   };
 };
 

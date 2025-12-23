@@ -42,21 +42,22 @@ export default function ContactPage() {
             </div>
             <div className="p-6 md:p-10 bg-white rounded-2xl border border-slate-200">
               <h2 className="text-xl font-bold text-slate-900 mb-6">お問い合わせフォーム</h2>
-              <form className="space-y-6">
+              <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
+                <input type="hidden" name="_language" value="ja" />
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">会社名</label><input type="text" placeholder="会社名" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">お名前</label><input type="text" placeholder="お名前" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">会社名</label><input type="text" name="company" placeholder="会社名" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">お名前</label><input type="text" name="name" placeholder="お名前" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">メールアドレス</label><input type="email" placeholder="example@email.com" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
-                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">国</label><input type="text" placeholder="日本" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">メールアドレス</label><input type="email" name="email" placeholder="example@email.com" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">国</label><input type="text" name="country" placeholder="日本" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                 </div>
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">ご関心のサービス</label>
-                  <select className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]">
-                    <option>お選びください</option><option>卸売り仕入れ</option><option>ブランド在庫</option><option>輸出サービス</option><option>パートナーシップ</option>
+                  <select name="interest" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]">
+                    <option value="">お選びください</option><option value="卸売り仕入れ">卸売り仕入れ</option><option value="ブランド在庫">ブランド在庫</option><option value="輸出サービス">輸出サービス</option><option value="パートナーシップ">パートナーシップ</option>
                   </select>
                 </div>
-                <div><label className="block text-sm font-semibold text-slate-700 mb-2">メッセージ</label><textarea placeholder="ご要望をお聞かせください" rows={4} className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
+                <div><label className="block text-sm font-semibold text-slate-700 mb-2">メッセージ</label><textarea name="message" placeholder="ご要望をお聞かせください" rows={4} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
                 <Button type="submit" className="w-full h-14 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-lg rounded-lg">送信する</Button>
               </form>
             </div>
