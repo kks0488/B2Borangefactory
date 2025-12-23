@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오렌지팩토리 | 대한민국 NO.1 패션 재고 솔루션</title>
+    <meta name="description" content="1985년 설립된 오렌지팩토리는 패션 브랜드의 과잉 재고 처리, 브랜드 양도양수, 동산 담보자금, 위탁판매 등 다양한 솔루션을 제공합니다.">
+    <meta name="keywords" content="오렌지팩토리, 땡처리, 재고처리, 패션 재고, 브랜드 양도양수, 동산 담보, 위탁판매, 의류 생산">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        /* 인덱스 페이지 추가 스타일 */
+        .stats-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            text-align: center;
+            margin: 3rem 0;
+        }
+        
+        .stat-item {
+            background-color: var(--light-color);
+            padding: 2rem;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+            height: 100%; /* 높이 일정하게 유지 */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .stat-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .stat-title {
+            color: var(--secondary-color);
+            font-weight: 500;
+        }
+        
+        .partner-logos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+        
+        .partner-logo {
+            height: 60px;
+            width: 120px;
+            background-color: var(--light-color);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .partner-logo:hover {
+            transform: scale(1.05);
+            box-shadow: var(--shadow);
+        }
+        
+        .brand-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="260" height="45">
+                </a>
+                <ul>
+                    <li><a href="index.html" class="active">메인</a></li>
+                    <li><a href="about.html">소개</a></li>
+                    <li><a href="services.html">서비스</a></li>
+                    <li><a href="success.html">성공사례</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <div class="hero-badge">
+                        <span>1985년부터 이어온 전통</span>
+                        <span class="divider"></span>
+                        <span>대한민국 NO.1 땡처리</span>
+                    </div>
+                    <h1>패션 재고 관리를 위한<br>완벽한 솔루션</h1>
+                    <p>30년 이상의 전문성과 노하우로 기업의 재고 문제를 해결해 드립니다.<br>빠른 현금화, 브랜드 가치 보호, 맞춤형 재고 관리까지 오렌지팩토리와 함께하세요.</p>
+                    <div class="hero-buttons">
+                        <a href="contact.html" class="btn">
+                            <i class="fas fa-paper-plane"></i> 무료 상담 신청
+                        </a>
+                        <a href="services.html" class="btn btn-outline">
+                            <i class="fas fa-info-circle"></i> 서비스 알아보기
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number">1,200+</span>
+                            <span class="stat-label">협력 브랜드</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">30년+</span>
+                            <span class="stat-label">업계 경력</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number">24시간</span>
+                            <span class="stat-label">빠른 현금화</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-pattern"></div>
+            <div class="hero-gradient"></div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-badge">SERVICES</span>
+                    <h2>오렌지팩토리 서비스</h2>
+                    <p class="section-description">모든 패션 기업의 재고 문제 해결을 위한 맞춤형 솔루션을 제공합니다</p>
+                </div>
+                
+                <div class="service-grid fade-in delay-2">
+                    <div class="card">
+                        <h3><i class="fas fa-boxes-stacked"></i> 재고 매입 및 브랜드 양도양수</h3>
+                        <p>기업의 과잉/악성 재고를 시세보다 높은 가격에 일괄 매입하고, 쇼핑몰 및 브랜드까지 함께 매각하여 경영 부담을 한번에 해결합니다. 24시간 내 100% 현금 지급으로 유동성을 즉시 확보할 수 있습니다.</p>
+                        <a href="services.html#inventory" class="btn">자세히 알아보기</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-money-bill-wave"></i> 동산 담보 자금</h3>
+                        <p>보유 재고를 담보로 긴급 운영 자금을 확보할 수 있는 서비스입니다. 홈쇼핑 스케줄 차질, 생산비용 확보 등 예상치 못한 자금 수요에 유연하게 대응하며, 기업 상황에 맞는 맞춤형 상환 계획을 제공합니다.</p>
+                        <a href="services.html#finance" class="btn">자세히 알아보기</a>
+                    </div>
+                    
+                    <div class="card">
+                        <h3><i class="fas fa-store"></i> 오프라인 위탁 판매</h3>
+                        <p>온라인 가격 노출 없이 브랜드 가치를 지키며 재고를 판매합니다. 백화점, 아울렛, 폐쇄몰 등 다양한 오프라인 채널을 통해 기존 고객층과 겹치지 않게 판매하여 브랜드 이미지 손상 없이 매출을 증대시킵니다.</p>
+                        <a href="services.html#consignment" class="btn">자세히 알아보기</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-pattern">
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-badge">BENEFITS</span>
+                    <h2>왜 오렌지팩토리인가?</h2>
+                    <p class="section-description">오렌지팩토리만의 특별한 가치를 경험해보세요</p>
+                </div>
+                
+                <div class="features-grid fade-in delay-2">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-trend-up"></i>
+                        </div>
+                        <h3>24시간 현금화</h3>
+                        <p>매입 결정 후 24시간 이내 100% 현금으로 지급하여 기업의 자금 유동성을 즉시 확보할 수 있습니다.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <h3>공정한 가격 평가</h3>
+                        <p>30년 노하우와 시장 데이터 분석을 통한 공정한 가격 평가로 시장 평균보다 10-15% 높은 매입가를 제시합니다.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <h3>브랜드 보호 시스템</h3>
+                        <p>귀사의 브랜드 가치를 손상시키지 않도록 철저한 유통 관리 시스템을 운영합니다.</p>
+                    </div>
+                    
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-ramp-box"></i>
+                        </div>
+                        <h3>무료 물류 서비스</h3>
+                        <p>매입 진행 시 물류 이동, 상품 포장, 운송 등의 서비스를 무료로 제공하여 월 평균 120만원 이상의 비용을 절감합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header text-center fade-in">
+                    <span class="section-badge">SUCCESS STORIES</span>
+                    <h2>성공 사례</h2>
+                    <p class="section-description">오렌지팩토리와 함께 성공적인 재고 관리를 이룬 기업들의 이야기</p>
+                </div>
+                
+                <div class="testimonial-slider fade-in delay-2">
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"홈쇼핑 방송이 잘 안 돼서 재고가 많이 남더라고요. 오렌지팩토리 덕분에 망설임 없이 바로 현금으로 바꿀 수 있었습니다. 하루만에 모든 거래가 완료되어 신속하게 신상품 생산에 투자할 수 있었습니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>A 브랜드 대표이사</h4>
+                                <p>국내 중견 스포츠웨어 브랜드</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-result">
+                            <span>35억원 상당의 재고를 2일 만에 매입 완료</span>
+                        </div>
+                    </div>
+                    
+                    <div class="testimonial-card">
+                        <div class="testimonial-content">
+                            <p>"무신사에 입점만 하면 잘 팔릴 줄 알았는데.. 생각만큼 팔리지 않아 고민이었던 재고를 오프라인 채널을 통해 기존 고객과 겹치지 않게 브랜드 이미지를 보호하면서도 매출을 올릴 수 있었습니다."</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <div class="author-info">
+                                <h4>B 브랜드 매니저</h4>
+                                <p>20대 타겟 스케이트 스트릿 브랜드</p>
+                            </div>
+                        </div>
+                        <div class="testimonial-result">
+                            <span>온라인 가격 노출 없이 이월 상품 90% 판매 완료</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center fade-in delay-3">
+                    <a href="success.html" class="btn btn-outline">모든 성공 사례 보기</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container">
+                <div class="cta-content fade-in">
+                    <h2>지금 바로 재고 문제 해결을 시작하세요</h2>
+                    <p>대한민국 NO.1 땡처리 전문 오렌지팩토리와 함께 재고 문제를 해결하고 비즈니스 성장을 경험하세요.</p>
+                    <div class="cta-buttons">
+                        <a href="contact.html" class="btn">
+                            <i class="fas fa-paper-plane"></i> 무료 상담 신청하기
+                        </a>
+                        <a href="tel:010-4464-0345" class="btn btn-outline">
+                            <i class="fas fa-phone"></i> 전화 상담 (010-4464-0345)
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+                <div>
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="220" height="40" style="margin-bottom: 1rem;">
+                    <p>대한민국 No.1 패션 재고 솔루션</p>
+                    <p><strong>재고처리 NO.1 • 땡처리 NO.1</strong></p>
+                </div>
+                <div>
+                    <h3>빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="about.html">회사 소개</a>
+                        <a href="services.html">서비스 안내</a>
+                        <a href="success.html">성공 사례</a>
+                        <a href="contact.html">문의하기</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>연락처</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <strong>김경수 이사: 010-4464-0345</strong></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:orangefactory@kakao.com">orangefactory@kakao.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="copyright">&copy; 2025 OrangeFactory. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 간단한 애니메이션 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 스크롤 애니메이션
+            const fadeElems = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElems.forEach(elem => {
+                elem.style.opacity = '0';
+                elem.style.transform = 'translateY(20px)';
+                elem.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(elem);
+            });
+        });
+    </script>
+
+</body>
+</html>

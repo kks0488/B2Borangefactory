@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오렌지팩토리 서비스 - 대한민국 NO.1 땡처리 패션 재고 솔루션</title>
+    <meta name="description" content="오렌지팩토리의 재고처리, 땡처리, 브랜드 양도양수, 동산 담보자금, 위탁판매, 의류 해외생산, 상품 소싱 서비스를 소개합니다.">
+    <meta name="keywords" content="오렌지팩토리, 땡처리, 재고처리, 패션 재고, 브랜드 양도양수, 동산 담보, 위탁판매, 의류 생산">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        /* 서비스 페이지 특별 스타일 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .service-card {
+            position: relative;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            background-color: var(--light-color);
+            border: 1px solid var(--border-color);
+            padding: 2rem;
+            text-align: center;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .service-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            position: relative;
+        }
+        
+        .service-card h3 {
+            margin-top: 0;
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .service-card p {
+            color: var(--secondary-color);
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+        
+        .service-card .btn {
+            margin-top: auto;
+        }
+        
+        .features-list {
+            list-style: none;
+            padding: 0;
+            margin: 2rem 0;
+        }
+        
+        .features-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            padding: 1.2rem;
+            border-radius: 0.5rem;
+            background-color: var(--light-color);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+        }
+        
+        .features-list li:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .feature-icon {
+            min-width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background-color: var(--primary-light);
+            color: var(--primary-color);
+            font-size: 1.5rem;
+        }
+        
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 2rem 0;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+        
+        .pricing-table thead {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .pricing-table th, .pricing-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+        
+        .pricing-table tbody tr {
+            background-color: var(--light-color);
+            transition: var(--transition);
+        }
+        
+        .pricing-table tbody tr:hover {
+            background-color: var(--primary-light);
+            color: var(--secondary-color);
+        }
+        
+        .pricing-table td:last-child {
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+        
+        .steps-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin: 2rem 0;
+            gap: 1rem;
+        }
+        
+        .step-item {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            position: relative;
+            padding: 1.5rem;
+            background-color: var(--light-color);
+            border: 1px solid var(--border-color);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+        
+        .step-item:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .step-number {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .step-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 0.5rem;
+        }
+        
+        .step-item p {
+            color: var(--secondary-color);
+            opacity: 0.8;
+        }
+        
+        @media (max-width: 768px) {
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .pricing-table {
+                display: block;
+                overflow-x: auto;
+            }
+        }
+
+        /* 땡처리 NO.1 배지 스타일 */
+        .brand-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="260" height="45">
+                </a>
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a href="about.html">소개</a></li>
+                    <li><a href="services.html" class="active">서비스</a></li>
+                    <li><a href="success.html">성공사례</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>오렌지팩토리 서비스</h1>
+                    <p>대한민국 NO.1 땡처리 전문기업이 30년 노하우로 재고 문제 해결을 위한 맞춤형 솔루션을 제공합니다.</p>
+                    <div class="brand-badge">재고처리 NO.1</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-intro">
+            <div class="container">
+                <h2 class="text-center fade-in">주요 서비스</h2>
+                <p class="text-center fade-in delay-1">오렌지팩토리는 패션 기업들을 위한 다양한 재고 관리 및 유통 솔루션을 제공합니다.</p>
+
+                <div class="service-grid">
+                    <div class="service-card fade-in delay-1" id="inventory">
+                        <div class="service-icon">
+                            <i class="fas fa-boxes-stacked"></i>
+                        </div>
+                        <h3>재고 매매 및 브랜드 양도양수</h3>
+                        <p>기업의 과잉/악성 재고를 시세보다 높은 가격에 일괄 매입하고, 쇼핑몰 및 브랜드까지 함께 매각하여 경영 부담을 한번에 해결합니다. 24시간 내 100% 현금 지급으로 유동성을 즉시 확보할 수 있습니다.</p>
+                        <a href="contact.html" class="btn">상담 신청</a>
+                    </div>
+
+                    <div class="service-card fade-in delay-2" id="finance">
+                        <div class="service-icon">
+                            <i class="fas fa-money-bill-wave"></i>
+                        </div>
+                        <h3>동산 담보 자금</h3>
+                        <p>보유 재고를 담보로 긴급 운영 자금을 확보할 수 있는 서비스입니다. 홈쇼핑 스케줄 차질, 생산비용 확보 등 예상치 못한 자금 수요에 유연하게 대응하며, 기업 상황에 맞는 맞춤형 상환 계획을 제공합니다.</p>
+                        <a href="contact.html" class="btn">상담 신청</a>
+                    </div>
+
+                    <div class="service-card fade-in delay-3" id="consignment">
+                        <div class="service-icon">
+                            <i class="fas fa-store"></i>
+                        </div>
+                        <h3>오프라인 위탁 판매</h3>
+                        <p>온라인 가격 노출 없이 브랜드 가치를 지키며 재고를 판매합니다. 백화점, 아울렛, 폐쇄몰 등 다양한 오프라인 채널을 통해 기존 고객층과 겹치지 않게 판매하여 브랜드 이미지 손상 없이 매출을 증대시킵니다.</p>
+                        <a href="contact.html" class="btn">상담 신청</a>
+                    </div>
+
+                    <div class="service-card fade-in delay-4" id="production">
+                        <div class="service-icon">
+                            <i class="fas fa-industry"></i>
+                        </div>
+                        <h3>의류 해외 생산</h3>
+                        <p>유명 브랜드의 잔여 원단을 활용하여 고품질 의류를 저렴하게 생산합니다. 국내 생산 대비 30-50% 낮은 비용으로 동일한 퀄리티를 유지하며, 샘플만 가져오셔도 기획부터 생산까지 원스톱으로 지원합니다.</p>
+                        <a href="contact.html" class="btn">상담 신청</a>
+                    </div>
+
+                    <div class="service-card fade-in delay-5" id="sourcing">
+                        <div class="service-icon">
+                            <i class="fas fa-search-dollar"></i>
+                        </div>
+                        <h3>상품 소싱 및 도매</h3>
+                        <p>경쟁력 있는 이월 상품, 브랜드 상품을 발굴하고 연결합니다. 30년간 구축한 네트워크를 통해 독점 거래를 확보하여 최저가 경쟁을 피하고, 고객사 이미지에 맞는 상품을 소싱하여 수익성을 높입니다.</p>
+                        <a href="contact.html" class="btn">상담 신청</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="features">
+            <div class="container">
+                <h2 class="text-center fade-in">오렌지팩토리만의 특별한 혜택</h2>
+                
+                <ul class="features-list">
+                    <li class="fade-in delay-1">
+                        <div class="feature-icon">
+                            <i class="fas fa-money-bill-trend-up"></i>
+                        </div>
+                        <div>
+                            <h3>현금 즉시 지급</h3>
+                            <p>매입 결정 후 24시간 이내에 100% 현금으로 지급하여 기업의 자금 유동성을 즉시 확보할 수 있습니다. 긴급한 자금 수요에 신속하게 대응합니다.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="fade-in delay-2">
+                        <div class="feature-icon">
+                            <i class="fas fa-calculator"></i>
+                        </div>
+                        <div>
+                            <h3>공정한 가격 평가</h3>
+                            <p>30년 노하우와 시장 데이터 분석을 통한 공정한 가격 평가로 최대한의 가치를 보장합니다. 시장 평균보다 10-15% 높은 매입가를 제시합니다.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="fade-in delay-3">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-halved"></i>
+                        </div>
+                        <div>
+                            <h3>브랜드 보호 시스템</h3>
+                            <p>귀사의 브랜드 가치를 손상시키지 않도록 철저한 유통 관리 시스템을 운영합니다. 온라인 가격 노출 없이 오프라인 전용 채널이나 해외 수출을 통해 기존 고객과 겹치지 않는 판매 전략을 구사합니다.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="fade-in delay-4">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck-ramp-box"></i>
+                        </div>
+                        <div>
+                            <h3>무료 물류 서비스</h3>
+                            <p>매입 진행 시 물류 이동, 상품 포장, 운송 등의 서비스를 무료로 제공합니다. 별도의 물류 비용이 발생하지 않아 월 평균 120만원 이상의 비용을 절감할 수 있습니다.</p>
+                        </div>
+                    </li>
+                    
+                    <li class="fade-in delay-5">
+                        <div class="feature-icon">
+                            <i class="fas fa-file-contract"></i>
+                        </div>
+                        <div>
+                            <h3>간소화된 행정 절차</h3>
+                            <p>복잡한 서류 작업 없이 간편한 프로세스로 빠르게 재고 처리를 완료합니다. 일반적인 절차 대비 70% 이상 간소화된 프로세스로 시간과 노력을 절약합니다.</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- 동산 담보 자금 상세 섹션 추가 -->
+        <section class="finance-details" id="finance-details">
+            <div class="container">
+                <h2 class="text-center fade-in">동산 담보 자금 서비스</h2>
+                <p class="text-center fade-in delay-1">재고를 담보로 긴급 자금을 확보하세요.</p>
+                
+                <div class="card fade-in delay-2">
+                    <h3><i class="fas fa-money-bill-wave"></i> 비즈니스가 숨을 쉴 수 있도록 도움이 되는 자금 융통</h3>
+                    <ul class="results-list">
+                        <li>유동성 확보의 신속성 - 복잡한 절차 없이 빠른 자금 확보</li>
+                        <li>재고 활용 극대화 - 판매 시기를 놓친 재고도 금융 자산으로 전환</li>
+                        <li>맞춤형 상환 계획 - 기업 상황에 맞는 유연한 상환 구조 설계</li>
+                        <li>리스크 최소화 - 재고 관리 및 유통 채널을 통한 담보 가치 유지</li>
+                    </ul>
+                    <p>홈쇼핑 일정 차질, 긴급 생산비용 발생 등 예상치 못한 자금 수요에 효과적으로 대응하세요.</p>
+                    <a href="contact.html" class="btn">상담 신청</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pricing">
+            <div class="container">
+                <h2 class="text-center fade-in">서비스 수수료 안내</h2>
+                <p class="text-center fade-in delay-1">각 서비스별 수수료 구조는 다음과 같습니다. 추가 문의사항은 언제든지 연락주세요.</p>
+                
+                <div class="card fade-in delay-2">
+                    <table class="pricing-table">
+                        <thead>
+                            <tr>
+                                <th>서비스 유형</th>
+                                <th>거래 규모</th>
+                                <th>수수료율</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="3">재고 매입 및 브랜드 양도양수</td>
+                                <td>5천만원 미만</td>
+                                <td>무료</td>
+                            </tr>
+                            <tr>
+                                <td>5천만원 ~ 1억원</td>
+                                <td>무료</td>
+                            </tr>
+                            <tr>
+                                <td>1억원 초과</td>
+                                <td>무료</td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="3">동산 담보 자금</td>
+                                <td>5천만원 미만</td>
+                                <td>협의</td>
+                            </tr>
+                            <tr>
+                                <td>5천만원 ~ 1억원</td>
+                                <td>협의</td>
+                            </tr>
+                            <tr>
+                                <td>1억원 초과</td>
+                                <td>협의</td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="3">위탁 판매</td>
+                                <td>5천만원 미만</td>
+                                <td>15%</td>
+                            </tr>
+                            <tr>
+                                <td>5천만원 ~ 1억원</td>
+                                <td>12%</td>
+                            </tr>
+                            <tr>
+                                <td>1억원 초과</td>
+                                <td>10%</td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="2">해외 의류 생산</td>
+                                <td>샘플 개발</td>
+                                <td>무료</td>
+                            </tr>
+                            <tr>
+                                <td>생산 대행</td>
+                                <td>협의</td>
+                            </tr>
+                            
+                            <tr>
+                                <td rowspan="2">상품 소싱 및 도매</td>
+                                <td>소싱 연결</td>
+                                <td>무료</td>
+                            </tr>
+                            <tr>
+                                <td>독점 계약</td>
+                                <td>협의</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="process">
+            <div class="container">
+                <h2 class="text-center fade-in">서비스 진행 절차</h2>
+                
+                <div class="steps-container">
+                    <div class="step-item fade-in delay-1">
+                        <div class="step-number">1</div>
+                        <h3>문의</h3>
+                        <p>온라인 또는 유선으로 초기 문의를 접수합니다. 24시간 연중무휴 상담 가능합니다.</p>
+                    </div>
+                    
+                    <div class="step-item fade-in delay-2">
+                        <div class="step-number">2</div>
+                        <h3>상담</h3>
+                        <p>전담 매니저가 맞춤형 솔루션을 제안합니다. 현장 방문도 가능합니다.</p>
+                    </div>
+                    
+                    <div class="step-item fade-in delay-3">
+                        <div class="step-number">3</div>
+                        <h3>견적</h3>
+                        <p>재고 상태 확인 후 정확한 견적을 제시합니다. 시장가보다 높은 가격을 보장합니다.</p>
+                    </div>
+                    
+                    <div class="step-item fade-in delay-4">
+                        <div class="step-number">4</div>
+                        <h3>계약</h3>
+                        <p>조건 합의 후 간단한 계약을 진행합니다. 복잡한 서류작업 없이 진행됩니다.</p>
+                    </div>
+                    
+                    <div class="step-item fade-in delay-5">
+                        <div class="step-number">5</div>
+                        <h3>실행</h3>
+                        <p>계약 체결 후 24시간 이내 현금 지급 및 서비스를 실행합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="fade-in">지금 바로 재고 문제 해결을 시작하세요</h2>
+                <p class="fade-in delay-1">대한민국 땡처리 NO.1 오렌지팩토리의 전문 컨설턴트가 최적의 솔루션을 제안해 드립니다.</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="contact.html" class="btn">
+                        <i class="fas fa-paper-plane"></i> 문의하기
+                    </a>
+                    <a href="tel:010-4464-0345" class="btn btn-outline">
+                        <i class="fas fa-phone"></i> 전화 상담 (010-4464-0345)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+                <div>
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="220" height="40" style="margin-bottom: 1rem;">
+                    <p>대한민국 No.1 패션 재고 솔루션</p>
+                    <p><strong>재고처리 NO.1 • 땡처리 NO.1</strong></p>
+                </div>
+                <div>
+                    <h3>빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="about.html">회사 소개</a>
+                        <a href="services.html">서비스 안내</a>
+                        <a href="success.html">성공 사례</a>
+                        <a href="contact.html">문의하기</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>연락처</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <strong>김경수 이사: 010-4464-0345</strong></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:orangefactory@kakao.com">orangefactory@kakao.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="copyright">&copy; 2025 OrangeFactory. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- 간단한 애니메이션 스크립트 -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 스크롤 애니메이션
+            const fadeElems = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElems.forEach(elem => {
+                elem.style.opacity = '0';
+                elem.style.transform = 'translateY(20px)';
+                elem.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(elem);
+            });
+        });
+    </script>
+</body>
+</html>

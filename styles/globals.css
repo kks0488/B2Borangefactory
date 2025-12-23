@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 기본 모노크로매틱 색상 팔레트 */
+    --background: 0 0% 98%;
+    --foreground: 240 10% 3.9%;
+    
+    /* 주요 액센트 컬러(오렌지) */
+    --primary: 29 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* 보조 컬러 (모노크로매틱 계열) */
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
+    
+    /* UI 컴포넌트 색상 */
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 240 10% 3.9%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
+    
+    /* 상태 표시 색상 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* 경계선 및 UI 요소 */
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 29 100% 50%;
+    
+    /* 반경 */
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    /* 다크 모드 모노크로매틱 색상 팔레트 */
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    
+    /* 주요 액센트 컬러(오렌지) - 다크모드에서도 동일하게 유지 */
+    --primary: 29 100% 50%;
+    --primary-foreground: 0 0% 100%;
+    
+    /* 보조 컬러 (모노크로매틱 계열) */
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+    
+    /* UI 컴포넌트 색상 */
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+    
+    /* 상태 표시 색상 */
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    
+    /* 경계선 및 UI 요소 */
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 29 100% 50%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* 한글 폰트 관련 설정 */
+  .font-noto-kr {
+    font-family: var(--font-noto-sans-kr), ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  }
+  
+  /* 글자 간격 설정 - 한글에 최적화 */
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight leading-tight;
+    word-break: keep-all;
+  }
+  
+  p {
+    @apply leading-relaxed;
+    word-break: keep-all;
+  }
+}
+
+/* 컴포넌트 스타일 확장 */
+@layer components {
+  /* 강조된 오렌지 텍스트 */
+  .text-accent-orange {
+    @apply text-[#FF8C00];
+  }
+  
+  /* 배지 스타일 */
+  .badge {
+    @apply inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-medium;
+  }
+  
+  .badge-primary {
+    @apply bg-primary/10 text-primary;
+  }
+  
+  /* 카드 스타일 */
+  .card-highlight {
+    @apply p-6 rounded-lg bg-card shadow-sm border border-border transition-all duration-200;
+  }
+  
+  .card-highlight:hover {
+    @apply shadow-md border-primary/20;
+  }
+}
+
+@layer base {
+  h1 {
+    @apply text-3xl md:text-4xl font-bold leading-tight tracking-tight;
+  }
+  h2 {
+    @apply text-2xl md:text-3xl font-semibold leading-tight tracking-tight;
+  }
+  h3 {
+    @apply text-xl md:text-2xl font-medium leading-snug;
+  }
+  h4 {
+    @apply text-lg font-medium leading-snug;
+  }
+  p {
+    @apply text-base leading-relaxed;
+  }
+  .text-small {
+    @apply text-sm leading-normal;
+  }
+}
+
+.section {
+  @apply py-12 md:py-16 lg:py-20;
+}
+.section-sm {
+  @apply py-8 md:py-12;
+}
+.container-inner {
+  @apply max-w-5xl mx-auto px-4;
+}

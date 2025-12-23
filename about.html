@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>오렌지팩토리 회사 소개 - 대한민국 NO.1 땡처리 패션 재고 솔루션</title>
+    <meta name="description" content="1985년 설립된 오렌지팩토리는 30년 이상의 역사와 함께 대한민국 패션 업계의 재고 처리 솔루션을 선도해온 기업입니다.">
+    <meta name="keywords" content="오렌지팩토리, 땡처리, 재고처리, 패션 재고, 회사 소개, 회사 역사, 브랜드 이야기">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <style>
+        /* 회사 소개 페이지 특별 스타일 */
+        .timeline {
+            position: relative;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem 0;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 50%;
+            width: 4px;
+            background: var(--primary-color);
+            transform: translateX(-50%);
+        }
+        
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-bottom: 3rem;
+        }
+        
+        .timeline-content {
+            width: 45%;
+            padding: 1.5rem;
+            background: var(--light-color);
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+            border: 1px solid var(--border-color);
+            position: relative;
+            transition: var(--transition);
+        }
+        
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-lg);
+        }
+        
+        .timeline-content h3 {
+            margin-top: 0;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--secondary-color);
+        }
+        
+        .timeline-content p {
+            color: var(--secondary-color);
+            opacity: 0.8;
+        }
+        
+        .timeline-content h3 i {
+            color: var(--primary-color);
+        }
+        
+        .timeline-content::before {
+            content: '';
+            position: absolute;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+        }
+        
+        .timeline-item:nth-child(odd) .timeline-content::before {
+            left: -40px;
+        }
+        
+        .timeline-item:nth-child(even) .timeline-content::before {
+            right: -40px;
+        }
+        
+        .value-list {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .value-list li {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.2rem;
+            padding: 1rem;
+            background-color: var(--light-color);
+            border-radius: 0.5rem;
+            transition: var(--transition);
+            border: 1px solid var(--border-color);
+        }
+        
+        .value-list li:hover {
+            transform: translateX(10px);
+            box-shadow: var(--shadow);
+        }
+        
+        .value-list li i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            width: 2rem;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .timeline::before {
+                left: 2rem;
+            }
+            
+            .timeline-item {
+                flex-direction: column;
+            }
+            
+            .timeline-content {
+                width: 90%;
+                margin-left: 3rem !important;
+            }
+            
+            .timeline-content::before {
+                left: -2rem !important;
+                right: auto !important;
+            }
+        }
+
+        .history-timeline {
+            position: relative;
+            margin: 4rem 0;
+            padding-left: 3rem;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 10px;
+            top: 0;
+            bottom: 0;
+            width: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding: 1.5rem;
+            background: white;
+            border-radius: 0.5rem;
+            box-shadow: var(--shadow);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 1.5rem;
+            width: 20px;
+            height: 20px;
+            background-color: white;
+            border: 4px solid var(--primary-color);
+            border-radius: 50%;
+        }
+
+        .timeline-item h3 {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .timeline-item h3 .year {
+            background-color: var(--primary-color);
+            color: white;
+            font-size: 0.9rem;
+            padding: 0.2rem 0.8rem;
+            border-radius: 1rem;
+            margin-right: 1rem;
+        }
+
+        .value-item {
+            background: white;
+            border-radius: 0.5rem;
+            padding: 2rem;
+            box-shadow: var(--shadow);
+            margin-bottom: 2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .value-item:hover {
+            transform: translateY(-5px);
+        }
+
+        .value-item .icon {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .value-item h3 {
+            margin-bottom: 1rem;
+            color: var(--secondary-color);
+        }
+
+        .brand-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--primary-color);
+            color: white;
+            font-weight: 700;
+            padding: 0.5rem 1rem;
+            border-radius: 2rem;
+            font-size: 0.9rem;
+            z-index: 10;
+            box-shadow: var(--shadow);
+        }
+
+        .team-member {
+            background: white;
+            border-radius: 0.5rem;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+
+        .team-photo {
+            height: 250px;
+            background-color: #f5f5f5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .team-photo i {
+            font-size: 5rem;
+            color: var(--primary-color);
+        }
+
+        .team-info {
+            padding: 1.5rem;
+        }
+
+        .team-info h3 {
+            margin-bottom: 0.5rem;
+        }
+
+        .team-info .position {
+            color: var(--primary-color);
+            font-weight: 500;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            background-color: var(--light-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+
+        .social-links a:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="index.html" class="logo">
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="260" height="45">
+                </a>
+                <ul>
+                    <li><a href="index.html">메인</a></li>
+                    <li><a href="about.html" class="active">소개</a></li>
+                    <li><a href="services.html">서비스</a></li>
+                    <li><a href="success.html">성공사례</a></li>
+                    <li><a href="contact.html">문의하기</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content fade-in">
+                    <h1>회사 소개</h1>
+                    <p>1985년 설립된 오렌지팩토리는 30년 이상의 역사와 함께 대한민국 패션 업계의 재고 처리 솔루션을 선도해온 기업입니다.</p>
+                    <div class="brand-badge">땡처리 NO.1</div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>우리의 이야기</h2>
+                    <p class="lead">오렌지팩토리는 패션 재고 처리 분야에서 30년 이상의 전문성과 노하우를 바탕으로<br>클라이언트에게 최적의 솔루션을 제공하고 있습니다.</p>
+                </div>
+                
+                <div class="history-timeline">
+                    <div class="timeline-item fade-in delay-1">
+                        <h3><span class="year">1985</span> 시작 (Beginning)</h3>
+                        <p>오렌지팩토리는 1985년 당시 전무했던 새로운 유통 모델을 도입하고자 설립되었습니다. 설립자들은 재고 처리에 대한 새로운 시각을 가지고, 고객들에게 보다 나은 쇼핑 경험을 제공하는 것을 목표로 했습니다. 당시 신규 점포를 오픈하며 '쇼핑의 새로운 가치'라는 슬로건을 내걸고 패션 시장에 첫발을 내디뎠습니다.</p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in delay-2">
+                        <h3><span class="year">1990</span> 발전 (Development)</h3>
+                        <p>미국의 '타이거 팩토리 아울렛'에서 영감을 받아, 과잉 생산된 의류와 리테일 재고품을 효율적으로 유통시키는 선구적인 유통 네트워크를 구축했습니다. 특히 국내 최초로 브랜드 가치를 유지하면서도 재고를 효과적으로 관리할 수 있는 시스템을 도입하여 패션 업계의 새로운 지표를 제시했습니다. 이 시기에 수도권을 중심으로 물리적 매장을 확장했습니다.</p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in delay-3">
+                        <h3><span class="year">2008</span> 위기 (Crisis)</h3>
+                        <p>잘못된 경영 관행과 체계적이지 못한 운영으로 인해 회사는 어려움을 겪게 되었습니다. 특히 글로벌 금융 위기와 맞물려 많은 도전에 직면했으며, 이 과정에서 고객 신뢰를 잃고 브랜드 가치가 하락하는 아픔을 겪었습니다. 이는 변화의 필요성을 일깨우는 중요한 계기가 되었습니다.</p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in delay-4">
+                        <h3><span class="year">2015</span> 변화 (Change)</h3>
+                        <p>회사는 직원들의 헌신과 새로운 경영진의 비전 아래 회복의 길을 걷기 시작했습니다. 온라인 플랫폼을 강화하고 B2B 서비스로 영역을 확장하며 새로운 성장 동력을 발굴했습니다. 또한 브랜드들과의 파트너십을 강화하고 재고 관리의 전문성을 높이는 데 집중했습니다. 현재의 '오렌지팩토리'로 브랜드를 리뉴얼하고 땡처리 NO.1이라는 포지셔닝을 확립했습니다.</p>
+                    </div>
+                    
+                    <div class="timeline-item fade-in delay-5">
+                        <h3><span class="year">현재</span> 현재 그리고 미래 (Present and Future)</h3>
+                        <p>오늘날 오렌지팩토리는 대한민국 NO.1 땡처리 기업으로 자리매김했습니다. 우리는 고품질 상품과 탄탄한 쇼핑 경험 제공에 집중하며, 패션 산업이 직면한 과잉 생산과 재고 문제를 해결하는데 앞장서고 있습니다. 앞으로도 고객과 함께 도전을 극복하고 성장하는 동반자가 되기 위해 노력할 것입니다. 고객의 성공이 곧 오렌지팩토리의 성공입니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="bg-light">
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>핵심 가치</h2>
+                    <p class="lead">오렌지팩토리의 모든 활동은 이러한 가치를 중심으로 이루어집니다.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="value-item fade-in delay-1">
+                        <div class="icon">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h3>신뢰와 정직</h3>
+                        <p>모든 비즈니스 관계에서 투명성과 정직을 최우선으로 합니다. 클라이언트의 신뢰는 우리의 가장 큰 자산입니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-2">
+                        <div class="icon">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <h3>전문성과 혁신</h3>
+                        <p>재고 관리 분야에서의 깊은 전문성을 바탕으로, 끊임없는 혁신을 통해 최적의 솔루션을 제공합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-3">
+                        <div class="icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>브랜드 보호</h3>
+                        <p>파트너 브랜드의 가치와 이미지를 최우선으로 보호하며, 브랜드 평판에 해가 되지 않는 방식으로 재고를 관리합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-4">
+                        <div class="icon">
+                            <i class="fas fa-users"></i>
+                        </div>
+                        <h3>상생과 협력</h3>
+                        <p>우리는 파트너와의 상생을 추구합니다. 단기적 이익보다는 장기적인 협력 관계 구축에 중점을 둡니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-5">
+                        <div class="icon">
+                            <i class="fas fa-recycle"></i>
+                        </div>
+                        <h3>지속 가능성</h3>
+                        <p>패션 산업에서의 지속 가능한 발전을 위해 효율적인 재고 관리와 환경 친화적인 처리 방식을 추구합니다.</p>
+                    </div>
+                    
+                    <div class="value-item fade-in delay-6">
+                        <div class="icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>신속한 실행력</h3>
+                        <p>빠르게 변화하는 시장 환경에서 신속한 의사결정과 실행을 통해 클라이언트의 비즈니스 성공을 돕습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="text-center fade-in">
+                    <h2>핵심 리더십</h2>
+                    <p class="lead">오렌지팩토리를 이끌어가는 전문가들을 소개합니다.</p>
+                </div>
+                
+                <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 2rem; margin-top: 3rem;">
+                    <div class="team-member fade-in delay-1">
+                        <div class="team-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-info">
+                            <h3>김경수</h3>
+                            <span class="position">이사 / 영업총괄</span>
+                            <p>패션 유통 분야에서 15년 이상의 경력을 가진 전문가로, 오렌지팩토리의 영업 전략을 총괄하고 있습니다.</p>
+                            <p><i class="fas fa-phone"></i> <a href="tel:010-4464-0345">010-4464-0345</a></p>
+                            <p><i class="fas fa-envelope"></i> <a href="mailto:orangefactory@kakao.com">orangefactory@kakao.com</a></p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member fade-in delay-2">
+                        <div class="team-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-info">
+                            <h3>박재현</h3>
+                            <span class="position">대표 / CEO</span>
+                            <p>글로벌 패션 브랜드에서의 경험을 바탕으로, 오렌지팩토리의 비전과 전략적 방향을 제시합니다.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="team-member fade-in delay-3">
+                        <div class="team-photo">
+                            <i class="fas fa-user-tie"></i>
+                        </div>
+                        <div class="team-info">
+                            <h3>이진솔</h3>
+                            <span class="position">해외사업부 이사</span>
+                            <p>아시아와 유럽 시장에서의 풍부한 경험을 바탕으로 오렌지팩토리의 글로벌 확장을 이끌고 있습니다.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <div class="container text-center">
+                <h2 class="fade-in">지금 바로 상담하세요</h2>
+                <p class="fade-in delay-1">대한민국 NO.1 땡처리 전문 오렌지팩토리와 함께 재고 문제를 해결하고 비즈니스 성장을 경험하세요.</p>
+                <div class="hero-buttons fade-in delay-2">
+                    <a href="contact.html" class="btn">
+                        <i class="fas fa-paper-plane"></i> 무료 상담 신청하기
+                    </a>
+                    <a href="tel:010-4464-0345" class="btn btn-outline">
+                        <i class="fas fa-phone"></i> 전화 상담 (010-4464-0345)
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-between; gap: 2rem;">
+                <div>
+                    <img src="logo.svg" alt="오렌지팩토리 로고" width="220" height="40" style="margin-bottom: 1rem;">
+                    <p>대한민국 No.1 패션 재고 솔루션</p>
+                    <p><strong>재고처리 NO.1 • 땡처리 NO.1</strong></p>
+                </div>
+                <div>
+                    <h3>빠른 링크</h3>
+                    <div class="footer-links">
+                        <a href="about.html">회사 소개</a>
+                        <a href="services.html">서비스 안내</a>
+                        <a href="success.html">성공 사례</a>
+                        <a href="contact.html">문의하기</a>
+                    </div>
+                </div>
+                <div>
+                    <h3>연락처</h3>
+                    <div class="footer-contact">
+                        <p><i class="fas fa-phone"></i> <strong>김경수 이사: 010-4464-0345</strong></p>
+                        <p><i class="fas fa-envelope"></i> <a href="mailto:orangefactory@kakao.com">orangefactory@kakao.com</a></p>
+                    </div>
+                </div>
+            </div>
+            <hr class="footer-divider">
+            <p class="copyright">&copy; 2025 OrangeFactory. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // 스크롤 애니메이션
+            const fadeElems = document.querySelectorAll('.fade-in');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            fadeElems.forEach(elem => {
+                elem.style.opacity = '0';
+                elem.style.transform = 'translateY(20px)';
+                elem.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                observer.observe(elem);
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,6 @@
+<svg width="300" height="50" viewBox="0 0 300 50" xmlns="http://www.w3.org/2000/svg">
+  <!-- ORANGE:FACTORY 로고 -->
+  <text x="10" y="35" font-family="Arial, sans-serif" font-weight="bold" font-style="italic" font-size="35" fill="#FF8C00">ORANGE</text>
+  <circle cx="165" cy="30" r="3" fill="#555555"/>
+  <text x="170" y="35" font-family="Arial, sans-serif" font-weight="bold" font-style="italic" font-size="35" fill="#555555">FACTORY</text>
+</svg> 
