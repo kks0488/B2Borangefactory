@@ -4,11 +4,11 @@ import { Phone, Mail, Menu, X, Globe } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 const navLinks = [
-  { label: 'Wholesale', href: '/en/wholesale' },
-  { label: 'Inventory', href: '/en/inventory' },
-  { label: 'Export', href: '/en/export' },
-  { label: 'About', href: '/en/about' },
-  { label: 'Contact', href: '/en/contact' },
+  { label: 'Wholesale', href: '/wholesale' },
+  { label: 'Inventory', href: '/inventory' },
+  { label: 'Export', href: '/export' },
+  { label: 'About', href: '/about' },
+  { label: 'Contact', href: '/contact' },
 ];
 
 export function Header() {
@@ -17,7 +17,7 @@ export function Header() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-12 md:h-14">
           {/* Logo */}
-          <Link href="/en" className="flex-shrink-0">
+          <Link href="/" className="flex-shrink-0">
             <Image 
               src="/img/logo.png" 
               alt="Orange Factory" 
@@ -43,12 +43,12 @@ export function Header() {
 
           {/* Language & CTA */}
           <div className="flex items-center gap-3">
-            <Link href="/" className="flex items-center gap-1 text-xs text-slate-500 hover:text-[#FF8C00]">
+            <Link href="/ko" className="flex items-center gap-1 text-xs text-slate-500 hover:text-[#FF8C00]">
               <Globe className="w-3.5 h-3.5" />
               한국어
             </Link>
             <Button className="hidden sm:flex bg-[#FF8C00] hover:bg-[#E67E00] text-white h-8 px-4 text-sm rounded-md font-semibold" asChild>
-              <Link href="/en/contact">Get Quote</Link>
+              <Link href="/contact">Get Quote</Link>
             </Button>
           </div>
         </div>
