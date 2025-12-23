@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Clock, TrendingUp, Shield, Phone, Mail, ChevronDown, Landmark } from 'lucide-react';
+import { ArrowRight, Clock, TrendingUp, Shield, Phone, Mail, ChevronDown } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '동산 담보자금 | 오렌지팩토리',
@@ -40,37 +40,30 @@ export default function FinancePage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero - 임팩트 */}
-      <section className="relative min-h-[60vh] md:min-h-[50vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
-        <div className="section-container relative z-10 py-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/20 text-[#FF8C00] text-sm font-semibold mb-6">
-            <Landmark className="w-4 h-4" />
-            동산 담보자금
+      {/* Hero - 깔끔한 라이트 스타일 */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div className="section-container">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-12 bg-[#FF8C00]"></span>
+            <span className="text-sm font-bold tracking-widest text-[#FF8C00]">동산 담보자금</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-            재고가 곧<br />
-            <span className="text-[#FF8C00]">현금입니다</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+            재고가 곧 현금입니다
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed mb-8">
+          <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
             홈쇼핑 스케줄 차질, 긴급 생산비용 확보 등 예상치 못한 상황에 대응하세요. 
-            재고자산으로 신속하게 자금을 확보합니다.
+            재고자산을 기반으로 신속하게 자금을 확보할 수 있습니다.
           </p>
-          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-6 rounded-lg font-semibold text-base" asChild>
-            <Link href="/contact" className="flex items-center gap-2">
-              자금 상담하기 <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
         </div>
       </section>
 
       {/* 핵심 3개 */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">서비스 특징</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {features.map((item, i) => (
-              <div key={i} className="p-5 border border-slate-200 rounded-xl hover:border-[#FF8C00] transition-colors">
+              <div key={i} className="p-5 bg-white border border-slate-200 rounded-xl hover:border-[#FF8C00] transition-colors">
                 <div className="text-[#FF8C00] mb-3">{item.icon}</div>
                 <h3 className="text-base font-bold text-slate-900 mb-2">{item.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
@@ -81,12 +74,12 @@ export default function FinancePage() {
       </section>
 
       {/* 절차 3단계 */}
-      <section className="py-12 md:py-16 bg-slate-50">
+      <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">진행 절차</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {steps.map((step) => (
-              <div key={step.num} className="p-5 bg-white border border-slate-200 rounded-xl text-center">
+              <div key={step.num} className="p-5 border border-slate-200 rounded-xl text-center">
                 <div className="w-10 h-10 rounded-full bg-[#FF8C00] text-white flex items-center justify-center mx-auto mb-3 font-bold">
                   {step.num}
                 </div>
@@ -99,12 +92,12 @@ export default function FinancePage() {
       </section>
 
       {/* FAQ */}
-      <section className="py-12 md:py-16">
+      <section className="py-12 md:py-16 bg-slate-50">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">자주 묻는 질문</h2>
           <div className="space-y-3">
             {faqs.map((faq, i) => (
-              <details key={i} className="group p-4 border border-slate-200 rounded-xl">
+              <details key={i} className="group p-4 bg-white border border-slate-200 rounded-xl">
                 <summary className="flex items-center justify-between cursor-pointer list-none font-semibold text-slate-900">
                   {faq.q}
                   <ChevronDown className="w-4 h-4 text-slate-400 group-open:rotate-180 transition-transform" />

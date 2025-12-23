@@ -1,11 +1,11 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Globe, Ship, Handshake, Phone, Mail, ChevronDown } from 'lucide-react';
+import { ArrowRight, Globe, Ship, Handshake, Phone, Mail, ChevronDown, Users, TrendingUp } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: '해외수출 | 오렌지팩토리',
-  description: 'Korean Fashion Wholesale & Export. 한국 패션 브랜드 해외 수출 지원 및 글로벌 바이어 연결.',
+  description: 'Korean Fashion Wholesale & Export. K-Fashion을 세계로, 글로벌 바이어와 한국 업체를 연결합니다.',
 };
 
 export default function ExportPage() {
@@ -13,17 +13,30 @@ export default function ExportPage() {
     {
       icon: <Globe className="w-6 h-6" />,
       title: "글로벌 바이어 연결",
-      desc: "한국 패션 상품을 찾는 해외 바이어와 수출 희망 한국 업체를 연결합니다. K-Fashion의 글로벌 유통을 지원합니다."
+      desc: "동남아, 중동, 유럽 등 전 세계 바이어와 네트워크를 보유하고 있습니다. K-Fashion을 찾는 해외 바이어와 수출 희망 한국 업체를 직접 연결합니다."
     },
     {
       icon: <Ship className="w-6 h-6" />,
-      title: "수출 물류 지원",
-      desc: "해외 배송, 통관, 서류 작업 등 수출에 필요한 물류 프로세스를 지원합니다. 복잡한 절차를 간소화해드립니다."
+      title: "수출 물류 원스톱",
+      desc: "해외 배송, 통관, 서류 작업까지 수출에 필요한 모든 물류 프로세스를 지원합니다. 복잡한 절차 걱정 없이 수출하세요."
     },
     {
       icon: <Handshake className="w-6 h-6" />,
       title: "브랜드 가치 보호",
-      desc: "해외 판매 시에도 브랜드 이미지를 보호합니다. 검증된 해외 파트너와만 거래를 진행합니다."
+      desc: "해외 판매 시에도 브랜드 이미지를 보호합니다. 검증된 해외 파트너와만 거래하며, 국내 시장과 분리하여 가격 충돌을 방지합니다."
+    }
+  ];
+
+  const targets = [
+    {
+      icon: <Users className="w-6 h-6" />,
+      title: "해외 바이어",
+      desc: "한국 패션 상품을 대량 구매하려는 글로벌 도매업체, 리테일러, 온라인 셀러를 위한 파트너십."
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: "수출 희망 한국 업체",
+      desc: "재고 처리를 해외 시장으로 확대하고 싶은 한국 패션 브랜드, 제조사, 도매업체."
     }
   ];
 
@@ -34,37 +47,47 @@ export default function ExportPage() {
   ];
 
   const faqs = [
-    { q: "어떤 국가로 수출이 가능한가요?", a: "동남아, 중동, 유럽 등 다양한 지역으로 수출 경험이 있습니다. 국가별 특성에 맞는 상품과 전략을 제안해드립니다." },
-    { q: "소량으로도 수출이 가능한가요?", a: "네, 소량 수출도 가능합니다. 다만 국가별 최소 주문량과 물류 조건은 상담을 통해 확인해드립니다." },
+    { q: "어떤 국가로 수출이 가능한가요?", a: "동남아시아(베트남, 태국, 인도네시아), 중동(두바이, 사우디), 유럽, 미주 등 다양한 지역으로 수출 경험이 있습니다. 국가별 특성에 맞는 상품과 전략을 제안드립니다." },
+    { q: "소량으로도 수출이 가능한가요?", a: "네, 컨테이너 단위가 아니어도 가능합니다. 다만 국가별 최소 주문량과 물류 조건은 상담을 통해 확인해드립니다." },
+    { q: "해외 바이어인데 연락하고 싶습니다.", a: "영어로 문의 가능합니다. 이메일(orangefactory@kakao.com)로 연락 주시면 담당자가 영어로 회신드립니다." },
   ];
 
   return (
     <div className="flex flex-col w-full bg-white">
-      {/* Hero - 임팩트 있게 */}
-      <section className="relative min-h-[60vh] md:min-h-[50vh] flex items-center bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
-        <div className="absolute inset-0 bg-[url('/img/grid.svg')] opacity-10"></div>
-        <div className="section-container relative z-10 py-20">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FF8C00]/20 text-[#FF8C00] text-sm font-semibold mb-6">
-            <Globe className="w-4 h-4" />
-            Global Export
+      {/* Hero - 깔끔한 라이트 스타일 */}
+      <section className="pt-32 pb-16 md:pt-40 md:pb-24">
+        <div className="section-container">
+          <div className="flex items-center gap-3 mb-6">
+            <span className="h-px w-12 bg-[#FF8C00]"></span>
+            <span className="text-sm font-bold tracking-widest text-[#FF8C00]">해외수출</span>
           </div>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-white mb-6 leading-tight">
-            한국 패션을<br />
-            <span className="text-[#FF8C00]">세계로</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-black text-slate-900 mb-6 tracking-tight">
+            한국 패션을 세계로
           </h1>
-          <p className="text-lg md:text-xl text-slate-300 max-w-xl leading-relaxed mb-8">
+          <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
             K-Fashion의 글로벌 유통을 지원합니다. 해외 바이어와 한국 업체를 연결하고, 
             수출에 필요한 모든 과정을 함께합니다.
           </p>
-          <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white h-12 px-6 rounded-lg font-semibold text-base" asChild>
-            <Link href="/contact" className="flex items-center gap-2">
-              수출 상담하기 <ArrowRight className="w-4 h-4" />
-            </Link>
-          </Button>
         </div>
       </section>
 
-      {/* 핵심 3개 */}
+      {/* 대상 고객 */}
+      <section className="py-12 md:py-16 bg-slate-50">
+        <div className="section-container">
+          <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">이런 분들을 위한 서비스입니다</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {targets.map((item, i) => (
+              <div key={i} className="p-5 bg-white border border-slate-200 rounded-xl">
+                <div className="text-[#FF8C00] mb-3">{item.icon}</div>
+                <h3 className="text-base font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 서비스 특징 */}
       <section className="py-12 md:py-16">
         <div className="section-container">
           <h2 className="text-xl md:text-2xl font-bold text-slate-900 mb-6">서비스 특징</h2>
@@ -119,7 +142,7 @@ export default function ExportPage() {
       {/* CTA */}
       <section className="py-12 md:py-16 bg-slate-900">
         <div className="section-container text-center">
-          <h2 className="text-xl md:text-2xl font-bold text-white mb-4">해외수출 상담</h2>
+          <h2 className="text-xl md:text-2xl font-bold text-white mb-4">수출 상담</h2>
           <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-6">
             <a href="tel:010-4464-0345" className="flex items-center gap-2 text-white text-sm">
               <Phone className="w-4 h-4 text-[#FF8C00]" /> 010-4464-0345

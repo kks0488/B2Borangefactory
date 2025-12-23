@@ -6,7 +6,8 @@ import {
   Landmark,
   Store, 
   Factory, 
-  ShoppingBag, 
+  ShoppingBag,
+  Globe,
   Phone,
   Mail,
   CheckCircle2
@@ -17,7 +18,7 @@ export default function LandingPage() {
     {
       icon: <Package className="w-7 h-7" />,
       title: "재고 및 브랜드 양도양수",
-      desc: "고객사의 과잉 재고 및 현금유동성 문제를 해결합니다. 브랜드, 쇼핑몰까지 한번에 정리 가능.",
+      desc: "과잉 재고 및 현금유동성 문제를 해결합니다. 브랜드, 쇼핑몰까지 한번에 정리 가능.",
       href: "/services/inventory"
     },
     {
@@ -43,6 +44,12 @@ export default function LandingPage() {
       title: "상품 소싱 및 도매",
       desc: "이월상품, 브랜드 의류 상품을 찾아 고객사에 연결해드립니다.",
       href: "/services/sourcing"
+    },
+    {
+      icon: <Globe className="w-7 h-7" />,
+      title: "해외수출",
+      desc: "K-Fashion을 세계로. 글로벌 바이어와 한국 업체를 연결하고 수출을 지원합니다.",
+      href: "/services/export"
     },
   ];
 
