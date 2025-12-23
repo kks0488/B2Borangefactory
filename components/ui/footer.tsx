@@ -1,57 +1,47 @@
 import Link from 'next/link';
-import { 
-  Building2, 
-  Mail, 
-  Phone, 
-  MapPin, 
-  Globe2,
-  ChevronRight,
-  ArrowUpRight
-} from 'lucide-react';
+import { Phone, Mail, MapPin } from 'lucide-react';
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const services = [
+    { label: '재고매매 및 브랜드 양도양수', href: '/services/inventory' },
+    { label: '동산 담보자금', href: '/services/finance' },
+    { label: '오프라인 위탁판매', href: '/services/consignment' },
+    { label: '의류 해외 생산', href: '/services/production' },
+    { label: '상품 소싱 및 도매', href: '/services/sourcing' },
+  ];
+
+  const company = [
+    { label: '회사소개', href: '/about' },
+    { label: '문의하기', href: '/contact' },
+  ];
+
   return (
-    <footer className="bg-white dark:bg-zinc-950 border-t border-zinc-100 dark:border-zinc-900 pt-32 pb-16">
+    <footer className="bg-slate-900 pt-20 pb-10">
       <div className="section-container">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-20 mb-32">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
           
-          {/* Column 1: Brand & Philosophy */}
-          <div className="lg:col-span-4 space-y-10">
+          {/* 브랜드 */}
+          <div className="space-y-6">
             <Link href="/" className="inline-block">
-              <span className="font-black text-2xl tracking-tighter text-brand-navy dark:text-white">
-                ORANGE<span className="text-[#FF8C00]">FACTORY</span>
+              <span className="font-black text-xl tracking-tight text-white">
+                오렌지<span className="text-[#FF8C00]">팩토리</span>
               </span>
             </Link>
-            <p className="text-slate-600 dark:text-zinc-400 text-sm leading-relaxed max-w-sm font-medium">
-              대한민국 1등 재고 솔루션 파트너. 39년간 쌓아온 데이터와 자본력을 바탕으로 
-              기업의 재고 자산을 최적의 유동성으로 전환합니다. 
-              우리의 기술력은 기업의 내일이 됩니다.
+            <p className="text-slate-400 text-sm leading-relaxed">
+              대한민국 1등 재고 솔루션 파트너. 30년간 쌓아온 경험과 네트워크를 바탕으로 
+              기업의 재고 문제를 해결합니다.
             </p>
-            <div className="flex gap-4">
-               {['LN', 'IG', 'FB'].map(sns => (
-                 <a key={sns} href="#" className="text-[10px] font-black tracking-widest text-zinc-300 hover:text-[#FF8C00] transition-colors border border-zinc-100 dark:border-zinc-900 px-3 py-1 rounded uppercase">
-                   {sns}
-                 </a>
-               ))}
-            </div>
           </div>
 
-          {/* Column 2: Solutions */}
-          <div className="lg:col-span-3 space-y-8">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-[#FF8C00]">Solutions</h3>
-            <ul className="space-y-4">
-              {[
-                { label: 'Inventory Purchasing', href: '/services/inventory' },
-                { label: 'Asset Financing', href: '/services/finance' },
-                { label: 'Consignment Ops', href: '/services/consignment' },
-                { label: 'Global Sourcing', href: '/services/sourcing' },
-                { label: 'Production Infra', href: '/services/production' },
-              ].map((link) => (
+          {/* 서비스 */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-bold text-[#FF8C00]">서비스</h3>
+            <ul className="space-y-3">
+              {services.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-slate-600 hover:text-brand-navy dark:hover:text-white transition-colors text-xs font-bold flex items-center gap-2 group">
-                    <ChevronRight className="w-3 h-3 group-hover:translate-x-1 transition-transform opacity-0 group-hover:opacity-100" />
+                  <Link href={link.href} className="text-slate-400 hover:text-white transition-colors text-sm">
                     {link.label}
                   </Link>
                 </li>
@@ -59,52 +49,46 @@ export function Footer() {
             </ul>
           </div>
 
-          {/* Column 3: Corporate */}
-          <div className="lg:col-span-2 space-y-8">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400">Corporate</h3>
-            <ul className="space-y-4 text-xs font-bold">
-              <li><Link href="/about" className="text-slate-600 hover:text-brand-navy dark:hover:text-white">Our Heritage</Link></li>
-              <li><Link href="/success" className="text-slate-600 hover:text-brand-navy dark:hover:text-white">Case Studies</Link></li>
-              <li><Link href="/contact" className="text-slate-600 hover:text-brand-navy dark:hover:text-white">Get in Touch</Link></li>
-              <li><Link href="/privacy" className="text-slate-600 hover:text-brand-navy dark:hover:text-white">Privacy Policy</Link></li>
+          {/* 회사 */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-bold text-slate-500">회사</h3>
+            <ul className="space-y-3">
+              {company.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-slate-400 hover:text-white transition-colors text-sm">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Column 4: Operational Center */}
-          <div className="lg:col-span-3 space-y-8">
-            <h3 className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400">Headquarters</h3>
-            <div className="space-y-6">
-              <div className="flex gap-4">
-                <MapPin className="w-4 h-4 text-zinc-300 mt-1" />
-                <p className="text-xs text-slate-600 leading-relaxed font-medium">
-                  서울시 강남구 테헤란로 123 <br />
-                  오렌지빌딩 8층, 전략 운영 센터
-                </p>
+          {/* 연락처 */}
+          <div className="space-y-6">
+            <h3 className="text-sm font-bold text-slate-500">연락처</h3>
+            <div className="space-y-4">
+              <div className="flex gap-3">
+                <Phone className="w-4 h-4 text-[#FF8C00] mt-0.5" />
+                <div>
+                  <p className="text-white text-sm font-bold">김경수 이사</p>
+                  <p className="text-slate-400 text-sm">010-4464-0345</p>
+                </div>
               </div>
-              <div className="flex gap-4">
-                <Phone className="w-4 h-4 text-zinc-300 mt-1" />
-                <p className="text-xs text-slate-600 font-bold">010-4464-0345</p>
-              </div>
-              <div className="flex gap-4">
-                <Mail className="w-4 h-4 text-zinc-300 mt-1" />
-                <p className="text-xs text-slate-600 font-bold">contact@orangefactory.kr</p>
+              <div className="flex gap-3">
+                <Mail className="w-4 h-4 text-[#FF8C00] mt-0.5" />
+                <p className="text-slate-400 text-sm">orangefactory@kakao.com</p>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Global Bottom Bar */}
-        <div className="pt-16 border-t border-zinc-100 dark:border-zinc-900 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex gap-10 items-center">
-            <p className="text-[10px] font-black tracking-widest text-zinc-300 uppercase">
-              © {currentYear} Orange Factory Global. Institutional Trust.
-            </p>
-            <div className="hidden md:flex gap-4 items-center">
-               <span className="flex items-center gap-1 text-[10px] text-zinc-400 font-bold"><Globe2 className="w-3 h-3" /> KR / EN</span>
-            </div>
-          </div>
-          <p className="text-[10px] font-black text-zinc-300 tracking-tighter uppercase italic">
-            Leading the Liquidity Standard Since 1985
+        {/* 하단 */}
+        <div className="pt-10 border-t border-slate-800 flex flex-col md:flex-row justify-between items-center gap-4">
+          <p className="text-slate-500 text-xs">
+            © {currentYear} 오렌지팩토리. All rights reserved.
+          </p>
+          <p className="text-slate-600 text-xs">
+            1985년부터 대한민국 재고 솔루션의 표준
           </p>
         </div>
       </div>
