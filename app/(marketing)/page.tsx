@@ -54,7 +54,7 @@ export default function LandingPage() {
   ];
 
   const reasons = [
-    { title: "30년 전문성", desc: "과잉 재고 매입에 특화된 전문 매입팀" },
+    { title: "40년 전문성", desc: "과잉 재고 매입에 특화된 전문 매입팀" },
     { title: "유연한 대응", desc: "1인기업부터 대기업까지 모두 지원" },
     { title: "당일 현금화", desc: "연중무휴 신속한 현금 구매" },
     { title: "원스톱 솔루션", desc: "상담부터 입금까지 한번에" },
@@ -81,7 +81,7 @@ export default function LandingPage() {
             대한민국 재고처리 NO.1
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed">
-            30년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다. 
+            40년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다. 
             당일 현금화부터 브랜드 양도까지, 한번에.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -119,7 +119,7 @@ export default function LandingPage() {
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="section-container">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 text-center">주요 서비스</h2>
-          <p className="text-slate-600 text-center mb-10">30년 경험을 바탕으로 고객사의 고민을 해결합니다</p>
+          <p className="text-slate-600 text-center mb-10">40년 경험을 바탕으로 고객사의 고민을 해결합니다</p>
           
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, i) => (

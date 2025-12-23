@@ -115,7 +115,7 @@ export default function AboutPage() {
             오렌지팩토리와 함께하세요
           </h2>
           <p className="text-slate-400 mb-10">
-            30년 이상의 경험과 네트워크로 고객사의 성장을 지원합니다.
+            40년 이상의 경험과 네트워크로 고객사의 성장을 지원합니다.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center mb-10">

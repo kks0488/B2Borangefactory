@@ -23,7 +23,7 @@ export default function SourcingPage() {
     {
       icon: <Users className="w-6 h-6" />,
       title: "네트워크 연결",
-      desc: "30년간 구축한 패션 업계 네트워크를 통해 필요한 상품과 파트너를 연결합니다."
+      desc: "40년간 구축한 패션 업계 네트워크를 통해 필요한 상품과 파트너를 연결합니다."
     }
   ];
 
@@ -52,7 +52,7 @@ export default function SourcingPage() {
           </h1>
           <p className="text-lg text-slate-600 max-w-2xl leading-relaxed">
             특정 브랜드나 스타일의 상품을 찾고 계신가요? 
-            30년간 구축한 네트워크로 고객사에 맞는 상품을 연결해드립니다.
+            40년간 구축한 네트워크로 고객사에 맞는 상품을 연결해드립니다.
           </p>
         </div>
       </section>
