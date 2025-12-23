@@ -5,7 +5,7 @@ import {
   CheckCircle2, 
   TrendingUp, 
   ArrowRight, 
-  Tshirt, 
+  Shirt, 
   Store, 
   History,
   Briefcase
