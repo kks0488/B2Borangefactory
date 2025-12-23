@@ -30,9 +30,9 @@ export default function SourcingServicePage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               STRATEGIC <br />
-              <span className="text-zinc-400">SOURCING.</span>
+              <span className="text-slate-500">SOURCING.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               팔리는 상품은 따로 있습니다. <br />
               오렌지팩토리의 데이터 큐레이션 엔진이 귀사 유통 채널의 필승 전략이 됩니다.
             </p>
@@ -74,7 +74,7 @@ export default function SourcingServicePage() {
                   <div key={i} className="bg-white dark:bg-zinc-950 p-16 space-y-8 hover:bg-zinc-50 dark:hover:bg-zinc-900/20 transition-colors">
                      <div className="text-[#FF8C00]">{item.icon}</div>
                      <h3 className="text-2xl font-black italic tracking-tighter uppercase">{item.title}</h3>
-                     <p className="text-zinc-500 text-sm leading-relaxed font-medium italic">{item.desc}</p>
+                     <p className="text-slate-600 text-sm leading-relaxed font-medium italic">{item.desc}</p>
                   </div>
                 ))}
            </div>
@@ -85,7 +85,7 @@ export default function SourcingServicePage() {
       <section className="py-40 bg-white dark:bg-zinc-950">
         <div className="section-container max-w-4xl mx-auto text-center space-y-12">
             <h2 className="text-4xl md:text-7xl font-black italic tracking-tighter uppercase leading-tight">Beyond <br /> Wholesaling.</h2>
-            <p className="text-xl md:text-2xl text-zinc-500 leading-relaxed font-medium italic">
+            <p className="text-xl md:text-2xl text-slate-600 leading-relaxed font-medium italic">
                 우리는 단순히 물건을 넘기지 않습니다. <br />
                 파트너사의 매출 구조를 분석하고, 그 구조 속에서 
                 최적의 수익을 낼 수 있는 상품의 &apos;흐름&apos;을 소싱합니다. 

@@ -30,9 +30,9 @@ export default function ConsignmentServicePage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               CONSIGNMENT <br />
-              <span className="text-zinc-400">OPERATIONS.</span>
+              <span className="text-slate-500">OPERATIONS.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               온라인 가격 무너짐 없이 재고를 소진하고 싶으신가요? <br />
               오렌지팩토리의 독점 오프라인 채널이 정답입니다.
             </p>
@@ -69,7 +69,7 @@ export default function ConsignmentServicePage() {
               <div key={idx} className="p-12 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 rounded-lg shadow-subtle hover:border-[#FF8C00] transition-colors group">
                 <div className="mb-8 group-hover:scale-110 transition-transform origin-left">{feature.icon}</div>
                 <h3 className="text-2xl font-black tracking-tighter mb-6 italic uppercase">{feature.title}</h3>
-                <p className="text-zinc-500 text-sm leading-relaxed font-medium italic">{feature.desc}</p>
+                <p className="text-slate-600 text-sm leading-relaxed font-medium italic">{feature.desc}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function ConsignmentServicePage() {
            <div className="max-w-3xl mx-auto text-center space-y-12">
               <h2 className="text-4xl md:text-6xl font-black italic tracking-tighter uppercase leading-tight">Channel <br /> Intelligence.</h2>
               <div className="h-1 w-20 bg-[#FF8C00] mx-auto mb-12"></div>
-              <p className="text-zinc-500 text-xl font-medium italic leading-relaxed">
+              <p className="text-slate-600 text-xl font-medium italic leading-relaxed">
                 오렌지팩토리는 단순히 물건을 위탁받지 않습니다. <br />
                 우리는 브랜드의 현재 가치와 시장의 수요를 매칭하여 
                 가장 저항이 적고 수익은 큰 채널을 설계합니다.

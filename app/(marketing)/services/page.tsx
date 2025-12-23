@@ -29,7 +29,7 @@ export default function ServicesPage() {
               STRATEGIC <br />
               <span className="text-[#FF8C00]">SOLUTIONS.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl leading-relaxed font-medium mb-0">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-medium mb-0">
               패션 기업의 동력을 멈추지 않게 하는 <br />
               오렌지팩토리만의 검증된 비즈니스 포트폴리오를 제안합니다.
             </p>
@@ -90,7 +90,7 @@ export default function ServicesPage() {
                 <div className="lg:col-span-7 mt-8 lg:mt-0 lg:px-12">
                   <h3 className="text-sm font-black text-zinc-300 uppercase tracking-widest mb-2 italic">{s.title}</h3>
                   <p className="text-2xl font-black tracking-tight mb-6">{s.subtitle}</p>
-                  <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium line-clamp-2 italic">{s.desc}</p>
+                  <p className="text-slate-600 dark:text-slate-500 leading-relaxed font-medium line-clamp-2 italic">{s.desc}</p>
                 </div>
                 <div className="lg:col-span-4 mt-12 lg:mt-0 flex justify-end">
                    <Button variant="outline" className="h-14 px-8 rounded-lg border-zinc-200 hover:border-[#FF8C00] hover:text-[#FF8C00] font-black italic uppercase tracking-tight group/btn" asChild>
@@ -110,7 +110,7 @@ export default function ServicesPage() {
         <div className="section-container">
            <div className="max-w-4xl mx-auto text-center space-y-12">
               <h2 className="text-4xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">Standardized <br /> Reliability.</h2>
-              <p className="text-zinc-400 text-xl font-medium italic">
+              <p className="text-slate-500 text-xl font-medium italic">
                 오렌지팩토리의 모든 솔루션은 39년의 실적과 1,200개 이상의 파트너사가 증명합니다. 
                 우리는 실질적인 숫자와 결과로만 대화합니다.
               </p>
@@ -122,7 +122,7 @@ export default function ServicesPage() {
                    { label: 'Speed', val: 'Instant' }
                  ].map((stat, i) => (
                    <div key={i} className="space-y-2 text-center md:text-left">
-                     <p className="text-[10px] font-black text-zinc-500 uppercase tracking-widest">{stat.label}</p>
+                     <p className="text-[10px] font-black text-slate-600 uppercase tracking-widest">{stat.label}</p>
                      <p className="text-3xl font-black italic tracking-tighter">{stat.val}</p>
                    </div>
                  ))}
@@ -138,7 +138,7 @@ export default function ServicesPage() {
              Ready to<br />
              Scale?
            </h2>
-           <p className="text-xl text-zinc-500 mb-16 font-medium leading-relaxed italic">
+           <p className="text-xl text-slate-600 mb-16 font-medium leading-relaxed italic">
              어떤 복잡한 재고 상황이라도 해결할 수 있는 <br />
              개별 맞춤형 인프라가 준비되어 있습니다.
            </p>

@@ -97,11 +97,19 @@ export default function RootLayout({
 }: PropsWithChildren) {
   return (
     <html lang="ko" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable}`}>
+      <head>
+        {/* Pretendard 폰트 - 한글 최적화 */}
+        <link
+          rel="stylesheet"
+          as="style"
+          href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css"
+        />
+      </head>
       <body
         id="root"
-        className="min-h-screen bg-background text-foreground antialiased selection:bg-[#FF8C00]/30 selection:text-[#FF8C00]"
+        className="min-h-screen bg-white text-slate-800 antialiased selection:bg-[#FF8C00]/30 selection:text-[#FF8C00] font-sans text-[17px] leading-relaxed"
       >
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+        <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
         </ThemeProvider>
       </body>

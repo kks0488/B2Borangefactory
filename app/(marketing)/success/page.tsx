@@ -30,9 +30,9 @@ export default function SuccessPage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               PROVEN <br />
-              <span className="text-zinc-400">OUTCOMES.</span>
+              <span className="text-slate-500">OUTCOMES.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl leading-relaxed font-medium mb-0">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl leading-relaxed font-medium mb-0">
               오렌지팩토리는 말이 아닌 결과로 증명합니다. <br />
               누적 1,200개 이상의 브랜드가 선택한 유동성 해결의 절대적 기준.
             </p>
@@ -51,7 +51,7 @@ export default function SuccessPage() {
                 { label: 'Operational Years', val: '39Y' },
               ].map((m, i) => (
                 <div key={i} className="space-y-2">
-                   <p className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{m.label}</p>
+                   <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{m.label}</p>
                    <p className="text-4xl font-black italic tracking-tighter text-brand-navy dark:text-white">{m.val}</p>
                 </div>
               ))}
@@ -72,7 +72,7 @@ export default function SuccessPage() {
                      Institutional <br /> Stock Clearout
                   </h3>
                   <p className="text-sm font-bold text-[#FF8C00] uppercase tracking-widest">A-Brand | Sports Segment</p>
-                  <p className="text-zinc-500 font-medium italic leading-relaxed">
+                  <p className="text-slate-600 font-medium italic leading-relaxed">
                      홈쇼핑 편성 조정으로 인한 35억 규모의 재고 적체 상황. 
                      단 48시간 내에 전액 현금 집행을 통해 차기 시즌 생산 자금을 확보한 사례입니다.
                   </p>
@@ -88,7 +88,7 @@ export default function SuccessPage() {
                     <div key={i} className="p-8 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 rounded-lg group-hover:border-[#FF8C00] transition-colors">
                        <p className="text-[10px] font-black text-zinc-300 uppercase tracking-widest mb-1">{stat.title}</p>
                        <p className="text-3xl font-black italic tracking-tighter mb-4">{stat.val}</p>
-                       <p className="text-xs text-zinc-500 font-medium leading-none">{stat.desc}</p>
+                       <p className="text-xs text-slate-600 font-medium leading-none">{stat.desc}</p>
                     </div>
                   ))}
                </div>
@@ -97,12 +97,12 @@ export default function SuccessPage() {
             {/* Case 02 */}
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start border-l-4 border-zinc-200 dark:border-zinc-800 pl-12 py-8 group">
                <div className="lg:col-span-4 space-y-6">
-                  <div className="inline-block px-3 py-1 bg-zinc-200 text-zinc-500 text-[10px] font-black uppercase tracking-widest">Case 02</div>
+                  <div className="inline-block px-3 py-1 bg-zinc-200 text-slate-600 text-[10px] font-black uppercase tracking-widest">Case 02</div>
                   <h3 className="text-3xl font-black tracking-tighter leading-tight italic uppercase">
                      Strategic <br /> Channel Migration
                   </h3>
                   <p className="text-sm font-bold text-[#FF8C00] uppercase tracking-widest">B-Brand | Street Fashion</p>
-                  <p className="text-zinc-500 font-medium italic leading-relaxed">
+                  <p className="text-slate-600 font-medium italic leading-relaxed">
                      온라인 무신사 등 주요 채널의 가격 노출을 우려한 고가의 스트릿 브랜드. 
                      오프라인 전용 위탁망을 통해 정상가 수준의 브랜드 이미지를 유지하며 재고의 90%를 소진하였습니다.
                   </p>
@@ -118,7 +118,7 @@ export default function SuccessPage() {
                     <div key={i} className="p-8 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 rounded-lg group-hover:border-[#FF8C00] transition-colors">
                        <p className="text-[10px] font-black text-zinc-300 uppercase tracking-widest mb-1">{stat.title}</p>
                        <p className="text-3xl font-black italic tracking-tighter mb-4">{stat.val}</p>
-                       <p className="text-xs text-zinc-500 font-medium leading-none">{stat.desc}</p>
+                       <p className="text-xs text-slate-600 font-medium leading-none">{stat.desc}</p>
                     </div>
                   ))}
                </div>
@@ -133,7 +133,7 @@ export default function SuccessPage() {
         <div className="section-container text-center max-w-4xl space-y-12">
            <Briefcase className="w-16 h-16 text-[#FF8C00] mx-auto animate-pulse" />
            <h2 className="text-4xl md:text-7xl font-black italic tracking-tighter uppercase leading-none">Your Success is <br /> Next.</h2>
-           <p className="text-zinc-400 text-xl font-medium italic">
+           <p className="text-slate-500 text-xl font-medium italic">
              귀사의 재고 상황에 최적화된 성공 시나리오를 설계해 드립니다. <br />
              지금 바로 실질적인 유동성 변화를 경험하세요.
            </p>

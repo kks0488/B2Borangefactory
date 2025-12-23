@@ -28,13 +28,13 @@ export default function AboutPage() {
           <div className="max-w-4xl">
             <div className="flex items-center gap-3 mb-8">
               <span className="h-px w-10 bg-zinc-900 dark:bg-white"></span>
-              <span className="text-[10px] font-black tracking-[0.3em] text-zinc-500 uppercase italic">Institutional Heritage</span>
+              <span className="text-[10px] font-black tracking-[0.3em] text-slate-600 uppercase italic">Institutional Heritage</span>
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               DECADES OF <br />
               <span className="text-[#FF8C00]">TRUST.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               1985년 설립 이후, 오렌지팩토리는 패션 브랜드의 보이지 않는 리스크를 관리하며 
               대한민국 유통 산업의 중추적인 역할을 담당해 왔습니다. 
             </p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
               <div key={i} className="space-y-8 p-12 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 rounded-lg shadow-subtle hover:border-[#FF8C00] transition-colors group">
                 <div className="text-[#FF8C00] group-hover:scale-110 transition-transform origin-left">{value.icon}</div>
                 <h3 className="text-2xl font-black tracking-tighter italic uppercase">{value.title}</h3>
-                <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed font-medium italic">{value.desc}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-500 leading-relaxed font-medium italic">{value.desc}</p>
               </div>
             ))}
           </div>
@@ -82,7 +82,7 @@ export default function AboutPage() {
                 Empowering Brands, <br />
                 <span className="text-[#FF8C00]">Enabling Growth.</span>
              </h2>
-             <p className="text-xl md:text-2xl text-zinc-500 leading-relaxed mb-20 max-w-3xl font-medium italic">
+             <p className="text-xl md:text-2xl text-slate-600 leading-relaxed mb-20 max-w-3xl font-medium italic">
                재고는 실패의 흔적이 아닙니다. 새로운 도약을 위한 &apos;준비된 자산&apos;입니다. 
                오렌지팩토리는 그 자산의 가치를 가장 먼저 알아보고, 
                귀사가 다시 원활하게 움직일 수 있도록 돕습니다.

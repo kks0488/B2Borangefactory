@@ -32,9 +32,9 @@ export default function FinanceServicePage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               ASSET-BACKED <br />
-              <span className="text-zinc-400">FINANCING.</span>
+              <span className="text-slate-500">FINANCING.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               은행 문턱을 넘지 못한 재고 자산도 오렌지팩토리를 만나면 <br />
               강력한 현금 유동성으로 재탄생합니다.
             </p>
@@ -54,7 +54,7 @@ export default function FinanceServicePage() {
              
              {/* Traditional Finance */}
              <div className="bg-white dark:bg-zinc-950 p-16 space-y-12">
-                <h3 className="text-xs font-black tracking-[0.3em] text-zinc-400 uppercase italic">Traditional Finance</h3>
+                <h3 className="text-xs font-black tracking-[0.3em] text-slate-500 uppercase italic">Traditional Finance</h3>
                 <div className="space-y-8">
                    {[
                      '재무제표 중심의 리지드한 심사',
@@ -64,7 +64,7 @@ export default function FinanceServicePage() {
                    ].map((item, i) => (
                      <div key={i} className="flex gap-4 items-center opacity-40">
                        <div className="w-1.5 h-1.5 rounded-full bg-zinc-300" />
-                       <span className="text-sm font-bold text-zinc-500 line-through">{item}</span>
+                       <span className="text-sm font-bold text-slate-600 line-through">{item}</span>
                      </div>
                    ))}
                 </div>
@@ -107,7 +107,7 @@ export default function FinanceServicePage() {
               { label: 'Network Access', val: 'Exclusive' },
             ].map((m, i) => (
               <div key={i} className="space-y-4">
-                <p className="text-[10px] font-black text-zinc-400 uppercase tracking-[0.2em]">{m.label}</p>
+                <p className="text-[10px] font-black text-slate-500 uppercase tracking-[0.2em]">{m.label}</p>
                 <div className="text-4xl font-black text-brand-navy dark:text-white tracking-tighter italic uppercase">{m.val}</div>
               </div>
             ))}
@@ -120,7 +120,7 @@ export default function FinanceServicePage() {
         <div className="section-container flex flex-col md:flex-row items-center justify-between gap-12">
            <div className="max-w-2xl text-center md:text-left">
               <h2 className="text-4xl md:text-6xl font-black text-white italic tracking-tighter uppercase mb-6">FUEL YOUR GROWTH.</h2>
-              <p className="text-zinc-400 text-lg font-medium">자금 흐름의 중단은 성장의 중단입니다. 오렌지팩토리가 귀사의 유동성 엔진이 되겠습니다.</p>
+              <p className="text-slate-500 text-lg font-medium">자금 흐름의 중단은 성장의 중단입니다. 오렌지팩토리가 귀사의 유동성 엔진이 되겠습니다.</p>
            </div>
            <Button size="lg" className="h-24 px-16 rounded-lg bg-white text-zinc-900 text-2xl font-black hover:bg-blue-600 hover:text-white transition-all shadow-2xl" asChild>
              <Link href="/contact" className="flex items-center gap-4 italic uppercase">Apply for Credit <Landmark className="w-8 h-8" /></Link>

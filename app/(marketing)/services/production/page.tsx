@@ -31,9 +31,9 @@ export default function ProductionServicePage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic uppercase">
               PRODUCTION <br />
-              <span className="text-zinc-400">INFRASTRUCTURE.</span>
+              <span className="text-slate-500">INFRASTRUCTURE.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               불안정한 공급망을 넘어선 압도적인 생산 경쟁력. <br />
               전 세계 주요 생산 기지를 아우르는 오렌지팩토리의 글로벌 네트워크가 귀사의 공급망이 됩니다.
             </p>
@@ -57,7 +57,7 @@ export default function ProductionServicePage() {
                 </div>
                 <div className="absolute -bottom-8 -right-8 p-10 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 shadow-2xl rounded-lg">
                    <p className="text-4xl font-black italic tracking-tighter text-[#FF8C00]">GLOBAL</p>
-                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-zinc-400 mt-1">Network Active</p>
+                   <p className="text-[10px] font-black uppercase tracking-[0.3em] text-slate-500 mt-1">Network Active</p>
                 </div>
              </div>
              
@@ -66,7 +66,7 @@ export default function ProductionServicePage() {
                   Precision <br />
                   <span className="text-[#FF8C00]">Manufacturing.</span>
                 </h2>
-                <p className="text-lg text-zinc-500 leading-relaxed font-medium italic">
+                <p className="text-lg text-slate-600 leading-relaxed font-medium italic">
                   베트남, 인도네시아, 중국 등 글로벌 거점에 위치한 검증된 파트너 공장들과의 
                   직접 계약을 통해 유통 마진을 제거하고 최상급 품질을 확보합니다. 
                   우리는 공장 섭외부터 선적까지 모든 프로세스를 데이터로 관리합니다.
@@ -81,7 +81,7 @@ export default function ProductionServicePage() {
                         <div className="w-2 h-2 rounded-full bg-[#FF8C00] mt-2.5" />
                         <div>
                           <p className="text-sm font-black uppercase tracking-widest text-brand-navy dark:text-white italic">{item.title}</p>
-                          <p className="text-xs text-zinc-400 font-bold mt-1 uppercase italic leading-none">{item.desc}</p>
+                          <p className="text-xs text-slate-500 font-bold mt-1 uppercase italic leading-none">{item.desc}</p>
                         </div>
                      </div>
                    ))}
@@ -103,7 +103,7 @@ export default function ProductionServicePage() {
                 { label: 'QC Rating', val: '99.8%' },
               ].map((m, i) => (
                 <div key={i} className="space-y-2">
-                  <p className="text-[10px] font-black text-zinc-400 uppercase tracking-widest">{m.label}</p>
+                  <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest">{m.label}</p>
                   <div className="text-2xl font-black italic tracking-tighter uppercase">{m.val}</div>
                 </div>
               ))}

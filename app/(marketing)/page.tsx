@@ -27,10 +27,10 @@ export default function LandingPage() {
             
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 leading-[1] tracking-tighter">
               The Standard of <br />
-              <span className="text-zinc-400">Inventory Liquidity.</span>
+              <span className="text-slate-500">Inventory Liquidity.</span>
             </h1>
             
-            <p className="text-xl md:text-2xl text-brand-slate dark:text-zinc-400 max-w-2xl mb-12 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-brand-slate dark:text-slate-500 max-w-2xl mb-12 leading-relaxed font-medium">
               오렌지팩토리는 39년간 대한민국 패션 산업의 유동성을 책임져온 <br className="hidden md:block" />
               재고 자산 관리 및 자금 조달 전문 파트너입니다. 
             </p>
@@ -52,7 +52,7 @@ export default function LandingPage() {
       {/* 2. LOGO CLOUD / TRUST - Minimalist */}
       <section className="py-16 bg-white dark:bg-zinc-950 border-b border-zinc-100 dark:border-zinc-900">
         <div className="section-container flex flex-col md:flex-row items-center justify-between gap-12 opacity-60 grayscale transition-all hover:grayscale-0">
-          <p className="text-xs font-bold uppercase tracking-widest text-zinc-400">Our Trusted Partners</p>
+          <p className="text-xs font-bold uppercase tracking-widest text-slate-500">Our Trusted Partners</p>
           <div className="flex flex-wrap justify-center gap-x-16 gap-y-8 items-center text-3xl font-black italic text-zinc-300 dark:text-zinc-800">
             <span>BRAND A</span>
             <span>BRAND B</span>
@@ -73,9 +73,9 @@ export default function LandingPage() {
               { label: 'Partnership Network', value: '1,200+', desc: '오렌지팩토리와 함께하는 국내외 패션 브랜드' },
             ].map((metric, i) => (
               <div key={metric.label} className="flex flex-col border-l-2 border-zinc-200 dark:border-zinc-800 pl-8 transition-all hover:border-[#FF8C00] group">
-                <p className="text-zinc-400 text-xs font-black uppercase tracking-widest mb-4">{metric.label}</p>
+                <p className="text-slate-500 text-xs font-black uppercase tracking-widest mb-4">{metric.label}</p>
                 <p className="text-5xl lg:text-6xl font-black text-brand-navy dark:text-white mb-6 group-hover:text-[#FF8C00] transition-colors tracking-tighter italic">{metric.value}</p>
-                <p className="text-zinc-500 text-sm leading-relaxed">{metric.desc}</p>
+                <p className="text-slate-600 text-sm leading-relaxed">{metric.desc}</p>
               </div>
             ))}
           </div>
@@ -88,7 +88,7 @@ export default function LandingPage() {
           <div className="flex flex-col md:flex-row justify-between items-end gap-8 mb-20 border-b border-zinc-100 dark:border-zinc-900 pb-12">
             <div className="max-w-xl">
               <h2 className="text-4xl md:text-5xl font-black mb-6 tracking-tight">Strategic Liquidity.</h2>
-              <p className="text-brand-slate dark:text-zinc-400 text-lg">
+              <p className="text-brand-slate dark:text-slate-500 text-lg">
                 현금 흐름 최적화와 브랜드 보호를 동시에 달성하는 <br />
                 오렌지팩토리만의 5대 핵심 비즈니스 엔진입니다.
               </p>
@@ -140,7 +140,7 @@ export default function LandingPage() {
               <Link key={i} href={sol.href} className="group p-10 border border-zinc-100 dark:border-zinc-900 bg-white dark:bg-zinc-950 transition-all hover:bg-zinc-50 dark:hover:bg-zinc-900/50">
                 <div className="text-[#FF8C00] mb-8 group-hover:scale-110 transition-transform origin-left">{sol.icon}</div>
                 <h3 className="text-xl font-bold mb-4 group-hover:text-[#FF8C00] transition-colors uppercase tracking-tight italic">{sol.title}</h3>
-                <p className="text-zinc-500 dark:text-zinc-400 text-sm leading-relaxed mb-6">{sol.desc}</p>
+                <p className="text-slate-600 dark:text-slate-500 text-sm leading-relaxed mb-6">{sol.desc}</p>
                 <div className="text-[10px] font-black tracking-widest text-zinc-300 dark:text-zinc-700 uppercase">Discover more</div>
               </Link>
             ))}
@@ -157,7 +157,7 @@ export default function LandingPage() {
                 EXPERIENCE <br />
                 THAT MATTERS.
               </h2>
-              <p className="text-zinc-400 text-xl leading-relaxed">
+              <p className="text-slate-500 text-xl leading-relaxed">
                 오렌지팩토리는 단순히 재고를 사고팔지 않습니다. <br />
                 우리는 지난 39년간 1,200개 이상의 파트너사와 함께하며 
                 패션 산업의 보이지 않는 리스크를 관리해 왔습니다. 
@@ -205,7 +205,7 @@ export default function LandingPage() {
              START YOUR <br />
              STRATEGIC EXIT.
            </h2>
-           <p className="text-xl text-brand-slate dark:text-zinc-400 mb-16 font-medium leading-relaxed">
+           <p className="text-xl text-brand-slate dark:text-slate-500 mb-16 font-medium leading-relaxed">
              더 이상 고민하지 마세요. 오렌지팩토리가 귀사의 재고 자산을 <br />
              가장 가치 있는 유동성으로 즉각 전환해 드립니다.
            </p>

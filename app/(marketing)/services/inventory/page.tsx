@@ -31,9 +31,9 @@ export default function InventoryServicePage() {
             </div>
             <h1 className="text-5xl md:text-8xl font-black text-brand-navy dark:text-white mb-10 tracking-tighter leading-none italic">
               INVENTORY <br />
-              <span className="text-zinc-400">LIQUIDATION.</span>
+              <span className="text-slate-500">LIQUIDATION.</span>
             </h1>
-            <p className="text-xl md:text-2xl text-zinc-500 max-w-2xl mb-16 leading-relaxed font-medium">
+            <p className="text-xl md:text-2xl text-slate-600 max-w-2xl mb-16 leading-relaxed font-medium">
               39년 데이터 기반의 정교한 가치 산출 시스템으로 <br />
               귀사의 잉여 자산을 즉각적인 기업 운영 자금으로 전환합니다.
             </p>
@@ -55,7 +55,7 @@ export default function InventoryServicePage() {
                   Not just buying. <br />
                   <span className="text-[#FF8C00]">Unlocking Capital.</span>
                </h2>
-               <p className="text-lg text-zinc-500 leading-relaxed font-medium">
+               <p className="text-lg text-slate-600 leading-relaxed font-medium">
                   단순한 &apos;땡처리&apos;가 아닙니다. 오렌지팩토리는 재고 자산의 시장 가치를 최고치로 끌어올려 
                   매각하는 전략적 파트너입니다. 대량 매입을 통한 자금 집행은 물론, 
                   브랜드 가치를 훼손하지 않는 철저한 유통 경로 통제 솔루션을 제공합니다.
@@ -84,7 +84,7 @@ export default function InventoryServicePage() {
                  <div key={i} className="p-8 bg-white dark:bg-zinc-950 border border-zinc-100 dark:border-zinc-800 rounded-lg flex flex-col justify-between h-48 hover:border-[#FF8C00] transition-colors">
                     <div className="text-zinc-300">{card.icon}</div>
                     <div>
-                       <p className="text-[10px] font-black text-zinc-400 uppercase tracking-widest mb-1">{card.label}</p>
+                       <p className="text-[10px] font-black text-slate-500 uppercase tracking-widest mb-1">{card.label}</p>
                        <p className="text-3xl font-black tracking-tighter italic">{card.val}</p>
                     </div>
                  </div>
@@ -112,7 +112,7 @@ export default function InventoryServicePage() {
               <div key={i} className="p-10 border border-zinc-50 dark:border-zinc-900 hover:bg-zinc-50 dark:hover:bg-zinc-900 group transition-colors">
                 <span className="text-4xl font-black text-zinc-100 dark:text-zinc-800 group-hover:text-[#FF8C00] transition-colors mb-8 block italic">{s.step}</span>
                 <h4 className="text-xl font-black mb-4 tracking-tighter uppercase italic">{s.title}</h4>
-                <p className="text-zinc-400 text-xs leading-relaxed font-bold tracking-tight">{s.desc}</p>
+                <p className="text-slate-500 text-xs leading-relaxed font-bold tracking-tight">{s.desc}</p>
               </div>
             ))}
           </div>
