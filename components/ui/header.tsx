@@ -52,7 +52,7 @@ export function Header() {
               alt="오렌지팩토리" 
               width={120} 
               height={30}
-              className="h-auto w-20"
+              className="h-auto w-28"
               priority
             />
           </Link>
