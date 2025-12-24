@@ -70,18 +70,25 @@ export default function BoardPage() {
         <section className="py-12 bg-slate-50 border-t border-slate-100">
           <div className="max-w-2xl mx-auto px-4 text-center">
             <h2 className="text-xl font-bold text-slate-900 mb-3">
-              Looking to Source Korean Fashion?
+              Have Inventory to Sell?
             </h2>
             <p className="text-slate-600 mb-6">
-              Whether it&apos;s brand inventory, overstock, or wholesale sourcing,
-              we connect global buyers with Korean fashion.
+              Post your fashion brand inventory, shopping mall, or brand for sale.
             </p>
-            <a
-              href="/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#E67E00] transition-colors"
-            >
-              Request a Quote
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="/board/post"
+                className="inline-block bg-[#FF8C00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#E67E00] transition-colors"
+              >
+                Post a Listing
+              </a>
+              <a
+                href="/contact"
+                className="inline-block bg-white text-slate-700 px-8 py-3 rounded-lg font-semibold border border-slate-200 hover:bg-slate-50 transition-colors"
+              >
+                Contact Us
+              </a>
+            </div>
           </div>
         </section>
       </main>

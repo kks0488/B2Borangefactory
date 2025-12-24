@@ -73,14 +73,22 @@ export default function BoardPage() {
               재고 매각을 원하시나요?
             </h2>
             <p className="text-slate-600 mb-6">
-              패션 브랜드 재고, 쇼핑몰, 브랜드 양도 등 무엇이든 상담해 드립니다.
+              패션 브랜드 재고, 쇼핑몰, 브랜드 양도 등 무엇이든 등록해 주세요.
             </p>
-            <a
-              href="/ko/contact"
-              className="inline-block bg-[#FF8C00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#E67E00] transition-colors"
-            >
-              무료 상담 신청
-            </a>
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <a
+                href="/ko/board/post"
+                className="inline-block bg-[#FF8C00] text-white px-8 py-3 rounded-lg font-semibold hover:bg-[#E67E00] transition-colors"
+              >
+                매물 등록하기
+              </a>
+              <a
+                href="/ko/contact"
+                className="inline-block bg-white text-slate-700 px-8 py-3 rounded-lg font-semibold border border-slate-200 hover:bg-slate-50 transition-colors"
+              >
+                1:1 상담 신청
+              </a>
+            </div>
           </div>
         </section>
       </main>
