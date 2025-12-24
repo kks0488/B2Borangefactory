@@ -43,9 +43,16 @@ export function FooterJa() {
             </div>
           </div>
         </div>
-        <div className="mt-10 pt-6 border-t border-slate-100 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-          <p className="text-xs text-slate-400">© {currentYear} Orange Factory. All rights reserved.</p>
-          <p className="text-xs text-slate-400">40年の韓国ファッション卸売経験</p>
+        {/* 会社情報 */}
+        <div className="mt-10 pt-6 border-t border-slate-100">
+          <div className="text-xs text-slate-400 space-y-1 mb-4">
+            <p>会社名: 株式会社マークトレード | 代表者: キム・ギョンス | 事業者登録番号: 552-86-00150</p>
+            <p>住所: 京畿道 始興市 大也洞 582-5 6階 (14915)</p>
+          </div>
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
+            <p className="text-xs text-slate-400">© {currentYear} Orange Factory. All rights reserved.</p>
+            <p className="text-xs text-slate-400">40年の韓国ファッション卸売経験</p>
+          </div>
         </div>
       </div>
     </footer>
