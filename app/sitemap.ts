@@ -12,6 +12,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
     { url: `${baseUrl}/inventory`, priority: 0.8 },
     { url: `${baseUrl}/export`, priority: 0.8 },
     { url: `${baseUrl}/contact`, priority: 0.9 },
+    { url: `${baseUrl}/board`, priority: 0.9 },
   ];
 
   // 한국어 페이지
@@ -25,6 +26,7 @@ const sitemap = (): MetadataRoute.Sitemap => {
     { url: `${baseUrl}/ko/services/sourcing`, priority: 0.8 },
     { url: `${baseUrl}/ko/services/export`, priority: 0.8 },
     { url: `${baseUrl}/ko/contact`, priority: 0.9 },
+    { url: `${baseUrl}/ko/board`, priority: 0.9 },
   ];
 
   // 일본어 페이지
