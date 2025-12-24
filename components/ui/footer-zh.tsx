@@ -47,7 +47,7 @@ export function FooterZh() {
         <div className="mt-10 pt-6 border-t border-slate-100">
           <div className="text-xs text-slate-400 space-y-1 mb-4">
             <p>公司名称: Mark Trade株式会社 | 代表: 金京洙 | 营业执照号: 552-86-00150</p>
-            <p>地址: 韩国京畿道始兴市大也洞582-5 6楼 (14915)</p>
+            <p>地址: 韩国京畿道始兴市银行路 176 6楼 (14915)</p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <p className="text-xs text-slate-400">© {currentYear} Orange Factory. All rights reserved.</p>

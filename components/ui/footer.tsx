@@ -86,7 +86,7 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t border-slate-100">
           <div className="text-xs text-slate-400 space-y-1 mb-4">
             <p>상호: 주식회사마크트레이드 | 대표자: 김경수 | 사업자등록번호: 552-86-00150</p>
-            <p>주소: (14915) 경기도 시흥시 대야동 582-5 6층</p>
+            <p>주소: (14915) 경기도 시흥시 은행로 176 6층</p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <p className="text-xs text-slate-400">

@@ -56,7 +56,7 @@ export function Footer() {
         <div className="mt-10 pt-6 border-t border-slate-100">
           <div className="text-xs text-slate-400 space-y-1 mb-4">
             <p>Company: Mark Trade Co., Ltd. | CEO: Kyungsoo Kim | Business Registration: 552-86-00150</p>
-            <p>Address: 6F, 582-5 Daeya-dong, Siheung-si, Gyeonggi-do, South Korea (14915)</p>
+            <p>Address: 6F, 176 Eunhaeng-ro, Siheung-si, Gyeonggi-do, South Korea (14915)</p>
           </div>
           <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
             <p className="text-xs text-slate-400">© {currentYear} Orange Factory. All rights reserved.</p>
