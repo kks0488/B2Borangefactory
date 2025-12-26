@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { 
-  ArrowRight, 
-  Package, 
+import {
+  ArrowRight,
+  Package,
   Landmark,
-  Store, 
-  Factory, 
+  Store,
+  Factory,
   ShoppingBag,
   Globe,
   Phone,
@@ -69,7 +69,7 @@ export default function LandingPage() {
 
   return (
     <div className="flex flex-col w-full bg-white">
-      
+
       {/* HERO - 다른 서비스 페이지와 동일한 스타일 */}
       <section className="pt-32 pb-16 md:pt-40 md:pb-24">
         <div className="section-container">
@@ -81,7 +81,7 @@ export default function LandingPage() {
             대한민국 재고처리 NO.1
           </h1>
           <p className="text-lg md:text-xl text-slate-600 max-w-2xl mb-8 leading-relaxed">
-            40년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다. 
+            40년간 쌓아온 경험과 네트워크로 기업의 재고 문제를 근본적으로 해결합니다.
             당일 현금화부터 브랜드 양도까지, 한번에.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 mb-10">
@@ -94,7 +94,7 @@ export default function LandingPage() {
               <Link href="/ko/about">회사소개</Link>
             </Button>
           </div>
-          
+
           {/* 신뢰 지표 */}
           <div className="flex items-center gap-6 pt-10 border-t border-slate-200">
             <div>
@@ -120,11 +120,11 @@ export default function LandingPage() {
         <div className="section-container">
           <h2 className="text-2xl md:text-3xl font-black text-slate-900 mb-2 text-center">주요 서비스</h2>
           <p className="text-slate-600 text-center mb-10">40년 경험을 바탕으로 고객사의 고민을 해결합니다</p>
-          
+
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             {services.map((service, i) => (
-              <Link 
-                key={i} 
+              <Link
+                key={i}
                 href={service.href}
                 className="group flex items-start gap-4 p-5 bg-white border border-slate-200 rounded-xl hover:border-[#FF8C00] hover:shadow-md transition-all"
               >
@@ -171,6 +171,26 @@ export default function LandingPage() {
                 <p className="text-[#FF8C00] font-bold text-sm mb-3">{item.brand}</p>
                 <p className="text-slate-700 text-sm leading-relaxed">&ldquo;{item.quote}&rdquo;</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 전문 서비스 영역 (SEO) */}
+      <section className="py-12 bg-white border-t border-slate-100">
+        <div className="section-container">
+          <h2 className="text-lg font-bold text-slate-900 mb-6">주요 서비스 키워드</h2>
+          <div className="flex flex-wrap gap-2">
+            {[
+              "의류땡처리", "재고매입", "의류재고매입", "재고정리", "이월상품",
+              "덤핑매입", "재고처분", "재고의류", "땡처리의류", "의류덤핑",
+              "의류도매", "배송대행B2B", "위탁판매", "브랜드유통", "도매매입",
+              "쇼핑몰폐업", "폐업재고처리", "희망리턴패키지", "불용자산매각", "점포정리",
+              "신발매입", "화장품땡처리", "식품덤핑", "아동복재고", "명품의류매입"
+            ].map((keyword, i) => (
+              <span key={i} className="px-3 py-1 bg-slate-50 text-slate-500 text-xs rounded-full border border-slate-200">
+                #{keyword}
+              </span>
             ))}
           </div>
         </div>

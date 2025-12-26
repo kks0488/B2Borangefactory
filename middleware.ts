@@ -3,16 +3,16 @@ import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
   const pathname = request.nextUrl.pathname;
-  
+
   // 정적 파일, API, 이미지 등은 처리하지 않음
   if (pathname.startsWith('/_next') || pathname.startsWith('/api') ||
-      pathname.startsWith('/img') || pathname.includes('.')) {
+    pathname.startsWith('/img') || pathname.includes('.')) {
     return NextResponse.next();
   }
 
   // 쿠키에 언어 설정이 있으면 그것을 우선 사용
   const localeCookie = request.cookies.get('locale')?.value;
-  
+
   // 특정 언어 경로로 직접 접근하면 해당 언어 쿠키 설정
   if (pathname.startsWith('/ko')) {
     const response = NextResponse.next();
@@ -36,14 +36,24 @@ export function middleware(request: NextRequest) {
     return response;
   }
 
-  // 쿠키가 있으면 자동 감지 무시 (사용자가 선택한 언어 유지)
-  if (localeCookie) {
-    // 영문이 아닌 쿠키인데 / 경로에 있으면 영문 쿠키로 변경 (사용자가 영문 선택)
-    if (localeCookie !== 'en') {
-      const response = NextResponse.next();
-      response.cookies.set('locale', 'en', { maxAge: 60 * 60 * 24 * 365 });
-      return response;
+  // 쿠키가 있으면 해당 언어 페이지로 리다이렉트 (루트 경로일 때만)
+  if (localeCookie && pathname === '/') {
+    if (localeCookie === 'ko') {
+      const url = request.nextUrl.clone();
+      url.pathname = '/ko';
+      return NextResponse.redirect(url);
     }
+    if (localeCookie === 'ja') {
+      const url = request.nextUrl.clone();
+      url.pathname = '/ja';
+      return NextResponse.redirect(url);
+    }
+    if (localeCookie === 'zh') {
+      const url = request.nextUrl.clone();
+      url.pathname = '/zh';
+      return NextResponse.redirect(url);
+    }
+    // en 쿠키면 영문 페이지 유지
     return NextResponse.next();
   }
 
