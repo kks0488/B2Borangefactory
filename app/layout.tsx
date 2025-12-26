@@ -124,6 +124,8 @@ const jsonLd = {
   sameAs: [],
 };
 
+import { FloatingInquiryWidget } from '@/components/ui/floating-inquiry-widget';
+
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable}`}>
@@ -144,6 +146,7 @@ export default function RootLayout({ children }: PropsWithChildren) {
       >
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
           {children}
+          <FloatingInquiryWidget />
         </ThemeProvider>
       </body>
     </html>

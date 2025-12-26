@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
-import { Menu, X, Phone, Globe, ChevronDown } from 'lucide-react';
+import { Menu, X, Phone, Globe, ChevronDown, FileDown } from 'lucide-react';
 import { useState, useEffect, useRef } from 'react';
 import { cn } from '@/lib/utils';
 
@@ -84,6 +84,14 @@ export function Header() {
               )}
             </div>
             <a href="tel:010-4464-0345" className="p-2 text-slate-600 hover:text-[#FF8C00] transition-colors"><Phone className="w-4 h-4" /></a>
+            <a 
+              href="/docs/OrangeFactory_Profile_KR.pdf" 
+              target="_blank" 
+              className="hidden md:flex items-center gap-1.5 px-3 py-1.5 text-xs font-bold text-slate-500 hover:text-slate-900 transition-colors border border-slate-200 rounded-md bg-slate-50 hover:bg-slate-100"
+            >
+              <FileDown className="w-3.5 h-3.5" />
+              <span>소개서(PDF)</span>
+            </a>
             <Button size="sm" className="hidden sm:flex bg-[#FF8C00] hover:bg-[#E67E00] text-white rounded-md font-semibold px-3 h-8 text-xs" asChild>
               <Link href="/ko/contact">상담신청</Link>
             </Button>

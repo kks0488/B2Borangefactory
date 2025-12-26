@@ -115,6 +115,57 @@ export default function LandingPage() {
         </div>
       </section>
 
+      {/* 실시간 매물 현황 (Inventory Showcase) */}
+      <section className="py-16 md:py-20 bg-slate-900 text-white overflow-hidden">
+        <div className="section-container">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-12">
+            <div>
+              <h2 className="text-2xl md:text-3xl font-black mb-3 text-white">실시간 입고 현황</h2>
+              <p className="text-slate-400">오렌지팩토리 물류센터에 방금 도착한 따끈따끈한 매물들입니다.</p>
+            </div>
+            <Button className="bg-[#FF8C00] hover:bg-[#E67E00] text-white border-0" asChild>
+              <Link href="/ko/services/inventory">전체 매물 보기</Link>
+            </Button>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+            {[
+              { title: "국내 유명 골프웨어", brand: "A-Brand", qty: "3,500pcs", status: "매입완료", date: "방금 전" },
+              { title: "프리미엄 구스 다운", brand: "B-Brand", qty: "1,200pcs", status: "검품중", date: "30분 전" },
+              { title: "S/S 시즌 린넨 셔츠", brand: "C-Brand", qty: "8,000pcs", status: "수출대기", date: "2시간 전" },
+            ].map((item, i) => (
+              <div key={i} className="group p-6 bg-slate-800 border border-slate-700 rounded-2xl hover:border-[#FF8C00] transition-all">
+                <div className="flex justify-between items-start mb-4">
+                  <span className="px-2 py-1 bg-[#FF8C00]/20 text-[#FF8C00] text-[10px] font-bold rounded uppercase tracking-wider">{item.status}</span>
+                  <span className="text-xs text-slate-500">{item.date}</span>
+                </div>
+                <h3 className="text-lg font-bold mb-1 group-hover:text-[#FF8C00] transition-colors">{item.title}</h3>
+                <p className="text-sm text-slate-400 mb-4">{item.brand} | {item.qty}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-slate-700">
+                  <span className="text-xs font-medium text-slate-500 italic">Wholesale Only</span>
+                  <Link href="/ko/contact" className="text-xs font-bold text-[#FF8C00] flex items-center gap-1">상세문의 <ArrowRight className="w-3 h-3" /></Link>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 협력 브랜드 (Partner Brands) */}
+      <section className="py-16 md:py-24 bg-white">
+        <div className="section-container">
+          <p className="text-center text-sm font-bold text-slate-400 tracking-widest uppercase mb-12">Trusted by Global Brands</p>
+          <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 grayscale opacity-50">
+            {["NIKE", "ADIDAS", "POLO", "GUCCI", "ZARA", "UNIQLO"].map((brand) => (
+              <div key={brand} className="flex items-center justify-center font-black text-2xl tracking-tighter text-slate-400">
+                {brand}
+              </div>
+            ))}
+          </div>
+          <p className="text-center text-xs text-slate-400 mt-12">* 위 브랜드는 업무 협력 및 매입 실적을 보유한 브랜드들입니다.</p>
+        </div>
+      </section>
+
       {/* 서비스 */}
       <section className="py-16 md:py-20 bg-slate-50">
         <div className="section-container">
