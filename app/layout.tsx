@@ -125,11 +125,13 @@ const jsonLd = {
 };
 
 import { FloatingInquiryWidget } from '@/components/ui/floating-inquiry-widget';
+import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
     <html lang="en" suppressHydrationWarning className={`${inter.variable} ${jakarta.variable}`}>
       <head>
+        <GoogleAnalytics />
         <link
           rel="stylesheet"
           as="style"
