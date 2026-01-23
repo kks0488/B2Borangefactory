@@ -1,11 +1,20 @@
 import { PropsWithChildren } from 'react';
+import dynamic from 'next/dynamic';
 import '@/styles/globals.css';
 import { ThemeProvider } from './theme-provider';
 import { Metadata } from 'next';
-
-export const dynamic = 'force-dynamic';
-
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
+
+// Dynamic imports for non-critical components (Bundle Size Optimization)
+const FloatingInquiryWidget = dynamic(
+  () => import('@/components/ui/floating-inquiry-widget').then(mod => mod.FloatingInquiryWidget),
+  { ssr: false }
+);
+
+const GoogleAnalytics = dynamic(
+  () => import('@/components/GoogleAnalytics'),
+  { ssr: false }
+);
 
 const inter = Inter({
   subsets: ['latin'],
@@ -123,9 +132,6 @@ const jsonLd = {
   },
   sameAs: [],
 };
-
-import { FloatingInquiryWidget } from '@/components/ui/floating-inquiry-widget';
-import GoogleAnalytics from '@/components/GoogleAnalytics';
 
 export default function RootLayout({ children }: PropsWithChildren) {
   return (
