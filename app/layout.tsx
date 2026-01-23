@@ -1,20 +1,10 @@
 import { PropsWithChildren } from 'react';
-import dynamic from 'next/dynamic';
 import '@/styles/globals.css';
 import { ThemeProvider } from './theme-provider';
 import { Metadata } from 'next';
 import { Inter, Plus_Jakarta_Sans } from 'next/font/google';
-
-// Dynamic imports for non-critical components (Bundle Size Optimization)
-const FloatingInquiryWidget = dynamic(
-  () => import('@/components/ui/floating-inquiry-widget').then(mod => mod.FloatingInquiryWidget),
-  { ssr: false }
-);
-
-const GoogleAnalytics = dynamic(
-  () => import('@/components/GoogleAnalytics'),
-  { ssr: false }
-);
+// Client Components with dynamic imports (Next.js 15 Server Component compatibility)
+import { FloatingInquiryWidget, GoogleAnalytics } from '@/components/ClientComponents';
 
 const inter = Inter({
   subsets: ['latin'],
