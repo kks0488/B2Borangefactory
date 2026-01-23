@@ -17,10 +17,10 @@ const NAV_LINKS = [
 ];
 
 const LANGUAGES = [
-  { href: '/', label: 'English', flag: '🇺🇸' },
-  { href: '/ko', label: '한국어', flag: '🇰🇷' },
-  { href: '/ja', label: '日本語', flag: '🇯🇵' },
-  { href: '/zh', label: '中文', flag: '🇨🇳' },
+  { href: '/', label: 'English', flag: '🇺🇸', locale: 'en' },
+  { href: '/ko', label: '한국어', flag: '🇰🇷', locale: 'ko' },
+  { href: '/ja', label: '日本語', flag: '🇯🇵', locale: 'ja' },
+  { href: '/zh', label: '中文', flag: '🇨🇳', locale: 'zh' },
 ];
 
 export function HeaderZh() {
@@ -74,6 +74,14 @@ export function HeaderZh() {
     setIsLangOpen(false);
   }, []);
 
+  // 언어 변경 시 쿠키 설정 후 페이지 이동
+  const handleLangChange = useCallback((locale: string, href: string) => {
+    document.cookie = `locale=${locale}; path=/; max-age=${60 * 60 * 24 * 365}`;
+    setIsLangOpen(false);
+    setIsMobileMenuOpen(false);
+    window.location.href = href;
+  }, []);
+
   return (
     <header className={cn(
       "fixed top-0 z-50 w-full transition-all duration-300",
@@ -108,9 +116,9 @@ export function HeaderZh() {
               {isLangOpen ? (
                 <div className="absolute right-0 top-full mt-1 bg-white border border-slate-200 rounded-lg shadow-lg py-1 min-w-[120px] z-50">
                   {LANGUAGES.map((lang) => (
-                    <Link key={lang.href} href={lang.href} className="flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#FF8C00]" onClick={handleLangClose}>
+                    <button key={lang.href} onClick={() => handleLangChange(lang.locale, lang.href)} className="flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 hover:text-[#FF8C00] w-full text-left">
                       <span>{lang.flag}</span><span>{lang.label}</span>
-                    </Link>
+                    </button>
                   ))}
                 </div>
               ) : null}
@@ -136,7 +144,7 @@ export function HeaderZh() {
             <div className="mt-3 pt-3 border-t border-slate-100">
               <p className="text-xs text-slate-500 mb-2 px-3">语言</p>
               <div className="grid grid-cols-2 gap-1">
-                {LANGUAGES.map((lang) => (<Link key={lang.href} href={lang.href} className="flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 rounded-lg" onClick={handleMenuClose}><span>{lang.flag}</span><span>{lang.label}</span></Link>))}
+                {LANGUAGES.map((lang) => (<button key={lang.href} onClick={() => handleLangChange(lang.locale, lang.href)} className="flex items-center gap-2 px-3 py-2 text-sm text-slate-700 hover:bg-slate-50 rounded-lg text-left"><span>{lang.flag}</span><span>{lang.label}</span></button>))}
               </div>
             </div>
             <div className="mt-3 pt-3 border-t border-slate-100">
