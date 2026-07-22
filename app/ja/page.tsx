@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Package, ShoppingBag, Globe, Truck, Phone, Mail, CheckCircle2 } from 'lucide-react';
+import { TradeProcess } from '@/components/trade-process';
 
 export default function JapaneseHomePage() {
   const services = [
@@ -59,6 +60,8 @@ export default function JapaneseHomePage() {
           </div>
         </div>
       </section>
+
+      <TradeProcess locale="ja" />
 
       <section className="py-16 md:py-20">
         <div className="section-container">

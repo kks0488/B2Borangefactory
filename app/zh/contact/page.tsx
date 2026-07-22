@@ -44,6 +44,8 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 mb-6">发送询价</h2>
               <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
                 <input type="hidden" name="_language" value="zh" />
+                <input type="hidden" name="source" value="orangefactory.biz" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">业务身份</label><select name="role" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg"><option value="">请选择</option><option value="buyer">买家 / 进口商</option><option value="supplier">供应商 / 制造商</option><option value="brand">品牌方</option><option value="other">其他</option></select></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">商品类别</label><select name="category" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg"><option value="">请选择</option><option value="fashion">时尚 / 服装</option><option value="beauty">美容 / 化妆品</option><option value="food">食品</option><option value="other">其他</option></select></div></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">公司名称</label><input type="text" name="company" placeholder="公司名称" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">姓名</label><input type="text" name="name" placeholder="您的姓名" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
@@ -58,6 +60,8 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">留言</label><textarea name="message" placeholder="请告诉我们您的需求" rows={4} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">预计订单规模</label><input name="order_size" placeholder="例如：1,000件" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / 电话</label><input type="tel" name="phone" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div></div>
+                <div><label className="block text-sm font-semibold text-slate-700 mb-2">参考商品链接</label><input type="url" name="reference_url" placeholder="https://" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div>
                 <Button type="submit" className="w-full h-14 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-lg rounded-lg">提交询价</Button>
               </form>
             </div>

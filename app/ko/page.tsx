@@ -12,6 +12,7 @@ import {
   Mail,
   CheckCircle2
 } from 'lucide-react';
+import { TradeProcess } from '@/components/trade-process';
 
 export default function LandingPage() {
   const services = [
@@ -246,6 +247,8 @@ export default function LandingPage() {
           </div>
         </div>
       </section>
+
+      <TradeProcess locale="ko" />
 
       {/* CTA */}
       <section className="py-16 md:py-20">

@@ -44,6 +44,11 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 mb-6">Send Inquiry</h2>
               <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
                 <input type="hidden" name="_language" value="en" />
+                <input type="hidden" name="source" value="orangefactory.biz" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Business role</label><select name="role" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]"><option value="">Select role</option><option value="buyer">Buyer / Importer</option><option value="supplier">Supplier / Manufacturer</option><option value="brand">Brand</option><option value="other">Other</option></select></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">Category</label><select name="category" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]"><option value="">Select category</option><option value="fashion">Fashion / Apparel</option><option value="beauty">Beauty / Cosmetics</option><option value="food">Food</option><option value="other">Other</option></select></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">Company</label><input type="text" name="company" placeholder="Company name" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">Name</label><input type="text" name="name" placeholder="Your name" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
@@ -58,6 +63,8 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">Message</label><textarea name="message" placeholder="Tell us about your needs" rows={4} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">Expected order size</label><input name="order_size" placeholder="e.g. 1,000 pcs" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / Phone</label><input type="tel" name="phone" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div></div>
+                <div><label className="block text-sm font-semibold text-slate-700 mb-2">Reference product URL</label><input type="url" name="reference_url" placeholder="https://" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div>
                 <Button type="submit" className="w-full h-14 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-lg rounded-lg">Send Inquiry</Button>
               </form>
             </div>

@@ -44,6 +44,8 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 mb-6">お問い合わせフォーム</h2>
               <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
                 <input type="hidden" name="_language" value="ja" />
+                <input type="hidden" name="source" value="orangefactory.biz" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">取引区分</label><select name="role" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg"><option value="">選択</option><option value="buyer">バイヤー / 輸入業者</option><option value="supplier">サプライヤー / メーカー</option><option value="brand">ブランド</option><option value="other">その他</option></select></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">カテゴリー</label><select name="category" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg"><option value="">選択</option><option value="fashion">ファッション / アパレル</option><option value="beauty">美容 / 化粧品</option><option value="food">食品</option><option value="other">その他</option></select></div></div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">会社名</label><input type="text" name="company" placeholder="会社名" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
                   <div><label className="block text-sm font-semibold text-slate-700 mb-2">お名前</label><input type="text" name="name" placeholder="お名前" required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]" /></div>
@@ -58,6 +60,8 @@ export default function ContactPage() {
                   </select>
                 </div>
                 <div><label className="block text-sm font-semibold text-slate-700 mb-2">メッセージ</label><textarea name="message" placeholder="ご要望をお聞かせください" rows={4} required className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] resize-none" /></div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">予定取引規模</label><input name="order_size" placeholder="例：1,000点" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">WhatsApp / 電話</label><input type="tel" name="phone" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div></div>
+                <div><label className="block text-sm font-semibold text-slate-700 mb-2">参考商品URL</label><input type="url" name="reference_url" placeholder="https://" className="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-lg" /></div>
                 <Button type="submit" className="w-full h-14 bg-[#FF8C00] hover:bg-[#E67E00] text-white font-bold text-lg rounded-lg">送信する</Button>
               </form>
             </div>

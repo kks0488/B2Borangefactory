@@ -87,6 +87,11 @@ export default function ContactPage() {
               <h2 className="text-xl font-bold text-slate-900 mb-6">상담 신청</h2>
               <form action="https://formspree.io/f/xykglvry" method="POST" className="space-y-6">
                 <input type="hidden" name="_language" value="ko" />
+                <input type="hidden" name="source" value="orangefactory.biz" />
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">문의 유형</label><select name="role" required className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]"><option value="">선택하세요</option><option value="buyer">바이어 / 수입사</option><option value="supplier">공급사 / 제조사</option><option value="brand">브랜드</option><option value="other">기타</option></select></div>
+                  <div><label className="block text-sm font-semibold text-slate-700 mb-2">상품 분야</label><select name="category" required className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00]"><option value="">선택하세요</option><option value="fashion">패션 / 의류</option><option value="beauty">뷰티 / 화장품</option><option value="food">식품</option><option value="other">기타</option></select></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
                     <label className="block text-sm font-semibold text-slate-700 mb-2">회사명</label>
@@ -144,6 +149,7 @@ export default function ContactPage() {
                     className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#FF8C00] focus:border-transparent transition-all resize-none"
                   />
                 </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6"><div><label className="block text-sm font-semibold text-slate-700 mb-2">예상 거래 규모</label><input name="order_size" placeholder="예: 1,000장 / 2천만원" className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg" /></div><div><label className="block text-sm font-semibold text-slate-700 mb-2">참고 상품 URL</label><input type="url" name="reference_url" placeholder="https://" className="w-full px-4 py-3 bg-white border border-slate-200 rounded-lg" /></div></div>
 
                 <Button 
                   type="submit"
